@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    body{
+        background-color: #8EB69B;
+    }
+
+    .drop-content,
+    .drop-content2,
+    .drop-content3,
+    .drop-content4{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropelemd{
+        width: fit-content;
+    }
+
+    .ewd{
+        margin: 0px;
+        width: 150px;
+    }
+
+    .dropbtn{
+        border: 2px solid #8EB69B;
+    }
+
+    .drop-content,
+    .drop-content2,
+    .drop-content3,
+    .drop-content4{
+        display: none;
+    }
+
+    .drop-contentparnt > .drop-content > .drop-contentparnt2 > .drop-content2 , .drop-contentparnt3 > .drop-content3 > .drop-contentparnt4 > .drop-content4{
+        position: relative;
+        top: -56px;
+        left: 256px;
+    }
+
+    .drop-contentparnt > .drop-content > .drop-contentparnt2 > .drop-content2 > .drop-contentparnt3 > .drop-content3{
+        position: relative;
+        top: 0px;
+        left: -256px;
+    }
+
+    #ldrop > .drop-content > .drop-contentparnt2 > .drop-content2 , #ldrop > .drop-content .drop-contentparnt2 >
+    .drop-content2 > .drop-contentparnt3 > .drop-content3 > .drop-contentparnt4 > .drop-content4{
+        position: relative;
+        top: -56px;
+        left: -256px;
+    }
+
+    #ldrop > .drop-content > .drop-contentparnt2 > .drop-content2 > .drop-contentparnt3 > .drop-content3{
+        position: relative;
+        top: 0px;
+        left: 256px;
+    }
+    
+    .drop-contentparnt:hover .drop-content,
+    .drop-contentparnt2:hover .drop-content2,
+    .drop-contentparnt3:hover .drop-content3,
+    .drop-contentparnt4:hover .drop-content4{
+        display: flex;
+    }
+    
+    .drop-contentparnt:focus-within .drop-content,
+    .drop-contentparnt2:focus-within .drop-content2,
+    .drop-contentparnt3:focus-within .drop-content3,
+    .drop-contentparnt4:focus-within .drop-content4{
+        display: flex;
+    }
+
+    .drop-contentparnt{
+        width: fit-content;
+    }
+
+    .dropbtn , .dropelemd{
+        padding: 20px 53px;
+        border: none;
+        background-color: #235347;
+        color: #DAF1DE;
+    }
+
+    .dropbtn:hover , .dropelemd:hover{
+        background-color: #DAF1DE;
+        color: #235347;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="drop-contentparnt">
+            <button class="dropbtn"><p class="ewd">Camera</p></button>
+            <div class="drop-content">
+                <button class="dropelemd"><p class="ewd">Tripod</p></button>
+                <div class="drop-contentparnt2">
+                    <button class="dropelemd"><p class="ewd">Lens</p></button>
+                    <div class="drop-content2">
+                        <button class="dropelemd"><p class="ewd">14mm</p></button>
+                        <button class="dropelemd"><p class="ewd">28mm</p></button>
+                        <div class="drop-contentparnt3">
+                            <button class="dropelemd"><p class="ewd">58mm</p></button>
+                            <div class="drop-content3">
+                                <button class="dropelemd"><p class="ewd">without cover</p></button>
+                                <div class="drop-contentparnt4">
+                                    <button class="dropelemd"><p class="ewd">with cover</p></button>
+                                    <div class="drop-content4">
+                                        <button class="dropelemd"><p class="ewd">high focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">medium focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">small focal length</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="drop-contentparnt">
+            <button class="dropbtn"><p class="ewd">Camera</p></button>
+            <div class="drop-content">
+                <button class="dropelemd"><p class="ewd">Tripod</p></button>
+                <div class="drop-contentparnt2">
+                    <button class="dropelemd"><p class="ewd">Lens</p></button>
+                    <div class="drop-content2">
+                        <button class="dropelemd"><p class="ewd">14mm</p></button>
+                        <button class="dropelemd"><p class="ewd">28mm</p></button>
+                        <div class="drop-contentparnt3">
+                            <button class="dropelemd"><p class="ewd">58mm</p></button>
+                            <div class="drop-content3">
+                                <button class="dropelemd"><p class="ewd">without cover</p></button>
+                                <div class="drop-contentparnt4">
+                                    <button class="dropelemd"><p class="ewd">with cover</p></button>
+                                    <div class="drop-content4">
+                                        <button class="dropelemd"><p class="ewd">high focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">medium focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">small focal length</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="drop-contentparnt">
+            <button class="dropbtn"><p class="ewd">Camera</p></button>
+            <div class="drop-content">
+                <button class="dropelemd"><p class="ewd">Tripod</p></button>
+                <div class="drop-contentparnt2">
+                    <button class="dropelemd"><p class="ewd">Lens</p></button>
+                    <div class="drop-content2">
+                        <button class="dropelemd"><p class="ewd">14mm</p></button>
+                        <button class="dropelemd"><p class="ewd">28mm</p></button>
+                        <div class="drop-contentparnt3">
+                            <button class="dropelemd"><p class="ewd">58mm</p></button>
+                            <div class="drop-content3">
+                                <button class="dropelemd"><p class="ewd">without cover</p></button>
+                                <div class="drop-contentparnt4">
+                                    <button class="dropelemd"><p class="ewd">with cover</p></button>
+                                    <div class="drop-content4">
+                                        <button class="dropelemd"><p class="ewd">high focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">medium focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">small focal length</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="drop-contentparnt">
+            <button class="dropbtn"><p class="ewd">Camera</p></button>
+            <div class="drop-content">
+                <button class="dropelemd"><p class="ewd">Tripod</p></button>
+                <div class="drop-contentparnt2">
+                    <button class="dropelemd"><p class="ewd">Lens</p></button>
+                    <div class="drop-content2">
+                        <button class="dropelemd"><p class="ewd">14mm</p></button>
+                        <button class="dropelemd"><p class="ewd">28mm</p></button>
+                        <div class="drop-contentparnt3">
+                            <button class="dropelemd"><p class="ewd">58mm</p></button>
+                            <div class="drop-content3">
+                                <button class="dropelemd"><p class="ewd">without cover</p></button>
+                                <div class="drop-contentparnt4">
+                                    <button class="dropelemd"><p class="ewd">with cover</p></button>
+                                    <div class="drop-content4">
+                                        <button class="dropelemd"><p class="ewd">high focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">medium focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">small focal length</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="ldrop" class="drop-contentparnt">
+            <button class="dropbtn"><p class="ewd">Camera</p></button>
+            <div class="drop-content">
+                <button class="dropelemd"><p class="ewd">Tripod</p></button>
+                <div class="drop-contentparnt2">
+                    <button class="dropelemd"><p class="ewd">Lens</p></button>
+                    <div class="drop-content2">
+                        <button class="dropelemd"><p class="ewd">14mm</p></button>
+                        <button class="dropelemd"><p class="ewd">28mm</p></button>
+                        <div class="drop-contentparnt3">
+                            <button class="dropelemd"><p class="ewd">58mm</p></button>
+                            <div class="drop-content3">
+                                <button class="dropelemd"><p class="ewd">without cover</p></button>
+                                <div class="drop-contentparnt4">
+                                    <button class="dropelemd"><p class="ewd">with cover</p></button>
+                                    <div class="drop-content4">
+                                        <button class="dropelemd"><p class="ewd">high focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">medium focal length</p></button>
+                                        <button class="dropelemd"><p class="ewd">small focal length</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
