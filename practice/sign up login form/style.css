@@ -1,0 +1,147 @@
+ *{
+    font-family: sans-serif;
+}
+
+body{
+    background-color: blueviolet;
+}
+body{
+    background-image: url(https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-222549-2166711.jpg&fm=jpg);
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
+.form-cover{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 480px;
+    border-radius: 20px;
+    padding: 20px 0px;
+    box-shadow: 0px 10px 200px -30px rgb(55, 17, 90);
+}
+
+.cover-cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 0px;
+}
+
+
+
+
+.pform{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 75%;
+}
+
+.input_field{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 35px;
+    box-shadow: -1px 0px 5px 0px rgba(39, 13, 64, 0.588);
+}
+
+.input_field > input{
+    width: 90%;
+    outline: unset;
+    border: unset;
+    font-size: 18px;
+}
+
+.input_field > select{
+    width: 90%;
+    outline: unset;
+    border: unset;
+    font-size: 15px;
+}
+
+.input_field:focus-within{
+    box-shadow: -1px 0px 13px 1px rgba(55, 17, 90, 0.588);
+}
+
+.cf_row{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: grey;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
+#icons{
+    color: #650979;
+    font-size: 20px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+}
+
+.submit > input{
+    padding: 10px 65px;
+    border-radius: 30px;
+    border: unset;
+    transition-duration: 0.1s;
+    color: white;
+    background: linear-gradient(165deg, rgba(101,9,121,1) 54%, rgba(0,5,255,1) 100%);
+    cursor: pointer;
+}
+
+.submit>input:active{
+    padding: 12px 68px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.caccount{
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    color: grey;
+    font-size: 12px;
+}
+
+.caccount > p > a{
+    color: blue;
+    cursor: pointer;
+}
+ 
+
+
+.row1 , .row2{
+    display: flex;
+    gap: 10px;
+}
+
+.fpass_parnt > a{
+    text-decoration: none;
+    color: grey;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
