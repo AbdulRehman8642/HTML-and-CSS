@@ -4,7 +4,9 @@
 }
 
 .logo_pic{
-    width: 100px;
+    padding: 4px;
+    width: 80px;
+    border-radius: 100%;
 }
 
 .navbar{
@@ -30,7 +32,7 @@
 .dropdown,
 .box4,
 .box5{
-    padding: 20px 60px;
+    padding: 33px 60px;
     transition-duration: 140ms;
     border-bottom: 5px solid #2c3e50;
 }
@@ -46,7 +48,7 @@
 .box4{
     background-color: #ecf0f1;
 }
-
+    
 .box5{
     background-color: #ecf0f1;
     border-bottom-right-radius: 80px;
@@ -70,6 +72,24 @@
     top: 0px;
 }
 
-@media(max-width:1120px){
+.drop_elements{
+    display: none;
+}
 
+@media(max-width:1120px){
+    .box1,
+    .box2,
+    .dropdown,
+    .box4,
+    .box5{
+        padding: 33px 30px;
+        transition-duration: 140ms;
+        border-bottom: 5px solid #2c3e50;
+}
+}
+
+@media(max-width:800px){
+    .navbar{
+        display: none;
+    }   
 }
