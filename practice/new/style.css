@@ -10,15 +10,12 @@
         gap: 30px;
         align-items: center;
         background-color: orange;
+        border-bottom-right-radius: 50px;
     }
 
     .elements{
-        /* width: 100%; */
         display: flex;
         gap: 25px;
-        align-items: center;
-        background-color: orange;
-        padding-right: 70px;
     }
 
     .icon_parnt{
