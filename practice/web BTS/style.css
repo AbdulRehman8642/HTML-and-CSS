@@ -1,9 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .logo{
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
     width: 130px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    padding: 0px;
 }
 
 .real-nav{
     background-color: gold;
+    padding: 0px;
+    padding-right: 40px;
+    margin-right: 30%;
+    display: flex;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.box5{
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.box, .box5, .dropdown{
+    padding: 45px 40px;
+}
+
+a{
+    text-decoration: none;
 }
