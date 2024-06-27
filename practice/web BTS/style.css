@@ -1,16 +1,9 @@
-.navbar{
-    background-color: rgb(40, 60, 90);
+.logo{
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    width: 130px;
 }
 
-.card{
-    display: inline-block;
-    margin: 10px 10px;
-}
-
-.btn{
-    background-color: aqua;
-}
-
-.btn:hover{
-    background-color: aquamarine;
+.real-nav{
+    background-color: gold;
 }
