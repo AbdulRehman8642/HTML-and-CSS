@@ -4,6 +4,9 @@ body{
 
 p{
     margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 a{
@@ -15,7 +18,7 @@ a{
     display: flex;
     justify-content: center;
     background-color: black;
-    height: 45px;
+    height: 42px;
 }
 
 .categories{
@@ -64,8 +67,9 @@ a{
 
 .drop-item{
     transition: 200ms;
-    padding: 5px 43px;
     background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
 }
 
 .drop-item:hover{
@@ -106,12 +110,6 @@ a{
     }    
 }
 
-.prod-img{
-    width: 200px;
-}
-
-
-
 
 
 /* SELF MADE DROPDOWN STYLING */
@@ -127,15 +125,7 @@ a{
         gap: 10px;
     }
 
-    #drop-content{
-        padding: 6px;
-    }
-
     .drop-sign{
-        display: none;
-    }
-
-    .navbox{
         display: none;
     }
 
@@ -151,21 +141,17 @@ a{
     display: none;
 }
 
+.menu-bar{
+    display: none;
+}
+
 @media(max-width:700px){
-    .op-pages{
-        display: flex;
-        justify-content: flex-end;
+    .navbox{
+        display: none;
     }
 
-    .pages-parnt:hover{
-        background-color: #696969;
-    }
-
-    .pages-parnt{
+    .menu-bar{
         display: flex;
-        justify-content: flex-end;
-        padding: 20px;
-        background-color: #E5E5E5;
-        border-left: 0.5px solid #696969;
-    }  
+        justify-content: center;
+    }
 }

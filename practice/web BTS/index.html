@@ -9,15 +9,16 @@
     <!-- font-awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
-  <body>
+  <body> 
     <div class="logo">
       <img src="./images/logo.png" alt="">
     </div>
-    <nav class="navbar">
-      <div class="dropdown on-com-cat categories" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <nav class="navbar container-fluid">
+      <div class="dropdown on-com-cat categories col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         <p class="dropdown-toggle drop-sign">Categories</p>
         <p class="bars">Categories <i class="fa-solid fa-bars"></i></p>
-        <ul class="dropdown-menu" id="drop-content">
+        <div>
+        <ul class="dropdown-menu container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="drop-content">
           <li><a class="dropdown-item drop-item" href="#">Action</a></li>
           <li><a class="dropdown-item drop-item" href="#">Another action</a></li>
           <li><a class="dropdown-item drop-item" href="#">Another action</a></li>
@@ -40,10 +41,20 @@
           <li><a class="dropdown-item drop-item" href="#">Another action</a></li>
           <li><a class="dropdown-item drop-item" href="#">Something else here</a></li>
         </ul>
+        </div>
       </div>
+      
+          <div class="dropdown on-com-cat categories menu-bar  col-12 col-sm-6">
+            <p class="bars" type="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</p>
+              <ul class="dropdown-menu container col-12 col-sm-6" id="drop-content">
+                <li><a class="dropdown-item drop-item" href="#">Home</a></li>
+                <li><a class="dropdown-item drop-item" href="#">home</a></li>
+                <li><a class="dropdown-item drop-item" href="#">Home</a></li>
+              </ul>
+          </div>
+          
       <div class="pages-parnt">
-        <p class="op-pages">Menu</p>
-        <div class="pages">
+        <div class="pages"> 
           <a href="#">
             <div class="navbox home">
               <p class="phome">Home</p>
@@ -62,14 +73,10 @@
         </div>
       </div>
     </nav>
-    
 
     <!-- body -->
-
-    <img class="prod-img img-fluid" src="https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/ecab47cf-aa84-424d-9692-c10d9353ae6b._SL480_.jpg" alt="">
-    <img class="prod-img img-fluid" src="https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/6f87cbc2-2a73-45fb-8974-4947022ab355._SL480_.jpg" alt="">
-
-
+    
+    
 
 
 
