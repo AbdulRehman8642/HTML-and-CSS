@@ -1,39 +1,124 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-.logo{
-    border-top-left-radius: 100%;
-    border-bottom-left-radius: 100%;
-    width: 130px;
-    margin: 0px;
-    padding: 0px;
-}
-
-.navbar{
-    padding: 0px;
-}
-
-.real-nav{
-    background-color: gold;
-    padding: 0px;
-    padding-right: 40px;
-    margin-right: 30%;
-    display: flex;
-    border-top-right-radius: 20%;
-    border-bottom-right-radius: 20%;
-}
-
-.box5{
-    border-top-right-radius: 100%;
-    border-bottom-right-radius: 100%;
-}
-
-.box, .box5, .dropdown{
-    padding: 45px 40px;
+p{
+    margin-bottom: 0px;
 }
 
 a{
     text-decoration: none;
+    color: black;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    height: 46px;
+}
+
+.categories{
+    background-color: #E5E5E5;
+    margin: 0px;
+    padding: 20px 80px;
+    border-radius: 0%;
+    transition: 200ms;
+}
+
+.categories:hover{
+    background-color: #696969;
+    color: white;
+}
+
+.navbar{
+    padding: 0px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* DROPDOWN STYLING */
+
+#drop-content{
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+    height: 600%;
+}
+
+.navbox{
+    transition: 200ms;
+    margin: 10px;
+    background-color: #E5E5E5;
+    padding: 10px 70px;
+    border-radius: 10px;
+}
+
+.navbox:hover{
+    transition: 200ms;
+    background-color: #696969;
+    color: white;
+}
+
+.drop-item{
+    transition: 200ms;
+    padding: 5px 43px;
+    background-color: #F5F5F5;
+}
+
+.drop-item:hover{
+    transition: 200ms;
+    background-color: #696969;
+    color: white;
+}
+
+
+
+.categories:active .drop-content{
+    display: block;
+}
+
+.on-mob-cat{
+    display: none;
+}
+
+@media(max-width:700px){
+    .on-com-cat{
+        display: none;
+    }
+
+    .on-mob-cat{
+        display: block;
+        padding: 20px 10px;
+    }
+}
+
+@media(max-width:1100px){
+    .drop-item{
+        transition: 200ms;
+        padding: 10px 51px;
+        background-color: #F5F5F5;
+    }
+
+    .navbox{
+        transition: 200ms;
+        margin: 10px;
+        background-color: #E5E5E5;
+        padding: 10px 50px;
+        border-radius: 10px;
+    }    
+}
+
+@media(max-width:950px){
+    .drop-item{
+        transition: 200ms;
+        padding: 10px 51px;
+        background-color: #F5F5F5;
+    }
+
+    .navbox{
+        transition: 200ms;
+        margin: 10px;
+        background-color: #E5E5E5;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }    
 }
