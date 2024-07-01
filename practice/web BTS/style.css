@@ -34,6 +34,18 @@ a{
     color: white;
 }
 
+.categories2{
+    background-color: #E5E5E5;
+    margin: 0px;
+    border-radius: 0%;
+    transition: 200ms;
+}
+
+.categories2:hover{
+    background-color: #696969;
+    color: white;
+}
+
 .navbar{
     padding: 0px;
     background-color: #F5F5F5;
@@ -49,6 +61,13 @@ a{
     padding: 0px;
     overflow-y: scroll;
     height: 600%;
+}
+
+
+#drop-content2{
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .navbox{
@@ -118,8 +137,19 @@ a{
     display: none;
 }
 
+.bars2{
+    display: none;
+    padding: 20px 118px;
+}
+
 @media(max-width:700px){
     .bars{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .bars2{
         display: flex;
         align-items: center;
         gap: 10px;
@@ -143,6 +173,7 @@ a{
 
 .menu-bar{
     display: none;
+    
 }
 
 @media(max-width:700px){
