@@ -1,3 +1,7 @@
+body{
+    background: url(https://wallpapers.com/images/hd/light-color-background-swzb97w5pxngu8yv.jpg);
+}
+
 p{
     margin-bottom: 0px;
 }
@@ -11,7 +15,7 @@ a{
     display: flex;
     justify-content: center;
     background-color: black;
-    height: 46px;
+    height: 45px;
 }
 
 .categories{
@@ -70,27 +74,6 @@ a{
     color: white;
 }
 
-
-
-.categories:active .drop-content{
-    display: block;
-}
-
-.on-mob-cat{
-    display: none;
-}
-
-@media(max-width:700px){
-    .on-com-cat{
-        display: none;
-    }
-
-    .on-mob-cat{
-        display: block;
-        padding: 20px 10px;
-    }
-}
-
 @media(max-width:1100px){
     .drop-item{
         transition: 200ms;
@@ -121,4 +104,68 @@ a{
         padding: 10px 20px;
         border-radius: 10px;
     }    
+}
+
+.prod-img{
+    width: 200px;
+}
+
+
+
+
+
+/* SELF MADE DROPDOWN STYLING */
+
+.bars{
+    display: none;
+}
+
+@media(max-width:700px){
+    .bars{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #drop-content{
+        padding: 6px;
+    }
+
+    .drop-sign{
+        display: none;
+    }
+
+    .navbox{
+        display: none;
+    }
+
+}
+
+/* Working on nav pages */
+
+.pages{
+    display: flex;
+}
+
+.op-pages{
+    display: none;
+}
+
+@media(max-width:700px){
+    .op-pages{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .pages-parnt:hover{
+        background-color: #696969;
+    }
+
+    .pages-parnt{
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        background-color: #E5E5E5;
+        border-left: 0.5px solid #696969;
+    }  
 }
