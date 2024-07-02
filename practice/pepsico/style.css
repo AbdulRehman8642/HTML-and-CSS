@@ -46,3 +46,22 @@ ul{
     font-size: 60px;
     font-weight: 800;
 }
+
+
+/* MARQUEE    MARQUEE     MARQUEE    MARQUEE    MARQUEE */
+
+.marquee p{
+    position: absolute;
+    transform: translateX(100%);
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee{
+        0%{
+            transform: translateX(100%);
+        }
+
+        100%{
+            transform: translateX(-100%);
+        }
+}
