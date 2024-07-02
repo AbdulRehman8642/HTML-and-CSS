@@ -1,0 +1,8 @@
+1: Living Room Lights
+2: Bedroom Lights
+3: Kitchen Lights
+4: Bathroom Lights
+5: Dining Room Lights
+6: Home Office Lights
+7: Function Lights
+8: 

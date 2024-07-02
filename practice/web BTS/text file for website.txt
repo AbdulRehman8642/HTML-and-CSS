@@ -1,0 +1,15 @@
+1: Living Room Lights
+2: Bedroom Lights
+3: Kitchen Lights
+4: Bathroom Lights
+5: Dining Room Lights
+6: Office Lights
+7: Function Lights
+8: Lamps
+9: Wall lights
+10: Ceiling lights
+11: Chandelier
+12: LED lights
+13: Garden lights
+14: Decoration lights
+15: Handcrafted lights
