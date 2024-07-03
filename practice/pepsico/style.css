@@ -1,12 +1,28 @@
 *{
     margin: 0px;
+    padding: 0px;
     font-family: helvetica, Arial, sans-serif;
 }
 
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
 .main{
-    background: url(https://www.pepsico.com/images/default-source/homepage/for_use_pepsico_dotcom_only_20240212_0112_d.png?sfvrsn=7b07341f_0);
-    background-size: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: url(./assets/images/bgmain.png);
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.img-parnt{
+    margin: 0px;
+    padding: 0px;
 }
 
 .logo{
@@ -20,10 +36,33 @@
     margin: 0px;
 }
 
+.main-ul, .cont-ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none;
+    font-weight: bolder;
+    font-size: 13px;
+    color: white;
+}
+
+.cont-ul{
+    padding-right: 18px;
+}
+
+.main-ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-weight: 800;
+    font-size: 14px;
+    color: white;
+}
+
 ul{
     display: flex;
     gap: 30px;
-    padding: 20px 38px;
     margin: 0px;
     list-style: none;
     font-weight: 800;
@@ -31,11 +70,15 @@ ul{
     color: white;
 }
 
+.navli{
+    padding: 8px 0px;
+}
+
 .logo{
     margin: 27px 12px;
     width: 165px;
 }   
-
+/* 
 .center-p{
     display: flex;
     justify-content: center;
@@ -45,23 +88,145 @@ ul{
     color: white;
     font-size: 60px;
     font-weight: 800;
+} */
+
+a{
+    text-decoration: none;
+    color: white;
 }
+
+.i-bars{
+    padding: 0px 10px;
+    font-size: 30px;
+    color: white;
+}
+
+.main-sm{
+    display: none;
+}
+
+@media(max-width:1250px){
+    .main{
+        display: none;
+    }
+
+    .main-sm{
+        display: block;
+    }
+
+    /* .center-p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 230px 180px;
+        line-height: 70px;
+        word-spacing: -5px;
+        color: white;
+        font-size: 45px;
+        font-weight: 800;
+    } */
+}
+
+.mgn-sm{
+    display: none;
+    padding: 0px 10px;
+    color: white;
+    font-size: 15px;
+}
+
+@media(max-width:770px){
+    .mgn-sm{
+        display: block;
+    }
+
+    .cont-nav{
+        display: none;
+    }
+
+    .main{
+        background: url(./assets/images/bgmain2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    /* .center-p{
+        display: flex;
+        justify-content: center;
+        padding: 230px 20px;
+        line-height: 70px;
+        word-spacing: -5px;
+        color: white;
+        font-size: 60px;
+        font-weight: 800;
+    } */
+
+}
+
+/* @media(max-width:630px){
+    .center-p{
+        display: flex;
+        justify-content: center;
+        padding: 200px 20px;
+        line-height: 70px;
+        word-spacing: -5px;
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:500px){
+    .center-p{
+        display: flex;
+        justify-content: center;
+        padding: 200px 20px;
+        padding-top: 90px;
+        line-height: 60px;
+        word-spacing: -5px;
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:370px){
+    .center-p{
+        display: flex;
+        justify-content: center;
+        padding: 100px 20px;
+        padding-top: 90px;
+        line-height: 40px;
+        word-spacing: -5px;
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+    }
+} */
+
 
 
 /* MARQUEE    MARQUEE     MARQUEE    MARQUEE    MARQUEE */
 
-.marquee p{
-    position: absolute;
+.marquee{
+    padding: 10px 0px;
+    font-size: 20px;
+    margin: 0px;
+    width: max-content;
     transform: translateX(100%);
-    animation: marquee 20s linear infinite;
+    animation: harry 25s infinite linear;
 }
 
-@keyframes marquee{
-        0%{
-            transform: translateX(100%);
-        }
+.marquee p{
+    padding: 0px;
+    margin: 0px;
+}
 
-        100%{
-            transform: translateX(-100%);
-        }
+@keyframes harry{
+    0%{
+        transform: translateX(100%);
+    }   
+
+    100%{
+        transform: translateX(-100%);
+    }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MARKH – Collection of all types of lights</title>
+    <title>Home page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,27 +18,63 @@
     />
   </head>
   <body>
-    <div class="main">
-      <nav class="navbar container">
-        <img src="./assets/images/logo.png" alt="" class="logo col-1"/>
-        <ul class="col-10">
-            <li class="dropdown-toggle">Who We Are</li>
-            <li class="dropdown-toggle">Our Impact</li>
-            <li class="dropdown-toggle">Our Brands</li>
-            <li>Our Stories</li>
-            <li>Investors</li>
-            <li class="dropdown-toggle">Resources</li>
+    <div class="main container-fluid">
+      <nav class="navbar container-fluid">
+        <img src="./assets/images/logo.png" alt="" class="logo col-2" />
+        <div class="real-nav">
+        <ul class="main-ul col-10">
+          <a href="#"><li class="dropdown-toggle navli">Who We Are</li></a>
+          <a href="#"><li class="dropdown-toggle navli">Our Impact</li></a>
+          <a href="#"><li class="dropdown-toggle navli">Our Brands</li></a>
+          <a href="#"><li class="navli">Our Stories</li></a>
+          <a href="#"><li class="navli">Investors</li></a>
+          <a href="#"><li class="dropdown-toggle navli">Resources</li></a>
         </ul>
+        </div>
+        <div class="cont-nav">
+            <ul class="cont-ul">
+                <li class="navli">Contact</li>
+                <li class="navli"><i class="fa-solid fa-globe"></i> US</li>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </ul>
+        </div>
+        <div class="magnify-sm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
       </nav>
-
       <div class="center-p">
         <p>Create more smiles with every sip and every bite</p>
       </div>
     </div>
 
-    <div class="marquee">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ad autem libero. Lorem, ipsum dolor. Lorem, ipsum dolor.</p>
+
+    <div class="main-sm main container-fluid">
+      <nav class="navbar container-fluid">
+        <i class="i-bars fa-solid fa-bars"></i>
+        <img src="./assets/images/logo.png" alt="" class="logo col-2" />
+        <div class="cont-nav">
+            <ul class="cont-ul">
+                <li class="navli">Contact</li>
+                <li class="navli"><i class="fa-solid fa-globe"></i> US</li>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </ul>
+        </div>
+        <div class="mgn-sm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </nav>
+      <div class="center-p">
+        <p>Create more smiles with every sip and every bite</p>
+      </div>
     </div>
+
+
+    <marquee>This text will scroll from right to left</marquee>
+    <!-- <div class="marquee">
+      <p>
+        <img src="./assets/images/globe.png" alt=""> ®PepsiCo's 2023 ESG Summary <a style="color: inherit; text-decoration: underline;" href="#">now available </a> <img src="./assets/images/thumbs-up.png" alt=""> Cafecito con Marias Gamesa returns to encourage connection among latina moms 
+      </p>
+    </div> -->
 
 
     <script
