@@ -4,6 +4,10 @@
     font-family: helvetica, Arial, sans-serif;
 }
 
+P{
+    margin: 0px;
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -16,8 +20,7 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100%;
+    height: 100vh;
 }
 
 .img-parnt{
@@ -78,17 +81,23 @@ ul{
     margin: 27px 12px;
     width: 165px;
 }   
-/* 
+
 .center-p{
     display: flex;
     justify-content: center;
-    padding: 230px 220px;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 100px;
     line-height: 70px;
-    word-spacing: -5px;
+    text-align: center;
     color: white;
     font-size: 60px;
     font-weight: 800;
-} */
+}
+
+.center-p p{
+    padding: 0px 100px;
+}
 
 a{
     text-decoration: none;
@@ -113,18 +122,6 @@ a{
     .main-sm{
         display: block;
     }
-
-    /* .center-p{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        padding: 230px 180px;
-        line-height: 70px;
-        word-spacing: -5px;
-        color: white;
-        font-size: 45px;
-        font-weight: 800;
-    } */
 }
 
 .mgn-sm{
@@ -145,88 +142,145 @@ a{
 
     .main{
         background: url(./assets/images/bgmain2.png);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
+        height: 100vh;
     }
-    
-    /* .center-p{
-        display: flex;
-        justify-content: center;
-        padding: 230px 20px;
-        line-height: 70px;
-        word-spacing: -5px;
-        color: white;
-        font-size: 60px;
-        font-weight: 800;
-    } */
 
+    /* CAROUSEL */
+    /* CAROUSEL */
 }
 
-/* @media(max-width:630px){
+
+
+
+@media(max-width:650px){
     .center-p{
-        display: flex;
-        justify-content: center;
-        padding: 200px 20px;
-        line-height: 70px;
-        word-spacing: -5px;
-        color: white;
-        font-size: 40px;
-        font-weight: 600;
+        padding: 0px 20px;
+        height: 65vh;
+        line-height: 50px;
+    }
+
+    .main{
+        height: 70vh;
     }
 }
 
 @media(max-width:500px){
     .center-p{
-        display: flex;
-        justify-content: center;
-        padding: 200px 20px;
-        padding-top: 90px;
-        line-height: 60px;
-        word-spacing: -5px;
-        color: white;
-        font-size: 40px;
-        font-weight: 600;
+        font-size: 35px;
+        height: 50vh;
+        line-height: 38px;
+    }
+
+    .main{
+        height: 60vh;
     }
 }
 
 @media(max-width:370px){
     .center-p{
-        display: flex;
-        justify-content: center;
-        padding: 100px 20px;
-        padding-top: 90px;
-        line-height: 40px;
-        word-spacing: -5px;
-        color: white;
-        font-size: 40px;
-        font-weight: 600;
+        font-size: 28px;
     }
-} */
+}
+
 
 
 
 /* MARQUEE    MARQUEE     MARQUEE    MARQUEE    MARQUEE */
 
-.marquee{
+.animation{
+    font-size: 25px;
+    font-weight: 800;
+    margin: 33px 0px;
+    color: #004C97;
+}
+
+.n-a{
+    color: #004C97;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.n-a:hover{
+    text-decoration: underline;
+}
+
+/* CAROUSEL */
+
+.side-text-parnt{
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+
+
+.crs-side-para1{
+    height: 100%;
+    background-color: #568302;
+    padding: 70px 30px;
+    color: white;
+}
+
+.crs-side-para2{
+    height: 100%;
+    background-color: #01A7DF;
+    padding: 70px 30px;
+    color: white;
+}
+
+.crs-side-para3{
+    height: 100%;
+    background-color: #004C97;
+    padding: 70px 30px;
+    color: white;
+}
+
+.crs-side-para4{
+    height: 100%;
+    background-color: #313859;
+    padding: 70px 30px;
+    color: white;
+}
+
+.crs-side-para5{
+    height: 100%;
+    background-color: #C6404D;
+    padding: 70px 30px;
+    color: white;
+}
+
+.side-ar-heading{
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.side-main-heading{
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 65px;
+}
+
+.side-date{
+    padding: 20px 0px;
+}
+
+.side-low-heading{
     padding: 10px 0px;
-    font-size: 20px;
-    margin: 0px;
-    width: max-content;
-    transform: translateX(100%);
-    animation: harry 25s infinite linear;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 32px;
 }
 
-.marquee p{
+.side-href{
+    padding: 15px 0px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.carousel{
     padding: 0px;
-    margin: 0px;
-}
-
-@keyframes harry{
-    0%{
-        transform: translateX(100%);
-    }   
-
-    100%{
-        transform: translateX(-100%);
-    }
 }
