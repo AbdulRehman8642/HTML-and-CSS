@@ -189,23 +189,28 @@ a{
 /* ALL DONE */
 
 .ban1-div{
-    margin: 30px;
-    padding: 5px 30px;
-    background-color: #69696934;
+    margin: 0px;
+    padding: 0px;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-}
+    background-image: url(./images/ban2.png);
+    background-size: cover;
 
-.ban1-img{
-    opacity: 100%;
-    border-radius: 20px;
-    border: 5px solid #69696944;
 }
 
 .ban1-p{
-    font-size: 30px;
+    height: 100%;
+    font-size: 50px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: grey;
+    text-align: center;
+    font-weight: 800;
+    padding: 0px 100px;
+    color: black;
+    margin: 0px;
+    background-color: rgba(255, 255, 0, 0.175);
 }
 
 @media(max-width:770px){
@@ -218,19 +223,9 @@ a{
 
     }
 
-    .ban1-img{
-        margin: 20px 0px;
-    }
-
     .ban1-p{
         font-size: medium;
     }
-}
-
-.ban1-p{
-    background-color: #69696944;
-    border-radius: 20px 0px 20px 0px;
-    padding: 5px 10px;
 }
 
 .prod-head{
