@@ -23,18 +23,18 @@
         <img src="./assets/images/logo.png" alt="" class="logo col-2" />
         <div class="real-nav">
         <ul class="main-ul col-10">
-          <a href="#"><li class="dropdown-toggle navli">Who We Are</li></a>
-          <a href="#"><li class="dropdown-toggle navli">Our Impact</li></a>
-          <a href="#"><li class="dropdown-toggle navli">Our Brands</li></a>
-          <a href="#"><li class="navli">Our Stories</li></a>
-          <a href="#"><li class="navli">Investors</li></a>
-          <a href="#"><li class="dropdown-toggle navli">Resources</li></a>
+          <a class="nav-link" href="#"><li class="dropdown-toggle navli">Who We Are</li></a>
+          <a class="nav-link" href="#"><li class="dropdown-toggle navli">Our Impact</li></a>
+          <a class="nav-link" href="#"><li class="dropdown-toggle navli">Our Brands</li></a>
+          <a class="nav-link" href="#"><li class="navli">Our Stories</li></a>
+          <a class="nav-link" href="#"><li class="navli">Investors</li></a>
+          <a class="nav-link" href="#"><li class="dropdown-toggle navli">Resources</li></a>
         </ul>
         </div>
         <div class="cont-nav">
             <ul class="cont-ul">
-                <li class="navli">Contact</li>
-                <li class="navli"><i class="fa-solid fa-globe"></i> US</li>
+                <a class="nav-link" href="#"><li class="navli">Contact</li></a>
+                <a class="nav-link" href="#"><li class="navli"><i class="fa-solid fa-globe"></i> US</li></a>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </ul>
         </div>
@@ -220,10 +220,55 @@
     <!-- MIRCH IMAGE -->
     
 
-    <div class="mirch-parnt">
-      <img src="./assets/images/peppers.png" alt="">
+    <div class="container-fluid kitchen">   
+      <div class="pepper-parnt container-fluid">
+        <img class="pepper" src="./assets/images/peppers.png" alt="">
+
+        <div class="kc-img-parnt container">
+          <img class="kc-img" src="./assets/images/kitchen.png" alt="">
+          <img id="kitchen2" class="kc-img" src="./assets/images/kitchen2.png" alt="">
+          <div class="kc-text kc-text1">
+            <p class="sm-text">Make today special</p>
+            <p class="h-text">Explore recipes featuring</p>
+            <p class="h-text">your favorite products</p>
+            <a class="sm-text-link" href="#"><p class="sm-text">Make today special</a></p>
+          </div>
+        </div>
+
+        <div class="kc-img-parnt2 container">
+          <img class="kc-img" src="./assets/images/pepplus.jpg" alt="">
+          <img id="kitchen2" class="kc-img" src="./assets/images/pepplus.jpg" alt="">
+          <div id="kc-text2" class="kc-text">
+            <p class="sm-text">PepsiCo Positive</p>
+            <p class="h-text">Building a stronger, more</p>
+            <p class="h-text">sustainable future</p>
+            <a class="sm-text-link" href="#"><p class="sm-text">Our Commitments</p></a>
+          </div>
+        </div>
+
+      </div>   
+    </div>
+    
+    <div class="container dr-qk">
+      <div class="drink-parnt">
+        <img src="./assets/images/drink.png" alt="" class="drink col-5 img-fluid">
+        <p class="h-text divers">Diversity</p>
+        <p class="l-text">At PepsiCo, opportunity is for everyone</p>
+        <p class="l-text-link"><a class="l" href="#">Diversity, Equity and Inclusion</a></p>
+      </div>
+      
+      <div class="quaker-parnt">
+        <img src="./assets/images/quaker.png" alt="" class="quaker col-5 img-fluid">
+        <p class="h-text nutri">Nutrition</p>
+        <p class="l-text">What's inside matters</p>
+        <p class="l-text-link"><a class="l" href="#">Our Nutrition Story</a></p>
+      </div>
     </div>
 
+    <div class="hungry-parnt">
+      <p class="hungry">Hungry?</p>
+      <p class="h-up-br"><span class="mm">---</span> Our Brands</p>
+    </div>
     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
