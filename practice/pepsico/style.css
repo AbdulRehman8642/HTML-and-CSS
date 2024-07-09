@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: helvetica, Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 P{
@@ -75,6 +75,12 @@ ul{
 
 .navli{
     padding: 8px 0px;
+}
+
+.navli:hover{
+    border-bottom: 3px solid #01A7DF;
+    transition: 200ms;
+    transition: 5s 5s 6s;
 }
 
 .logo{
@@ -426,16 +432,12 @@ ul{
     }
 
     .sm-text{
-        font-weight: 1  00;
+        font-weight: 100;
     }
     
     .h-text{
         font-weight: 100;
         font-size: 5px;
-    }
-
-    .dr-qk{
-        flex-direction: column;
     }
 }
 
@@ -456,6 +458,7 @@ ul{
 .sm-text{
     color: white;
     font-weight: 900;
+    font-size: 15px;
 }
 
 .h-text{
@@ -465,6 +468,11 @@ ul{
     padding: 0px;
 }
 
+@media(max-width:1200px){
+    .h-text{
+        font-size: 20px;
+    }
+}
 
 .kc-img-parnt2{
     display: flex;
@@ -476,27 +484,11 @@ ul{
     top: 350px;
 }
 
-.drink, .quaker{
-    width: 513px;
-}
 
-.dr-qk{
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    margin-top: 70px;
-}
-
-.divers, .nutri{
-    position: relative;
-    top: -100px;
-    padding: 0px;
-    width: fit-content;
-}
 
 .l-text{
     padding: 0px;
-    margin: -40px 0px;
+    margin: -20px 0px;
 }
 
 .l-text-link{
@@ -512,6 +504,47 @@ ul{
 
 .l:hover{
     text-decoration: underline;
+}
+
+
+
+.dr-qk{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 70px;
+}
+
+.divers, .nutri{
+    position: relative;
+    top: -100px;
+    padding: 0px;
+    width: fit-content;
+}
+
+.drink, .quaker{
+    width: 513px;
+}
+
+
+@media(max-width:860px){
+    .dr-qk{
+        flex-direction: column;
+        padding: 0px 30px;
+    }
+    
+    .drink, .quaker{
+        width: 100%;
+    }
+
+    .kc-img-parnt, .kc-img-parnt2{
+        padding: 0px;
+    }
+
+    .kc-img{
+        width: 100%;
+    }
+    
 }
 
 
@@ -532,6 +565,17 @@ ul{
     width: fit-content;
 }
 
+@media(max-width:770px){
+    .hungry{
+        font-size: 110px;
+    }
+
+    .h-up-br{
+        font-size: 25px;
+        top: -120px;
+    }
+}
+
 .mm{
     letter-spacing: -8px;
     font-weight: 900;
@@ -539,7 +583,225 @@ ul{
     color: #004C97;
 }
 
-.navli:hover{
-    border-bottom: 2px solid #01A7DF;
-    transition: 200ms;
+
+
+@media(max-width:500px){
+    .dr-qk{
+        padding: 0px 0px;
+    }
+
+    .drink, .quaker{
+        width: 100%;
+    }
+
+    .kc-img-parnt, .kc-img-parnt2{
+        padding: 0px;
+    }
+
+    .kc-img{
+        width: 100%;
+    }
+
+    .kc-text1{
+        top: 340px;
+    }
+
+    #kc-text2{
+        top: 60px;
+    }
+
+
+    .hungry{
+        font-size: 80px;
+    }
+
+    .h-up-br{
+        font-size: 20px;
+        top: -100px;
+    }
+}
+
+@media(max-width:325px){
+    .sm-text{
+        font-size: 8px;
+    }
+
+    .h-text{
+        font-size: 15px;
+    }
+
+    .hungry{
+        font-size: 60px;
+        letter-spacing: -5px;
+    }
+
+    .h-up-br{
+        font-size: 15px;
+        top: -90px;
+        left: 60px;
+    }
+}
+
+
+@media(max-width:250px){
+    .hungry{
+        font-size: 40px;
+        letter-spacing: -5px;
+    }
+
+    .h-up-br{
+        font-size: 10px;
+        top: -80px;
+        left: 40px;
+    }
+
+    .pepper{
+        width: 150px;
+    }
+}
+
+.prod-parnt{
+    width: 100%;
+}
+
+.prod-row{
+    display: flex;
+    gap: 30px;
+    margin: 35px -90px;
+    width: fit-content;
+}
+
+.row-img{
+    width: 180px;
+}
+
+
+.prod-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+
+.prod-center-text{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px 110px;
+}
+
+.ev-dl{
+    font-weight: 900;
+    color: rgb(86, 86, 86);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sm-ch{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.ds-buy{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.fyf{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    padding-top: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.fyf:hover{
+    text-decoration: underline;
+}
+
+.lets-eat{
+    background-color: #C05535;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.bite{
+    width: 210px;
+}
+
+.le-text{
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+
+.snacks-parnt{
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    padding: 100px;
+}
+
+.snacks{
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+}
+
+@media(max-width:1270px){
+    .snacks{
+        font-size: 20px;
+    }
+
+    .snacks-parnt{
+        padding: 100px 120px;
+    }
+}
+
+.snk-link{
+    color: white;
+    text-decoration: none;
+}
+
+.snk-link:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.snk-p{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.marginalia{
+    width: 220px;
+    margin-top: 70px;
+}
+
+.soc-parnt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.yel-parnt{
+    margin: 0px;
+    padding: 0px;
+}
+
+.yel-man{
+    display: flex;
+    width: 100%;
 }
