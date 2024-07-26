@@ -184,14 +184,13 @@
 
 
 
-var a = ["cat", "lion", "giraffe", "zebra", "horse", "fox"]
+// var a = ["cat", "lion", "giraffe", "zebra", "horse", "fox"]
 
-a.push("dog", "doggy")
+// a.push("dog", "doggy")
 
-// a[7] = "oppo"
-// a[8] = "oppo"
+// a[7] = "xyz"
 
-a.shift()   
+// a.shift()   
 
 // document.write(a[0], "<br>", a[1], "<br>", a[2], "<br>", a[3], "<br>", a[4], "<br>", a[5], "<br>", a[6], "<br>", a[7])
 
@@ -202,17 +201,33 @@ a.shift()
 // document.write(b[0], b[1], b[2], b[3], b[4])
 
 
-var cityToCheck = prompt("Enter your city name")
+// var cityToCheck = prompt("Enter your city name")
 
-var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
+// var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
 
-for (var i = 0; i <= 4; i++) {
-    if (cityToCheck === cleanestCities[i]) {
-        alert("It's one of the cleanest cities");
+// for (var i = 0; i < cleanestCities.length; i++) {
+//     if (cityToCheck === cleanestCities[i]) {
+//         alert("It's one of the cleanest cities");
+//         break;
+//     }
+
+//     if(i === cleanestCities.length-1){
+//         alert("not in the list")
+//     }
+// }
+
+
+var pr = prompt("Enter the number")
+var checkerElements = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+for(var i = 0; i < checkerElements.length; i++){
+    if(pr === checkerElements[i]){
+        document.write("You type the letter " + pr)
+        break;
     }
-    
-    else {
-        alert("not in the list")
+
+    if(i === checkerElements.length-1){
+        alert("Type only single letter")
     }
 }
-    
+
