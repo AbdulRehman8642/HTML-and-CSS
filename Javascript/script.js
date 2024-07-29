@@ -203,6 +203,8 @@
 
 // var cityToCheck = prompt("Enter your city name")
 
+// cityToCheck = cityToCheck.toLowerCase();
+
 // var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
 
 // for (var i = 0; i < cleanestCities.length; i++) {
@@ -216,18 +218,82 @@
 //     }
 // }
 
+// -----------------------------------------------------------------------------------------------------------------------
 
-var pr = prompt("Enter the number")
-var checkerElements = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+// Creating flag which is equal to matching //ye kaam baad mein kiya
 
-for(var i = 0; i < checkerElements.length; i++){
-    if(pr === checkerElements[i]){
-        document.write("You type the letter " + pr)
-        break;
-    }
+// var matching = false
 
-    if(i === checkerElements.length-1){
-        alert("Type only single letter")
-    }
-}
+// var pr = prompt("Enter the number")
+// var checkerElements = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+// for(var i = 0; i < checkerElements.length; i++){
+//     if(pr === checkerElements[i]){
+//         matching = true
+//         document.write("You type the letter " + pr)
+//         break;
+//     }
+// }
+
+// if (matching === false){
+//     alert("Only type one single letter")
+// }
+
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// var matching = false
+
+// var pr = prompt("Enter the number")
+// var checkerElements = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+// for(var i = 0; i < checkerElements.length; i++){
+//     if(pr === checkerElements[i]){
+//         matching = true
+//         document.write("You type the letter " + pr)
+//         break;
+//     }
+    
+//     if(i === checkerElements.length-1){
+//         alert("Only type one single letter")
+//     }
+// }
+
+//------------------------------------------------------------------------------------------------------------------------------
+
+//  var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
+//  var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+//  var fullNames = [];
+//  for (var i = 0; i < firstNames.length; i++) {
+//    for (var j = 0; j < lastNames.length; j++) {
+//     fullNames.push(firstNames[i] + lastNames[j]);
+// }
+// }
+
+
+// var a = ["ayan", "ahmed", "faisal", "jawad", "maaz", "umer"]
+
+// a.splice(1, 0, "amir", "imran", "haseeb", "saad")
+
+// document.write(a)
+
+
+// ----------------------------------------------------------------------------------------------------------------------------
+// SAMAJH NHI AYA //
+// 1
+// if(i === checkerElements.length-1){
+
+// 2
+// f(pr === checkerElements[i])
+// is mein [i] call q kiya
+// break;
+// break ne statement ko wapas kese bheja
+
+// hasan bhai ne break lagwa kar aur ".length-1" laga kar alert ya yeh keh sakte hen ke false statement par bhi response 
+// banwaya tha LEKIN book mein inhon ne filhaal flag ke concept se ye kaam karwaya he
+// ooper flag banaya bhi he mene
+
+
+// ----------------------------------------------------------------------------------------------------------------------------
+
+
 
