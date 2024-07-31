@@ -1,36 +1,32 @@
+body{
+    background-color: #F0F8FF;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* OBILEE */
 @font-face {
     font-family: obilee;
     src: url(./fonts/Odibee_Sans/OdibeeSans-Regular.ttf);
 }
 
-.logo-pic{
-    width: 140px;
+/* BATANGAS */
+@font-face {
+    font-family: batangas;
+    src: url(./fonts/batangas-font-family-fontmirror/Batangas\ Bold\ 700.otf);
 }
 
-.logo-parnt{
-    background-color: black;
+.logo{
+    width: 20%;
     display: flex;
     justify-content: center;
-    padding: 3px 0px;
+    padding: 10px 0px;
 }
 
-.banner{
-    width: 800px;
+.logo-text{
+    font-family: batangas;
 }
 
-.ban-parnt{
-    display: flex;
-    justify-content: right;
-    background-color: yellow;
-}
-
-.ban-text{
-    padding: 20px;
-}
-
-.ban-p{
-    color: darkslategray;
-    font-weight: 900;
-    font-size: 40px;
-    font-family: obilee;
+.kh{
+    color: #FE1F1F;
 }
