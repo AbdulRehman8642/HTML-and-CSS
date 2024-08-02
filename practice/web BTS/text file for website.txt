@@ -13,3 +13,8 @@
 13: Garden lights
 14: Decoration lights
 15: Handcrafted lights
+
+------------------------COLORS---COLORS---COLORS---COLORS---COLORS---COLORS---------------------
+#F0F8FF = light
+#5F9EA0 = dark-dark
+#5F9EA0 = dark-bright

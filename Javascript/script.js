@@ -83,7 +83,7 @@
 // var phy = prompt("Enter Physics marks")
 // var math = prompt("Enter Maths marks")
 // var chem = prompt("Enter Chemistry marks")
-// var tot = Number(eng) + Number(phy) + Number(math) + chems
+// var tot = Number(eng) + Number(phy) + Number(math) + Number(chem)
 
 // if(tot >=160){
 //     alert("You have passed the exam")
@@ -113,7 +113,7 @@
 // var age = prompt("Enter your age")
 // var res = prompt("Enter your country")
 
-// if(age > 60 || (age < 20 && res === "US")){
+// if((age > 60 || age < 20) && res === "US"){
 //     alert("you have passed")
 // }
 
@@ -153,24 +153,25 @@
 // }
 
 
-// var a
+// var letter
 // var pr = prompt("Yes or No")
 
 // if(pr === "yes" || pr === "Yes"){
-//     a = "a"
+//     letter = "a"
 // }
 
 // if(pr === "no" || pr === "No"){
-//     a = "b"
+//     letter = "b"
 // }
 
-// document.write(a)
+// document.write(letter)
 
 
 // var a = []
 
 // a[0] = "name"
 // a[1] = "age"
+// a[4] = "multimedia"
 // a[5] = "contact"
 
 // document.write(a[0],"<br>", a[1], "<br>", a[5], "<br>", a[4])
@@ -188,9 +189,13 @@
 
 // a.push("dog", "doggy")
 
-// a[7] = "xyz"
-
 // a.shift()   
+
+// // a.push("oppo")  
+
+// a.splice(2,2, "tiger")
+
+// document.write(a)
 
 // document.write(a[0], "<br>", a[1], "<br>", a[2], "<br>", a[3], "<br>", a[4], "<br>", a[5], "<br>", a[6], "<br>", a[7])
 
@@ -200,12 +205,13 @@
 
 // document.write(b[0], b[1], b[2], b[3], b[4])
 
+// -------------------------------------------------------------------------------------------------------------------------
 
 // var cityToCheck = prompt("Enter your city name")
 
 // cityToCheck = cityToCheck.toLowerCase();
 
-// var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];
+// var cleanestCities = ["cheyenne", "santa fe", "tucson", "great falls", "honolulu"];
 
 // for (var i = 0; i < cleanestCities.length; i++) {
 //     if (cityToCheck === cleanestCities[i]) {
@@ -217,6 +223,17 @@
 //         alert("not in the list")
 //     }
 // }
+
+// Converting camel case into normal case
+
+// var firstChar = cityToCheck.slice(0,1)
+// var otherChars = cityToCheck.slice(1)
+// firstChar = firstChar.toUpperCase()
+// otherChars = otherChars.toLowerCase()
+// var cappedCity = firstChar + otherChars
+    
+// document.write(cappedCity)
+
 
 // -----------------------------------------------------------------------------------------------------------------------
 
@@ -248,7 +265,7 @@
 
 // for(var i = 0; i < checkerElements.length; i++){
 //     if(pr === checkerElements[i]){
-//         matching = true
+//         matching = true  
 //         document.write("You type the letter " + pr)
 //         break;
 //     }
@@ -261,7 +278,7 @@
 //------------------------------------------------------------------------------------------------------------------------------
 
 //  var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
-//  var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+//  var lastNames = ["Zzz", "Burp"];
 //  var fullNames = [];
 //  for (var i = 0; i < firstNames.length; i++) {
 //    for (var j = 0; j < lastNames.length; j++) {
@@ -269,12 +286,20 @@
 // }
 // }
 
+// document.write(fullNames)   
+
+// for(var i = 1; i<=100; i = i+10){
+//     for(var j = i; j < i + 10; j++){
+//         document.write(j + "&nbsp&nbsp")
+//     }
+//     document.write("<br>")
+// }
 
 // var a = ["ayan", "ahmed", "faisal", "jawad", "maaz", "umer"]
 
-// a.splice(1, 0, "amir", "imran", "haseeb", "saad")
+// a.splice(2, 0, "amir", "imran", "haseeb", "saad")
 
-// document.write(a)
+// document.write(a.slice(1, 4))
 
 
 // ----------------------------------------------------------------------------------------------------------------------------
@@ -288,6 +313,8 @@
 // break;
 // break ne statement ko wapas kese bheja
 
+// .toUpperCase
+
 // hasan bhai ne break lagwa kar aur ".length-1" laga kar alert ya yeh keh sakte hen ke false statement par bhi response 
 // banwaya tha LEKIN book mein inhon ne filhaal flag ke concept se ye kaam karwaya he
 // ooper flag banaya bhi he mene
@@ -295,5 +322,42 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------
 
+// Creating month abbreviation
+
+// var monthAbbrev
+// var month = prompt("Enter the month name")
+// var charsInMonth = month.length
+// if(charsInMonth > 3){
+//     monthAbbrev = month.slice(0, 3)
+//     document.write(monthAbbrev)
+// }
 
 
+// Custom banaya
+
+// var charsLimit
+// var name = prompt("Enter your name")
+
+// var totchars = name.length
+// ------------------------------------**NAME KI PROBLEM CHECK KARWAO OOPER**---------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------
+
+// No.1
+var text = "It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing World War II the trilogy, which contains, with the weird applicability available only to poetry and myth, the essential notion that the good gray wizard can understand the evil magi precisely because he is just enough like them to grasp their minds and motives in ways that they cannot grasp his."
+
+for (var i = 0; i < text.length; i++) {
+    if (text.slice(i, i + 12) === "World War II") {
+        text = text.slice(0, i) + "the Second World War" + text.slice(i + 12);
+    }
+}
+
+document.write(text)
+
+// No.2
+// var para = "Do you know my name? my name is Abdul Rehman Khan"
+// for(var i = 0; i < para.length; i++){
+//     if(para.slice(i, i + 17) === "Abdul Rehman Khan") {
+//         para = para.slice(0, i) + "Muhammad Abdul Rehman Khan" + para.slice(i + 17)
+//     }
+// }
+// document.write(para)
