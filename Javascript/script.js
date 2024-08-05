@@ -343,21 +343,101 @@
 // -----------------------------------------------------------------------------------------------------------------------
 
 // No.1
-var text = "It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing World War II the trilogy, which contains, with the weird applicability available only to poetry and myth, the essential notion that the good gray wizard can understand the evil magi precisely because he is just enough like them to grasp their minds and motives in ways that they cannot grasp his."
+// var text = "It is startling World War II ye sab kuch bhi nahi he bas aik baat batane wala hun ke ye check kar raha hun mein koi cheez pata he ke lorem bhi likh sakta hun"
 
-for (var i = 0; i < text.length; i++) {
-    if (text.slice(i, i + 12) === "World War II") {
-        text = text.slice(0, i) + "the Second World War" + text.slice(i + 12);
-    }
-}
+// for (var i = 0; i < text.length; i++) {
+//     if (text.slice(i, i + 9) === "startling") {
+//         text = text.slice(0, i) + "me" + text.slice(i + 9);
+//     }
+// }
 
-document.write(text)
+// document.write(text)
 
 // No.2
 // var para = "Do you know my name? my name is Abdul Rehman Khan"
 // for(var i = 0; i < para.length; i++){
-//     if(para.slice(i, i + 17) === "Abdul Rehman Khan") {
-//         para = para.slice(0, i) + "Muhammad Abdul Rehman Khan" + para.slice(i + 17)
+//     if(para.slice(i, i + 4) === "know") {
+//         para = para.slice(0, i) + "finding" + para.slice(i + 4 )
 //     }
 // }
 // document.write(para)
+
+// ----------------------------------------index of method---------------------------------------------------------------------
+
+// var firstChar = text.indexOf("World War II");
+// if (firstChar !== -1) {
+// text = text.slice(0, firstChar) + "the Second World War" + text.slice(firstChar + 12);
+// }
+
+// document.write(text)
+
+// var myText = "The quick brown fox jumps over the lazy dog. Exactly you are shocked yeah it's really a lazy dog and fox is brown"
+// document.write(myText)
+// document.write("<br>")
+// document.write("<br>")
+// document.write("<br>")
+
+// var firstChar = myText.indexOf("fox")
+// if (firstChar !== -1) {
+//     myText = myText.slice(0, firstChar) + "bear" + myText.slice(firstChar + 3)
+// }
+
+// for(var i = 0; i < myText.length; i++) {
+//     if(myText.slice(i, i + 3) === "fox") {
+//         myText = myText.slice(0, i) + "bear" + myText.slice(i + 3)
+//     }
+    
+//     if(myText.slice(i, i + 5) === "brown") {
+//         myText = myText.slice(0, i) + "white" + myText.slice(i + 5)
+//     }
+    
+//     if(myText.slice(i, i + 3) === "dog") {
+//         myText = myText.slice(0, i) + "deer" + myText.slice(i + 3)
+//     }
+    
+//     if(myText.slice(i, i + 3) === "dog") {
+//         myText = myText.slice(0, i) + "deer" + myText.slice(i + 3)
+//     }
+    
+//     if(myText.slice(i, i + 4) === "lazy") {
+//         myText = myText.slice(0, i) + "innocent" + myText.slice(i + 4)
+//     }
+// }
+
+// document.write(myText)
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------WORKING ON FORM------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------
+
+var delWord = document.getElementById("delElement").value
+var repWord = document.getElementById("repElement").value
+// var delChars = delWord.length
+// var repChars = repWord.length
+
+// var pSave = document.getElementById("story")
+// var pCont = pSave.innerHTML
+
+// for(var i = 0; i < pCont.length; i++){
+//     if(pCont.slice(i, i + delChars) === delWord) {
+//         pCont = pCont.slice(0, i) + repWord + pCont.slice(i + delChars)
+//     }
+// }
+
+function changeProcess(){
+//     document.write(pCont)
+document.write(delWord)
+}
+
+
+
+// for (var i = 0; i < pCont.length; i++) {
+//     if (text.slice(i, i + 9) === "startling") {
+//         text = text.slice(0, i) + "me" + text.slice(i + 9);
+//     }
+// }
+
+// document.write(text)
+
