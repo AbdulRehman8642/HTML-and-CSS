@@ -18,6 +18,8 @@ body{
 
 .logo{
     padding: 0px 20px;
+    margin: 0px;
+    background-color: #F0F8FF;
 }
 
 .logo-text{
@@ -32,8 +34,13 @@ body{
 }
 
 .navbar{
-    /* background-color: aqua; */
+    background-color: #f0f8ff72;
     border-bottom: 1px solid #5F9EA0;
+    box-shadow: 0px 3px 12px -10px #5F9EA0;
+    padding: 0px;
+    padding-top: 6px;
+    position: sticky;
+    top: 0px;
 }
 
 .nav-items{
@@ -48,16 +55,35 @@ body{
     text-decoration: none;
     font-size: 20px;
     transition: 200ms;
-}
-
-.nav-link:hover{
-    /* text-shadow: 0px 0px 1px #5F9EA0; */
-    text-shadow: 0 0 40px  #025454, 0 0 40px #025454;
-    
+    /* padding: 6px 10px; */
+    padding: 0px;
+    background-color: #F0F8FF;
+    box-shadow: 0px 1px 6px #F0F8FF;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .nav-link p{
     margin: 0px;
+    /* padding: 5px 9px; */
+    padding: 0px;
+}
+
+.nav-link:hover{
+    /* text-shadow: 0px 0px 1px #5F9EA0; */
+    /* text-shadow: 0 0 40px  #025454, 0 0 40px #025454; */
+    /* background-color: #5a6774; */
+    /* color: #F0F8FF; */
+    /* dodododododoododdodododoododdodododoododdodododoododdodododoododododod */
+    /* border-radius: 50px;
+    padding: 5px 18px; */
+    padding: 6px 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 6px 22px;
+    /* border-radius: 20px; */
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.3), 6px 0px 10px -8px rgba(0, 0, 0, 0.3), -6px 0px 10px -8px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0px 3px 18px -8px #5F9EA0; */
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -118,10 +144,17 @@ body{
 .pic-back{
     height: 530px;
     width: 530px;
+<<<<<<< HEAD
     background-color: #062503;
     margin: 20px;
     border-radius: 100%;
     box-shadow: 0px 0px 30px black;
+=======
+    background-color: #000;
+    margin: 20px;
+    border-radius: 100%;
+    box-shadow: 0px 1px 20px crimson;
+>>>>>>> 36e97a205f2d1c1a341bc5d078f678a831c87b31
 }
 
 .circle-parnt{
@@ -133,8 +166,6 @@ body{
     flex-direction: row-reverse;
     justify-content: space-between;
     margin: 0px;
-    padding: 0px;
-    padding: 20px;
 }
 
 .first-t-parnt{
@@ -154,17 +185,25 @@ body{
 
 .stopwt{
     font-weight: 900;
-    color: brown;
+    color: crimson;
     font-size: 45px;
     text-shadow: 0px 0px 3px black;
 }
 
 .fin{
-    color: aqua;
+    color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 45px;
     -webkit-text-stroke: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 0px 0px 5px black;
     font-weight: 900;
+    filter: blur(8px);
+    transition: 300ms;
     /* -webkit-text-stroke-width: 2px; */
+}
+
+.fin:hover{
+    filter: blur(0px);
+    cursor: default;
 }

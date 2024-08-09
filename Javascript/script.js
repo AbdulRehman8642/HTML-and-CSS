@@ -412,32 +412,48 @@
 // ---------------------------------------------WORKING ON FORM------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------------------------------------
 
-var delWord = document.getElementById("delElement").value
-var repWord = document.getElementById("repElement").value
+// var pSave = document.getElementById("story")
+// var pCont = pSave.innerHTML
+// var delWord = document.forms["myForm"]["delInp"].value
+// var repWord = document.forms["myForm"]["repInp"].value
 // var delChars = delWord.length
 // var repChars = repWord.length
 
 // var pSave = document.getElementById("story")
 // var pCont = pSave.innerHTML
+// var delWord = document.getElementById("delElement").value
+// var repWord = document.getElementById("repElement").value
+// var delChars = delWord.length
+// var repChars = repWord.length
 
-// for(var i = 0; i < pCont.length; i++){
-//     if(pCont.slice(i, i + delChars) === delWord) {
-//         pCont = pCont.slice(0, i) + repWord + pCont.slice(i + delChars)
+
+// for (var i = 0; i < text.length; i++) {
+//     if (text.slice(i, i + 9) === "startling") {
+//         text = text.slice(0, i) + "changed word" + text.slice(i + 9);
 //     }
 // }
 
 function changeProcess(){
-//     document.write(pCont)
-document.write(delWord)
+    var pSave = document.getElementById("story")
+    var pCont = pSave.innerHTML
+    var delWord = document.getElementById("delElement").value
+    var repWord = document.getElementById("repElement").value
+    var delChars = delWord.length
+    var repChars = repWord.length
+
+    // for(var i = 0; i < pCont.length; i++){        
+    //     if(pCont.slice(i, i + delChars).toLowerCase() === delWord.toLowerCase()) {
+    //         pCont = pCont.slice(0, i) + repWord + pCont.slice(i + delChars)
+    //     }
+    // }
+
+    var changedWord = pCont.replace(delWord, repWord)
+    document.write(changedWord)
+    document.write("<br>")
+    document.write("<br>")
+    document.write("<br>")
+    document.write("<br>")
+    document.write(totChars)
+    document.write("<br>")
+    document.write(totCharsLength)
 }
-
-
-
-// for (var i = 0; i < pCont.length; i++) {
-//     if (text.slice(i, i + 9) === "startling") {
-//         text = text.slice(0, i) + "me" + text.slice(i + 9);
-//     }
-// }
-
-// document.write(text)
-
