@@ -57,8 +57,8 @@ body{
     transition: 200ms;
     /* padding: 6px 10px; */
     padding: 0px;
-    background-color: #F0F8FF;
-    box-shadow: 0px 1px 6px #F0F8FF;
+    /* background-color: #F0F8FF;
+    box-shadow: 0px 1px 6px #F0F8FF; */
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -81,8 +81,9 @@ body{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     padding: 6px 22px;
-    /* border-radius: 20px; */
+    background-color: #F0F8FF;
     box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.3), 6px 0px 10px -8px rgba(0, 0, 0, 0.3), -6px 0px 10px -8px rgba(0, 0, 0, 0.3);
+    /* border-radius: 20px; */
     /* box-shadow: 0px 3px 18px -8px #5F9EA0; */
 }
 
@@ -144,17 +145,14 @@ body{
 .pic-back{
     height: 530px;
     width: 530px;
-<<<<<<< HEAD
     background-color: #062503;
     margin: 20px;
     border-radius: 100%;
     box-shadow: 0px 0px 30px black;
-=======
     background-color: #000;
     margin: 20px;
     border-radius: 100%;
     box-shadow: 0px 1px 20px crimson;
->>>>>>> 36e97a205f2d1c1a341bc5d078f678a831c87b31
 }
 
 .circle-parnt{
