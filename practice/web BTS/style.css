@@ -144,17 +144,10 @@ body{
 .pic-back{
     height: 530px;
     width: 530px;
-<<<<<<< HEAD
-    background-color: #062503;
-    margin: 20px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 30px black;
-=======
     background-color: #000;
     margin: 20px;
     border-radius: 100%;
     box-shadow: 0px 1px 20px crimson;
->>>>>>> 36e97a205f2d1c1a341bc5d078f678a831c87b31
 }
 
 .circle-parnt{

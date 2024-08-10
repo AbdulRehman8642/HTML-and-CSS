@@ -433,13 +433,13 @@
 //     }
 // }
 
-function changeProcess(){
-    var pSave = document.getElementById("story")
-    var pCont = pSave.innerHTML
-    var delWord = document.getElementById("delElement").value
-    var repWord = document.getElementById("repElement").value
-    var delChars = delWord.length
-    var repChars = repWord.length
+// function changeProcess(){
+//     var pSave = document.getElementById("story")
+//     var pCont = pSave.innerHTML
+//     var delWord = document.getElementById("delElement").value
+//     var repWord = document.getElementById("repElement").value
+//     var delChars = delWord.length
+//     var repChars = repWord.length
 
     // for(var i = 0; i < pCont.length; i++){        
     //     if(pCont.slice(i, i + delChars).toLowerCase() === delWord.toLowerCase()) {
@@ -447,13 +447,13 @@ function changeProcess(){
     //     }
     // }
 
-    var changedWord = pCont.replace(delWord, repWord)
-    document.write(changedWord)
-    document.write("<br>")
-    document.write("<br>")
-    document.write("<br>")
-    document.write("<br>")
-    document.write(totChars)
-    document.write("<br>")
-    document.write(totCharsLength)
-}
+//     var changedWord = pCont.replace(delWord, repWord)
+//     document.write(changedWord)
+//     document.write("<br>")
+//     document.write("<br>")
+//     document.write("<br>")
+//     document.write("<br>")
+//     document.write(totChars)
+//     document.write("<br>")
+//     document.write(totCharsLength)
+// }
