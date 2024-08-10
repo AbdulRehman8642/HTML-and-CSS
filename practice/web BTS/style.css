@@ -142,25 +142,17 @@ body{
 }
 
 .pic-back{
-    height: 80%;
-    width: 80%;
-    background-color: #062503;
-    margin: 20px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 30px black;
+    height: 530px;
+    width: 530px;
     background-color: #000;
     margin: 20px;
     border-radius: 100%;
     box-shadow: 0px 1px 20px crimson;
 }
 
-.hussha{
-    /* width: ; */
-}
-
-.circle-parnt{
-    /* display: flex; */
-}
+/* .circle-parnt{
+    display: flex;
+} */
 
 .first-parnt{
     height: 90vh;
