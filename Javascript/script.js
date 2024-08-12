@@ -521,7 +521,7 @@
 //---------------------------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------------------------
-// Problem No # 5
+// Problem No#5
 // var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // for(var i = 1; i < 11; i++){
 //     for(var v = 1; v < 11; v++){
@@ -538,3 +538,31 @@
 //     }
 // }
 //---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+// Problem No#6
+// var colors = ["red", "green", "blue", "yellow", "purple"]
+// var addingColor = prompt("Add your color")
+// var removingColor = prompt("Remove the last color")
+// var replacingColor = prompt("Replace the color")
+// colors.unshift(addingColor)
+// colors.pop(removingColor)
+// colors.replace(replacingColor, colors[2])
+// document.write(colors)
+//---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+// Problem No#7
+var username = prompt("Enter the username")
+var usernameChars =username.length
+for(var i = 0; i < username.length; i++){
+    if(username.slice(i, i + 1) === " "){
+        document.write("Usernames cannot contain spaces" + "<br>")
+    }
+    break
+}
+if(usernameChars < 5){
+    document.write("Usernames must be atleast 5 characters long")
+}
+//---------------------------------------------------------------------------------------------
+
