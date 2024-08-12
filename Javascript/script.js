@@ -457,3 +457,84 @@
 //     document.write("<br>")
 //     document.write(totCharsLength)
 // }
+
+//---------------------------------------------------------------------------------------------
+// ------------------------------TEST OF HASAN BHAI JAVASCRIPT-------------------------------//
+//---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+//Problem No#1
+
+// var name = prompt("Enter your name")
+// alert("Hello " + name)
+// var age = prompt("Enter your age")
+// if(age >= 18){
+// 	document.write("You are eligible to vote")
+// }
+// else{
+    // 	document.write("You are not eligible to vote")
+// }
+//---------------------------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------------------
+// Problem No#2
+
+// var price1 = prompt("Enter first item cost")
+// var price2 = prompt("Enter second item cost")
+// var totCost = Number(price1) + Number(price2)
+
+// document.write("The total cost is " + totCost)
+// document.write("The first item price is " + price1)
+// document.write("The second item price is " + price2)
+//---------------------------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------------------
+// Problem No#3
+
+// var fruits = ["mango", "apple", "banana", "watermelon", "orange"]
+
+// for(var i = 0; i < fruits.length; i++){
+//     alert("I found " + fruits[i])
+// }
+//---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+// Problem No#4
+
+// var sentence = prompt("Enter a sentence")
+// sentence = sentence.toLowerCase()
+// var checker = false
+// for(var i = 0; i < sentence.length; i++){
+//     if(sentence.slice(i, i + 10) === "javascript"){
+//         checker = true
+//     }
+// }
+
+// if(checker === true){
+//     document.write("The sentence contains a word 'Javascript'")
+// }
+// else{
+//     document.write("The sentence doesn't contains a word 'Javascript'")
+// }
+//---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+// Problem No # 5
+// var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// for(var i = 1; i < 11; i++){
+//     for(var v = 1; v < 11; v++){
+//         // document.write(i * v + "<br>")
+//         var multiply = i * v
+//         var table = i + " * " + v + " = " + multiply
+//         var evenCheck = multiply % 2
+//         if(evenCheck === 0){
+//             document.write(table + " (is even)" + "<br>")
+//         }
+//         else{
+//         document.write(table + "<br>")
+//         }
+//     }
+// }
+//---------------------------------------------------------------------------------------------
