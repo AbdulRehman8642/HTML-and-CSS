@@ -553,16 +553,39 @@
 
 //---------------------------------------------------------------------------------------------
 // Problem No#7
+// var space = " "
+// var spaceChecker = false
+var specialChars = "!@#$%^&*()-_=+{}[]:;'<>,.?/\|~`"
+var specialCharChecker = false
 var username = prompt("Enter the username")
-var usernameChars =username.length
+var usernameChars = username.length
 for(var i = 0; i < username.length; i++){
-    if(username.slice(i, i + 1) === " "){
-        document.write("Usernames cannot contain spaces" + "<br>")
+    if(username.slice(i, i + 1) === space){
+        spaceChecker = true
     }
-    break
 }
+
+for(var j = 0; j < specialChars.length; j++){
+    for(var k = 0; k < username.length; k++){
+        if(username.slice(k, k + 1) === username[j]){
+        // if(username.slice(k, k + 1) === username[j]){
+            specialCharChecker = true
+        }
+    }
+}
+
+if(spaceChecker === true){
+    document.write("Usernames cannot contain spaces" + "<br>")
+}
+
+if(specialCharChecker === true){
+    document.write("Usernames cannot contain special character like @,#,$,%" + "<br>")
+}
+
 if(usernameChars < 5){
     document.write("Usernames must be atleast 5 characters long")
-}
+} 
+
+
 //---------------------------------------------------------------------------------------------
 
