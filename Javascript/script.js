@@ -543,11 +543,11 @@
 // Problem No#6
 // var colors = ["red", "green", "blue", "yellow", "purple"]
 // var addingColor = prompt("Add your color")
-// var removingColor = prompt("Remove the last color")
 // var replacingColor = prompt("Replace the color")
+// var removingColor = prompt("Remove the last color")
 // colors.unshift(addingColor)
-// colors.pop(removingColor)
 // colors.replace(replacingColor, colors[2])
+// colors.pop(removingColor)
 // document.write(colors)
 //---------------------------------------------------------------------------------------------
 
@@ -555,36 +555,38 @@
 // Problem No#7
 // var space = " "
 // var spaceChecker = false
-var specialChars = "!@#$%^&*()-_=+{}[]:;'<>,.?/\|~`"
-var specialCharChecker = false
-var username = prompt("Enter the username")
-var usernameChars = username.length
-for(var i = 0; i < username.length; i++){
-    if(username.slice(i, i + 1) === space){
-        spaceChecker = true
-    }
-}
+// var specialChars = "!@#$%^&*()-_=+{}[]:;'<>,.?/\|~`"
+// var specialCharChecker = false
+// var username = prompt("Enter the username")
+// var usernameChars = username.length
+// for(var i = 0; i < username.length; i++){
+//     if(username.slice(i, i + 1) === space){
+//         spaceChecker = true
+//     }
+// }
+// const startTime=new Date().getMilliseconds()
+// for(var j = 0; j < specialChars.length; j++){
+//     console.log('here')
+//     for(var k = 0; k < username.length; k++){
+//         if(username[k] === specialChars[j]){
+//             specialCharChecker = true
+//             break
+//         }
+//     }
+// }
+// const endTime=new Date().getMilliseconds()
+// console.log('time',endTime-startTime)
+// if(spaceChecker){
+//     document.write("Usernames cannot contain spaces" + "<br>")
+// }
 
-for(var j = 0; j < specialChars.length; j++){
-    for(var k = 0; k < username.length; k++){
-        if(username.slice(k, k + 1) === username[j]){
-        // if(username.slice(k, k + 1) === username[j]){
-            specialCharChecker = true
-        }
-    }
-}
+// if(specialCharChecker){
+//     document.write("Usernames cannot contain special character like @,#,$,%" + "<br>")
+// }
 
-if(spaceChecker === true){
-    document.write("Usernames cannot contain spaces" + "<br>")
-}
-
-if(specialCharChecker === true){
-    document.write("Usernames cannot contain special character like @,#,$,%" + "<br>")
-}
-
-if(usernameChars < 5){
-    document.write("Usernames must be atleast 5 characters long")
-} 
+// if(usernameChars < 5){
+//     document.write("Usernames must be atleast 5 characters long")
+// } 
 
 
 //---------------------------------------------------------------------------------------------
