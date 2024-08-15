@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .a_parnt{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .row1 > img , .row2 > img , .row3 > img{
+            width: 150px;
+        }
+
+        .row1 , .row2 , .row3{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .images > .row2 > .dg{
+            width: 70px;
+        }
+
+        .images > .row2 > .lucky{
+            width: 240px;
+        }
+
+        .p_parnt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .p_parnt > h1{
+            width: fit-content;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="a_parnt">
+      <div class="p_parnt">
+        <h1 class="hkey">Our key Client</h1>
+        <p class="pkey">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+          necessitatibus rerum maiores?
+        </p>
+      </div>
+      <div class="images">
+        <div class="row1">
+            <img src="https://seeklogo.com/images/N/national-bank-of-pakistan-logo-966A8DD8BA-seeklogo.com.png" alt="NBP">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/33/TCS_Pakistan_logo.png" alt="TCS">
+            <img src="https://seeklogo.com/images/P/parco-logo-7B1542A900-seeklogo.com.png" alt="PARCO"/>
+        </div>
+        <div class="row2">
+            <img class="dg" src="./600-6004641_dg-khan-cement-logo-hd-png-download-removebg-preview.png" alt="DG">
+            <img class="lucky" src="https://www.lucky-cement.com/wp-content/uploads/2017/02/lucky-logo.png" alt="lucky">
+            <img src="https://i.pinimg.com/originals/e1/37/2a/e1372a039203d4f99dc27927c7174146.png" alt="FFC">
+        </div>
+        <div class="row3">
+            <img src="https://seeklogo.com/images/B/beaconhouse-school-system-logo-B8DD760BF0-seeklogo.com.png" alt="school">
+            <img src="https://www.ziauddinhospital.com/wp-content/uploads/2022/03/Logo-estd.png" alt="">
+            <img src="./file.png" alt="hockey">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
