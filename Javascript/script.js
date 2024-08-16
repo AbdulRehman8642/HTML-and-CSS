@@ -543,10 +543,10 @@
 // Problem No#6
 // var colors = ["red", "green", "blue", "yellow", "purple"]
 // var addingColor = prompt("Add your color")
-// var replacingColor = prompt("Replace the color")
+// var replacedColor = prompt("Replace the color")
 // var removingColor = prompt("Remove the last color")
-// colors.unshift(addingColor)
-// colors.replace(replacingColor, colors[2])
+// colors.unshift(addingColor)  
+// colors[3] = replacedColor
 // colors.pop(removingColor)
 // document.write(colors)
 //---------------------------------------------------------------------------------------------
