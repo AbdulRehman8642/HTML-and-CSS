@@ -543,11 +543,11 @@
 // Problem No#6
 // var colors = ["red", "green", "blue", "yellow", "purple"]
 // var addingColor = prompt("Add your color")
+// var replacedColor = prompt("Replace the color")
 // var removingColor = prompt("Remove the last color")
-// var replacingColor = prompt("Replace the color")
-// colors.unshift(addingColor)
+// colors.unshift(addingColor)  
+// colors[3] = replacedColor
 // colors.pop(removingColor)
-// colors.replace(replacingColor, colors[2])
 // document.write(colors)
 //---------------------------------------------------------------------------------------------
 
@@ -564,20 +564,23 @@
 //         spaceChecker = true
 //     }
 // }
-
+// const startTime=new Date().getMilliseconds()
 // for(var j = 0; j < specialChars.length; j++){
+//     console.log('here')
 //     for(var k = 0; k < username.length; k++){
 //         if(username[k] === specialChars[j]){
 //             specialCharChecker = true
+//             break
 //         }
 //     }
 // }
-
-// if(spaceChecker === true){
+// const endTime=new Date().getMilliseconds()
+// console.log('time',endTime-startTime)
+// if(spaceChecker){
 //     document.write("Usernames cannot contain spaces" + "<br>")
 // }
 
-// if(specialCharChecker === true){
+// if(specialCharChecker){
 //     document.write("Usernames cannot contain special character like @,#,$,%" + "<br>")
 // }
 
@@ -588,35 +591,6 @@
 
 //---------------------------------------------------------------------------------------------
 
-// var age = prompt("Enter you age")
-// var age2 = prompt("Enter you age2")
-// var a = "5.8"
-// var b = parseInt("9.6")
-// document.write(Math.round(b))
-// document.write(typeof b)
-
-// var num = 347.285
-// var str = num.toString()
-// if(str.charAt(str.length - 1) === "5"){
-//     str = str.slice(0, str.length - 1) + "6"
-// }
-// num = Number(str)
-// realNum = num.toFixed(2)
-
-// document.write(realNum)
-// =========================================================================================================================
-
-// =========================================================================================================================
-// var rightNow = new Date()
-// var today =  rightNow.getDay()
-// document.write(today)
-
-// var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-// var now = new Date()
-// var theDay = now.getDay()
-// var nameOfToday = dayNames[theDay]
-// document.write(nameOfToday)
-
-// var array = ["fortuner", "revo", "civic", "uaeh", "iotaowehfo", "eirhsoa", "ieruowhg", "ieawhog", "eoi", "oppo"]
-// var output = array.slice(1, array.length - 1)
-// document.write(output)
+//---------------------------------------------------------------------------------------------
+// -----------------------END OF TEST OF HASAN BHAI JAVASCRIPT-------------------------------//
+//---------------------------------------------------------------------------------------------
