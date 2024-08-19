@@ -555,37 +555,68 @@
 // Problem No#7
 // var space = " "
 // var spaceChecker = false
-var specialChars = "!@#$%^&*()-_=+{}[]:;'<>,.?/\|~`"
-var specialCharChecker = false
-var username = prompt("Enter the username")
-var usernameChars = username.length
-for(var i = 0; i < username.length; i++){
-    if(username.slice(i, i + 1) === space){
-        spaceChecker = true
-    }
-}
+// var specialChars = "!@#$%^&*()-_=+{}[]:;'<>,.?/\|~`"
+// var specialCharChecker = false
+// var username = prompt("Enter the username")
+// var usernameChars = username.length
+// for(var i = 0; i < username.length; i++){
+//     if(username.slice(i, i + 1) === space){
+//         spaceChecker = true
+//     }
+// }
 
-for(var j = 0; j < specialChars.length; j++){
-    for(var k = 0; k < username.length; k++){
-        if(username.slice(k, k + 1) === username[j]){
-        // if(username.slice(k, k + 1) === username[j]){
-            specialCharChecker = true
-        }
-    }
-}
+// for(var j = 0; j < specialChars.length; j++){
+//     for(var k = 0; k < username.length; k++){
+//         if(username[k] === specialChars[j]){
+//             specialCharChecker = true
+//         }
+//     }
+// }
 
-if(spaceChecker === true){
-    document.write("Usernames cannot contain spaces" + "<br>")
-}
+// if(spaceChecker === true){
+//     document.write("Usernames cannot contain spaces" + "<br>")
+// }
 
-if(specialCharChecker === true){
-    document.write("Usernames cannot contain special character like @,#,$,%" + "<br>")
-}
+// if(specialCharChecker === true){
+//     document.write("Usernames cannot contain special character like @,#,$,%" + "<br>")
+// }
 
-if(usernameChars < 5){
-    document.write("Usernames must be atleast 5 characters long")
-} 
+// if(usernameChars < 5){
+//     document.write("Usernames must be atleast 5 characters long")
+// } 
 
 
 //---------------------------------------------------------------------------------------------
 
+// var age = prompt("Enter you age")
+// var age2 = prompt("Enter you age2")
+// var a = "5.8"
+// var b = parseInt("9.6")
+// document.write(Math.round(b))
+// document.write(typeof b)
+
+// var num = 347.285
+// var str = num.toString()
+// if(str.charAt(str.length - 1) === "5"){
+//     str = str.slice(0, str.length - 1) + "6"
+// }
+// num = Number(str)
+// realNum = num.toFixed(2)
+
+// document.write(realNum)
+// =========================================================================================================================
+
+// =========================================================================================================================
+// var rightNow = new Date()
+// var today =  rightNow.getDay()
+// document.write(today)
+
+// var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+// var now = new Date()
+// var theDay = now.getDay()
+// var nameOfToday = dayNames[theDay]
+// document.write(nameOfToday)
+
+// var array = ["fortuner", "revo", "civic", "uaeh", "iotaowehfo", "eirhsoa", "ieruowhg", "ieawhog", "eoi", "oppo"]
+// var output = array.slice(1, array.length - 1)
+// document.write(output)
