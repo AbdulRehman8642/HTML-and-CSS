@@ -599,17 +599,29 @@
 // -------------------------------------------------PERMUTATION------------------------------------------------------------
 // ========================================================================================================================
 
-// var word = "kite"
-// var wordLength = word.length
-// var multiply=1
-// for(var i = wordLength; i > 0; i--){
-//         multiply = multiply * i
-// }
-// for(var j = 0; j < multiply; j++){
-    
-//     var di = word.indexOf("kite")
-//     document.write(di)
-// }
+var word = "kit"
+var firstChar
+var remChar
+var nWord
+var wordLength = word.length
+var multiply=1
+for(var i = wordLength; i > 0; i--){
+        multiply = multiply * i
+}
 // document.write(multiply)
-
-
+for(var k = 0; k < multiply; k++){
+    for(var j = 0; j < wordLength; j++){
+        // firstChar = word.slice(k, k+1)
+        // remChar = word.slice(k+1, k+2)
+        // // document.write(firstChar)
+        // document.write("<br>")
+        // nWord = word.replace(firstChar, remChar)
+        // document.write(nWord)
+        // document.write("<br>")
+        // document.write(remChar)
+        nWord = word.replace(word[k], word[j])
+        document.write(nWord)
+        document.write("<br>")
+        break
+    }
+}
