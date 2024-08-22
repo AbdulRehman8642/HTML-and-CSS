@@ -1,7 +1,77 @@
-#a-parnt{
+/* #a-parnt{
     display: none;
 }
 
 #b-parnt{
     display: none;
 }
+
+.calculator-parnt-bord{
+    box-shadow: 1px 0px 4px black;
+    border-radius: 2px;
+    width: fit-content;
+}
+
+.calculator-parnt{
+    background-color: cadetblue;
+    width: fit-content;
+    padding: 6px;
+}
+
+.rows{
+    padding: 10px 0px;
+}
+
+.buttons{
+    border: none;
+    border-radius: 4% 40% 10% 40%;
+    box-shadow: 1px 0px 3px black;
+    background-color: gold;
+    font-size: 34px;
+    font-weight: 900;
+    padding: 10px 20px;
+    margin: 2px;
+    transition: 200ms;
+}
+
+.buttons:hover{
+    background-color: black;
+    color: gold;
+}
+
+.fDivide{
+    padding: 10px 26px;
+}
+
+.fSubt{
+    padding: 10px 25px;
+}
+
+.fEqual{
+    padding: 10px 21px;
+}
+
+.nPoint{
+    padding: 10px 25px;
+}
+
+.fMulti,
+.fSubt,
+.fDivide,
+.fAdd{
+    background-color: black;
+    color: gold;
+}
+
+.fEqual:hover{
+    background-color: rgb(63, 255, 178);
+    color: black;
+}
+
+.fMulti:hover,
+.fSubt:hover,
+.fDivide:hover,
+.fAdd:hover{
+    background-color: gold;
+    color: black;
+} */

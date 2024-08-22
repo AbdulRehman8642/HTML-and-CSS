@@ -599,29 +599,101 @@
 // -------------------------------------------------PERMUTATION------------------------------------------------------------
 // ========================================================================================================================
 
-var word = "kit"
-var firstChar
-var remChar
-var nWord
-var wordLength = word.length
-var multiply=1
-for(var i = wordLength; i > 0; i--){
-        multiply = multiply * i
-}
-// document.write(multiply)
-for(var k = 0; k < multiply; k++){
-    for(var j = 0; j < wordLength; j++){
-        // firstChar = word.slice(k, k+1)
-        // remChar = word.slice(k+1, k+2)
-        // // document.write(firstChar)
-        // document.write("<br>")
-        // nWord = word.replace(firstChar, remChar)
-        // document.write(nWord)
-        // document.write("<br>")
-        // document.write(remChar)
-        nWord = word.replace(word[k], word[j])
-        document.write(nWord)
-        document.write("<br>")
-        break
-    }
-}
+// var word = "kit"
+// var firstChar
+// var remChar
+// var nWord
+// var wordLength = word.length
+// var multiply=1
+// for(var i = wordLength; i > 0; i--){
+//         multiply = multiply * i
+// }
+
+// // document.write(multiply)
+// for(var k = 0; k < multiply; k++){
+//     for(var h = 0; h < wordLength; h++){
+//         for(var j = 0; j < wordLength; j++){
+//             // firstChar = word.slice(k, k+1)
+//             // remChar = word.slice(k+1, k+2)
+//             // // document.write(firstChar)
+//             // document.write("<br>")
+//             // nWord = word.replace(firstChar, remChar)
+//             // document.write(nWord)
+//             // document.write("<br>")
+//             // document.write(remChar)
+//             if(h !== j){
+//                 nWord = word.replace(word[h], word[j])
+//                 document.write(nWord)
+//                 document.write("<br>")
+//             }
+//             // break
+//         }
+//     }
+//     break
+// }
+// ========================================================================================================================
+// ------------------------------------------------PERMUTATION--CLOSE------------------------------------------------------
+// ========================================================================================================================
+
+
+// ========================================================================================================================
+// -----------------------------------------------------CALCULATOR---------------------------------------------------------
+// ========================================================================================================================
+
+// var one = document.getElementById("n1").innerHTML
+// var two = document.getElementById("n2").innerHTML
+// var three = document.getElementById("n3").innerHTML
+// var four = document.getElementById("n4").innerHTML
+// var five = document.getElementById("n5").innerHTML
+// var six = document.getElementById("n6").innerHTML
+// var seven = document.getElementById("n7").innerHTML
+// var eight = document.getElementById("n8").innerHTML
+// var nine = document.getElementById("n9").innerHTML
+// document.write(one)
+// document.write(two)
+// document.write(three)
+// document.write(four)
+// document.write(five)
+// document.write(six)
+// document.write(seven)
+// document.write(eight)
+// document.write(nine)
+
+// ========================================================================================================================
+// -----------------------------------------------------CALCULATOR---------------------------------------------------------
+// ========================================================================================================================
+
+
+var myArr = Array.from(Array(1000) .keys())
+// document.write(myArr)
+document.write("<br>")
+document.write("<br>")
+document.write("<br>")
+document.write("<br>")
+document.write("<br>")
+
+var date1 = new Date()
+var date1Milli = date1.getMilliseconds()
+// ----------------Method1
+// var firstValue = myArr.slice(0,1)
+// var lastValue = myArr.slice(myArr.length-1)
+
+// ----------------Method2
+// var firstValue = myArr[0]
+// var lastValue = myArr.length-1
+
+// ----------------Method3
+var firstValue = myArr.splice(0,1)
+var lastValue = myArr.splice(myArr.length-1)
+
+document.write(firstValue)
+document.write("<br>")
+document.write("<br>")
+document.write("<br>")
+document.write(lastValue)
+var date2 = new Date()
+var date2Milli = date2.getMilliseconds()
+document.write("<br>")
+
+var totalMilliSeconds = date1Milli - date2Milli
+document.write(totalMilliSeconds)
