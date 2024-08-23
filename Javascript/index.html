@@ -65,7 +65,8 @@
             </div>
             <input type="submit" onclick="changeProcess()" value="Change">
         </form> -->
-<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- -------------------------------------------------------------
+ ----------------------------------------------------------- -->
         <!-- <button onclick="write()">click</button> -->
 
 
@@ -75,38 +76,37 @@
 <!-- =====================================================CALCULATOR======================================================= -->
 <!-- ====================================================================================================================== -->
 
-<!-- <div class="calculator-parnt-bord">
-    <div class="inpOut">
-
+<div class="calculator-parnt-bord">
+    <div class="inpOut" id="inpOut">
+        
     </div>
     <div class="calculator-parnt">
-        <div class="row1 rows">
-            <button id="n7" class="n7 buttons">7</button>
-            <button id="n8" class="n8 buttons">8</button>
-            <button id="n9" class="n9 buttons">9</button>
-            <button id="fDivide" class="fDivide buttons">/</button>
+        <div class="row1 rows container">
+            <button id="n7" class="n7 buttons col-3" onclick="pressNumber(7)"><p>7</p></button>
+            <button id="n8" class="n8 buttons col-3" onclick="pressNumber(8)"><p>8</p></button>
+            <button id="n9" class="n9 buttons col-3" onclick="pressNumber(9)"><p>9</p></button>
+            <button id="fDivide" class="fDivide buttons col-3" onclick="pressNumber('/')">/</button>
         </div>
-        <div class="row2 rows">
-            <button id="n4" class="n4 buttons">4</button>
-            <button id="n5" class="n5 buttons">5</button>
-            <button id="n6" class="n6 buttons">6</button>
-            <button id="fMulti" class="fMulti buttons">x</button>
+        <div class="row2 rows container">
+            <button id="n4" class="n4 buttons" onclick="pressNumber(4)"><p>4</p></button>
+            <button id="n5" class="n5 buttons" onclick="pressNumber(5)"><p>5</p></button>
+            <button id="n6" class="n6 buttons" onclick="pressNumber(6)"><p>6</p></button>
+            <button id="fMulti" class="fMulti buttons" onclick="pressNumber('*')">*</button>
         </div>
-        <div class="row3 rows">
-            <button id="n1" class="n1 buttons">1</button>
-            <button id="n2" class="n2 buttons">2</button>
-            <button id="n3" class="n3 buttons">3</button>
-            <button id="fSubt" class="fSubt buttons">-</button>
+        <div class="row3 rows container">
+            <button id="n1" class="n1 buttons" onclick="pressNumber(1)"><p>1</p></button>
+            <button id="n2" class="n2 buttons" onclick="pressNumber(2)"><p>2</p></button>
+            <button id="n3" class="n3 buttons" onclick="pressNumber(3)"><p>3</p></button>
+            <button id="fSubt" class="fSubt buttons" onclick="pressNumber('-')">-</button>
         </div>
-        <div class="row4 rows">
-            <button id="n0" class="n0 buttons">0</button>
-            <button id="nPoint" class="nPoint buttons">.</button>
-            <button id="fEqual" class="fEqual buttons">=</button>
-            <button id="fAdd" class="fAdd buttons">+</button>
+        <div class="row4 rows container">
+            <button id="n0" class="n0 buttons"  onclick="pressNumber(0)"><p>0</p></button>
+            <button id="nPoint" class="nPoint buttons" onclick="fPoint('.')"><p>.</p></button>
+            <button id="fEqual" class="fEqual buttons" onclick="result()"><p>=</p></button>
+            <button id="fAdd" class="fAdd buttons" onclick="pressNumber('+')"><p>+</p></button>
         </div>
     </div>
 </div>
-<p id="check">7</p> -->
 
     <script src="script.js"></script>
 </body>

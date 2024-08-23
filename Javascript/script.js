@@ -640,15 +640,19 @@
 // -----------------------------------------------------CALCULATOR---------------------------------------------------------
 // ========================================================================================================================
 
-// var one = document.getElementById("n1").innerHTML
-// var two = document.getElementById("n2").innerHTML
-// var three = document.getElementById("n3").innerHTML
-// var four = document.getElementById("n4").innerHTML
-// var five = document.getElementById("n5").innerHTML
-// var six = document.getElementById("n6").innerHTML
-// var seven = document.getElementById("n7").innerHTML
-// var eight = document.getElementById("n8").innerHTML
-// var nine = document.getElementById("n9").innerHTML
+var point = document.getElementById("nPoint").innerHTML
+var zero = document.getElementById("n0").innerHTML
+var one = document.getElementById("n1").innerHTML
+var two = document.getElementById("n2").innerHTML
+var three = document.getElementById("n3").innerHTML
+var four = document.getElementById("n4").innerHTML
+var five = document.getElementById("n5").innerHTML
+var six = document.getElementById("n6").innerHTML
+var seven = document.getElementById("n7").innerHTML
+var eight = document.getElementById("n8").innerHTML
+var nine = document.getElementById("n9").innerHTML
+var inpOutput = document.getElementById("inpOut").innerHTML
+// document.write(zero)
 // document.write(one)
 // document.write(two)
 // document.write(three)
@@ -659,41 +663,51 @@
 // document.write(eight)
 // document.write(nine)
 
+function pressNumber (number) {
+    console.log(number)
+    document.getElementById("inpOut").innerHTML += number
+}
+function result () {
+   var val= document.getElementById("inpOut").innerHTML
+   document.getElementById("inpOut").innerHTML=eval(val)
+}
+
 // ========================================================================================================================
 // -----------------------------------------------------CALCULATOR---------------------------------------------------------
 // ========================================================================================================================
 
 
-var myArr = Array.from(Array(1000) .keys())
-// document.write(myArr)
-document.write("<br>")
-document.write("<br>")
-document.write("<br>")
-document.write("<br>")
-document.write("<br>")
+// var myArr = Array.from(Array(1000) .keys())
+// // document.write(myArr)
+// document.write("<br>")
+// document.write("<br>")
+// document.write("<br>")
+// document.write("<br>")
+// document.write("<br>")
 
-var date1 = new Date()
-var date1Milli = date1.getMilliseconds()
-// ----------------Method1
-// var firstValue = myArr.slice(0,1)
-// var lastValue = myArr.slice(myArr.length-1)
+// var date1 = new Date()
+// var date1Milli = date1.getMilliseconds()
+// // ----------------Method1
+// // var firstValue = myArr.slice(0,1)
+// // var lastValue = myArr.slice(myArr.length-1)
 
-// ----------------Method2
-// var firstValue = myArr[0]
-// var lastValue = myArr.length-1
+// // ----------------Method2
+// // var firstValue = myArr[0]
+// // var lastValue = myArr.length-1
 
-// ----------------Method3
-var firstValue = myArr.splice(0,1)
-var lastValue = myArr.splice(myArr.length-1)
+// // ----------------Method3
+// // var firstValue = myArr.splice(0,1)
+// // var lastValue = myArr.splice(myArr.length-1)
 
-document.write(firstValue)
-document.write("<br>")
-document.write("<br>")
-document.write("<br>")
-document.write(lastValue)
-var date2 = new Date()
-var date2Milli = date2.getMilliseconds()
-document.write("<br>")
+// document.write(firstValue)
+// document.write("<br>")
+// document.write("<br>")
+// document.write("<br>")
+// document.write(lastValue)
+// var date2 = new Date()
+// var date2Milli = date2.getMilliseconds()
+// document.write("<br>")
+// document.write("<br>")
 
-var totalMilliSeconds = date1Milli - date2Milli
-document.write(totalMilliSeconds)
+// var totalMilliSeconds = date2Milli - date1Milli
+// console.log(totalMilliSeconds)
