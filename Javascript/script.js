@@ -640,36 +640,54 @@
 // -----------------------------------------------------CALCULATOR---------------------------------------------------------
 // ========================================================================================================================
 
-var point = document.getElementById("nPoint").innerHTML
-var zero = document.getElementById("n0").innerHTML
-var one = document.getElementById("n1").innerHTML
-var two = document.getElementById("n2").innerHTML
-var three = document.getElementById("n3").innerHTML
-var four = document.getElementById("n4").innerHTML
-var five = document.getElementById("n5").innerHTML
-var six = document.getElementById("n6").innerHTML
-var seven = document.getElementById("n7").innerHTML
-var eight = document.getElementById("n8").innerHTML
-var nine = document.getElementById("n9").innerHTML
-var inpOutput = document.getElementById("inpOut").innerHTML
-// document.write(zero)
-// document.write(one)
-// document.write(two)
-// document.write(three)
-// document.write(four)
-// document.write(five)
-// document.write(six)
-// document.write(seven)
-// document.write(eight)
-// document.write(nine)
+// var point = document.getElementById("nPoint").innerHTML
+// var zero = document.getElementById("n0").innerHTML
+// var one = document.getElementById("n1").innerHTML
+// var two = document.getElementById("n2").innerHTML
+// var three = document.getElementById("n3").innerHTML
+// var four = document.getElementById("n4").innerHTML
+// var five = document.getElementById("n5").innerHTML
+// var six = document.getElementById("n6").innerHTML
+// var seven = document.getElementById("n7").innerHTML
+// var eight = document.getElementById("n8").innerHTML
+// var nine = document.getElementById("n9").innerHTML
+// var inpOutput = document.getElementById("inpOut").innerHTML
 
-function pressNumber (number) {
-    console.log(number)
-    document.getElementById("inpOut").innerHTML += number
+function myIncludes(text,characterToCheck){
+    for(var i = 0; i < text.length; i++){
+        if(characterToCheck === op[i]){
+        return  true
+        }
+    }
+    return false
 }
-function result () {
-   var val= document.getElementById("inpOut").innerHTML
-   document.getElementById("inpOut").innerHTML=eval(val)
+
+var answerChecker = false
+var operators='-+*/'
+function pressNumber(number) {
+    if(answerChecker === true  && !myIncludes(operators,number)){
+        document.getElementById("inpOut").value = null
+    }
+    answerChecker = false
+    document.getElementById("inpOut").value += number
+
+}
+
+function result() {
+   var val = document.getElementById("inpOut").value
+   document.getElementById("inpOut").value = eval(val)
+   answerChecker = true
+}
+
+function del() {
+    var afterDelLength = document.getElementById("inpOut").value.length - 1
+    var afterDelNumbers = document.getElementById("inpOut").value.slice(0, afterDelLength)
+    document.getElementById("inpOut").value = afterDelNumbers
+}
+
+function clearAll() {
+    document.getElementById("inpOut").value = null
+    answerChecker = false
 }
 
 // ========================================================================================================================
@@ -711,3 +729,23 @@ function result () {
 
 // var totalMilliSeconds = date2Milli - date1Milli
 // console.log(totalMilliSeconds)
+
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// var un = "hello"
+// function why(because){
+//     alert(because)
+// }
+
+// why(un)
+
+// function tellTime(){
+//     var now = new Date()
+//     var theHr = now.getHours()
+//     var theMin = now.getMinutes()
+//     var theSec = now.getSeconds()
+//     document.getElementById("tim").innerHTML="time: " + theHr + ":" + theMin + ":" + theSec
+// }
+
+// var alm = 999
+// first(alm)

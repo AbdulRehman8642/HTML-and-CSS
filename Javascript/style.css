@@ -21,19 +21,30 @@ body{
 }
 
 .calculator-parnt{
-    width: fit-content;
+    width: 250px;
     padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
 }
 
 .calculator-parnt-bord{
     background-color: cadetblue;
     padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rows{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     padding: 8px 0px;
+}
+
+.row1{
+    display: flex;
+    justify-content: right;
 }
 
 .buttons{
@@ -48,6 +59,13 @@ body{
     height: 50px;
 }
 
+.ac, .ce{
+    /* width: 100%; */
+    border-radius: 10%;
+    font-weight: 200;
+    font-size: 24px;
+}
+
 .buttons p{
     padding: 0px;
     margin: 0px;
@@ -57,22 +75,6 @@ body{
     background-color: black;
     color: gold;
 }
-
-/* .fDivide{
-    padding: 10px 26px;
-}
-
-.fSubt{
-    padding: 10px 25px;
-}
-
-.fEqual{
-    padding: 10px 21px;
-}
-
-.nPoint{
-    padding: 10px 25px;
-} */
 
 .fMulti,
 .fSubt,
@@ -97,7 +99,9 @@ body{
 
 .inpOut{
     width: 100%;
-    height: 100px;
-    border-radius: 5px;
-    border: 2px solid rgb(49, 80, 83);
+    height: 60px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+    font-size: 34px;
 }
