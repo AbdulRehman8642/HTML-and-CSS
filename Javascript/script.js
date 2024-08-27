@@ -655,7 +655,7 @@
 
 function myIncludes(text,characterToCheck){
     for(var i = 0; i < text.length; i++){
-        if(characterToCheck === op[i]){
+        if(characterToCheck === operators[i]){
         return  true
         }
     }
