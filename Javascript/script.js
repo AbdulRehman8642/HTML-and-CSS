@@ -652,43 +652,43 @@
 // var eight = document.getElementById("n8").innerHTML
 // var nine = document.getElementById("n9").innerHTML
 // var inpOutput = document.getElementById("inpOut").innerHTML
+// -----                                                                                                        -----------
+// function myIncludes(text,characterToCheck){
+//     for(var i = 0; i < text.length; i++){
+//         if(characterToCheck === operators[i]){
+//         return  true
+//         }
+//     }
+//     // return false
+// }
 
-function myIncludes(text,characterToCheck){
-    for(var i = 0; i < text.length; i++){
-        if(characterToCheck === operators[i]){
-        return  true
-        }
-    }
-    return false
-}
+// var answerChecker = false
+// var operators='-+*/'
+// function pressNumber(number) {
+//     if(answerChecker === true  && !myIncludes(operators,number)){
+//         document.getElementById("inpOut").value = null
+//     }
+//     answerChecker = false
+//     document.getElementById("inpOut").value += number
 
-var answerChecker = false
-var operators='-+*/'
-function pressNumber(number) {
-    if(answerChecker === true  && !myIncludes(operators,number)){
-        document.getElementById("inpOut").value = null
-    }
-    answerChecker = false
-    document.getElementById("inpOut").value += number
+// }
 
-}
+// function result() {
+//     var val = document.getElementById("inpOut").value
+//     document.getElementById("inpOut").value = eval(val)
+//     answerChecker = true
+// }
 
-function result() {
-   var val = document.getElementById("inpOut").value
-   document.getElementById("inpOut").value = eval(val)
-   answerChecker = true
-}
+// function del() {
+//     var afterDelLength = document.getElementById("inpOut").value.length - 1
+//     var afterDelNumbers = document.getElementById("inpOut").value.slice(0, afterDelLength)
+//     document.getElementById("inpOut").value = afterDelNumbers
+// }
 
-function del() {
-    var afterDelLength = document.getElementById("inpOut").value.length - 1
-    var afterDelNumbers = document.getElementById("inpOut").value.slice(0, afterDelLength)
-    document.getElementById("inpOut").value = afterDelNumbers
-}
-
-function clearAll() {
-    document.getElementById("inpOut").value = null
-    answerChecker = false
-}
+// function clearAll() {
+//     document.getElementById("inpOut").value = null
+//     answerChecker = false
+// }
 
 // ========================================================================================================================
 // -----------------------------------------------------CALCULATOR---------------------------------------------------------
@@ -732,7 +732,7 @@ function clearAll() {
 
 // ---------------------------------------------------------------------------------------------------------------------------
 
-// var un = "hello"
+// var un = "chalo shaba kato"
 // function why(because){
 //     alert(because)
 // }
@@ -749,3 +749,19 @@ function clearAll() {
 
 // var alm = 999
 // first(alm)
+
+
+// ------------text
+// FOR AFFILATE
+// --for Instagram
+// 1-make logo
+// 2-design posts and attach links
+// 3-learn making reels
+// 4-switch to professional
+// 5-add bio
+// 6-complete profile
+// 7-difference b/w boost and ads
+// 8- Can I boost reel
+
+// FOR WEBSITE
+// 1-
