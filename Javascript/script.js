@@ -750,18 +750,108 @@
 // var alm = 999
 // first(alm)
 
+// function calcTot(merchTot){
+//     var orderTot;
 
-// ------------text
-// FOR AFFILATE
-// --for Instagram
-// 1-make logo
-// 2-design posts and attach links
-// 3-learn making reels
-// 4-switch to professional
-// 5-add bio
-// 6-complete profile
-// 7-difference b/w boost and ads
-// 8- Can I boost reel
+//     if (merchTot >= 100) {
+//         orderTot = merchTot;
+//     }
 
-// FOR WEBSITE
-// 1-
+//     else if (merchTot < 50.01) {
+//         orderTot = merchTot + 5;
+//     }
+
+//     else if (merchTot < 1){
+//         orderTot = 0
+//     }
+
+//     else {
+//         orderTot = merchTot + 5 + (.03 * (merchTot - 50));
+//     }
+//     return orderTot
+// }
+// oppo = Number(prompt("Enter the total price"))
+// --
+// var val = calcTot(Number(prompt("Enter the total price")))
+// document.write(val)
+// --
+// var value = calcTot(oppo)
+// document.write(value)
+// document.write(calcTot())
+// -----------------------practice chapter 37--------------
+// function addition(firstValue, secondValue){
+//     var a
+//     a = firstValue + secondValue
+//     return a
+// }
+
+// var b = addition(6, 6)
+// document.write(b)
+
+// function returnString (name){
+//     var a = "your name is " + name
+//     return a
+// }
+
+// var p = prompt("Enter you name to see magic")
+
+// var b = returnString(p)
+// document.write(b)
+
+// function calc (first,second){
+//     var tot = first * second
+//     return tot
+// }
+
+// var a = calc(4,9)
+// document.write(a)
+
+// function first(){
+//     var a = 4*4
+//     return a
+// }
+
+// function another(){
+//     var b = first() + 4
+//     return b
+// }
+
+// var c = another()
+// document.write(c)
+
+// --
+// function isEven(number){
+//     var t
+//     var a = number % 2 === 0
+//     if(a){
+//         t = "value is even"
+//     }
+//     else{
+//         t = "value is odd"
+//     }
+//     return t
+// }
+
+// var b = isEven(48)
+// document.write(b)
+// -------------------practice chapter 37---------------
+// -----------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------SWITCH---------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------------
+
+// var dayOfWeek = "sun"
+// switch(dayOfWeek) {
+//     case "sat":
+//         document.write("today is off")
+//         break
+//     case "sun":
+//         document.write("today is off")
+//         break
+//     case "fri":
+//         document.write("today is halfday")
+//         break
+//     default:
+//         document.write("Shoot Me Now!")
+// }
+
+
