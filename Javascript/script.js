@@ -855,3 +855,21 @@
 // }
 
 
+// -------------shopping cart--------------------------------
+// var pName = prompt("Enter the item name")
+// var pPrice = prompt("Enter the item price")
+var cart = []
+var item
+function addItem(name, price){
+    item = {
+        name : name,
+        price : price
+    }
+    cart.push(item)
+    for(var i = 0; i < 2; i++){
+        document.write(cart[i].name + cart[i].price + "<br><br>")
+    }
+}
+
+// var design = "<h1>Hello Guys</h1><style>h1{color: aqua;border: 2px solid;}</style>"
+// document.write(design)
