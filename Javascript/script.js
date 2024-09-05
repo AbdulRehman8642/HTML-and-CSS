@@ -855,21 +855,29 @@
 // }
 
 
-// -------------shopping cart--------------------------------
+// -------------shopping cart----------------tesattributes----
 // var pName = prompt("Enter the item name")
 // var pPrice = prompt("Enter the item price")
-var cart = []
-var item
-function addItem(name, price){
-    item = {
-        name : name,
-        price : price
-    }
-    cart.push(item)
-    for(var i = 0; i < 2; i++){
-        document.write(cart[i].name + cart[i].price + "<br><br>")
-    }
-}
+// var cart = []
+// var item
+// function addItem(name, price){
+//     item = {
+//         oName : name,
+//         oPrice : price
+//     }
+//     cart.push(item)
+//     document.getElementById("dataName").innerHTML = name
+//     document.getElementById("dataPrice").innerHTML = price
+//     document.createElement()
+//     if(document.getElementById("dataName").innerHTML !== null && document.getElementById("dataPrice").innerHTML !== null){
+//         document.getElementById("dataName").innerHTML += '<tr class="rowData" id="DataRow"><td class="nameData" id="dataName"></td>
+//                 <td class="priceData" id="dataPrice"></td>
+//             </tr>'
+//     }
+// }
+// --
 
-// var design = "<h1>Hello Guys</h1><style>h1{color: aqua;border: 2px solid;}</style>"
-// document.write(design)
+// document.getElementById("dataParnt").setAttribute("class", "xyz")
+var element = document.getElementById("dataName").style.backgroundColor = "orange";
+var element = document.getElementById("dataPrice").style.backgroundColor = "orange";
+console.log(element)
