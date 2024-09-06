@@ -856,28 +856,43 @@
 
 
 // -------------shopping cart----------------tesattributes----
-// var pName = prompt("Enter the item name")
-// var pPrice = prompt("Enter the item price")
-// var cart = []
-// var item
-// function addItem(name, price){
-//     item = {
-//         oName : name,
-//         oPrice : price
-//     }
-//     cart.push(item)
-//     document.getElementById("dataName").innerHTML = name
-//     document.getElementById("dataPrice").innerHTML = price
-//     document.createElement()
-//     if(document.getElementById("dataName").innerHTML !== null && document.getElementById("dataPrice").innerHTML !== null){
-//         document.getElementById("dataName").innerHTML += '<tr class="rowData" id="DataRow"><td class="nameData" id="dataName"></td>
-//                 <td class="priceData" id="dataPrice"></td>
-//             </tr>'
-//     }
+// --
+var cart = []
+var item
+// function itemCollection(){
+//     var pName = prompt("Enter the item name")
+//     var pPrice = prompt("Enter the item price")
+//     // addItem(pName, pPrice)
 // }
+function addItem(name, price){
+    item = {
+        oName : name,
+        oPrice : price
+    }
+    var newTr = document.createElement("tr")
+    newTr.setAttribute("class", "rowData")
+    newTr.setAttribute("id", "dataRow")
+    var newTdName = document.createElement("td")
+    newTdName.setAttribute("class", "nameData")
+    newTdName.setAttribute("id", "dataName")
+    var newTdPrice = document.createElement("td")
+    newTdPrice.setAttribute("class", "priceData")
+    newTdPrice.setAttribute("id", "dataPrice")
+    newTr.appendChild(newTdName)
+    newTr.appendChild(newTdPrice)
+    document.getElementById("tableParnt").appendChild(newTr)
+    cart.push(item)
+    document.getElementById("dataName").innerHTML = name
+    document.getElementById("dataPrice").innerHTML = price
+}    
+// addItem(pName, pPrice)
 // --
 
 // document.getElementById("dataParnt").setAttribute("class", "xyz")
-var element = document.getElementById("dataName").style.backgroundColor = "orange";
-var element = document.getElementById("dataPrice").style.backgroundColor = "orange";
-console.log(element)
+// var element = document.getElementById("dataName").style.backgroundColor = "orange";
+// var element = document.getElementById("dataPrice").style.backgroundColor = "orange";
+// console.log(element)
+// function adding(){
+    
+// }
+// console.log(newTr)
