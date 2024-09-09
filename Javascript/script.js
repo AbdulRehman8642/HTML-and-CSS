@@ -857,34 +857,49 @@
 
 // -------------shopping cart----------------tesattributes----
 // --
-var cart = []
-var item
 // function itemCollection(){
-//     var pName = prompt("Enter the item name")
+    //     var pName = prompt("Enter the item name")
 //     var pPrice = prompt("Enter the item price")
 //     // addItem(pName, pPrice)
 // }
-function addItem(name, price){
-    item = {
-        oName : name,
-        oPrice : price
-    }
-    var newTr = document.createElement("tr")
-    newTr.setAttribute("class", "rowData")
-    newTr.setAttribute("id", "dataRow")
-    var newTdName = document.createElement("td")
-    newTdName.setAttribute("class", "nameData")
-    newTdName.setAttribute("id", "dataName")
-    var newTdPrice = document.createElement("td")
-    newTdPrice.setAttribute("class", "priceData")
-    newTdPrice.setAttribute("id", "dataPrice")
-    newTr.appendChild(newTdName)
-    newTr.appendChild(newTdPrice)
-    document.getElementById("tableParnt").appendChild(newTr)
-    cart.push(item)
-    document.getElementById("dataName").innerHTML = name
-    document.getElementById("dataPrice").innerHTML = price
-}    
+
+// var pName = prompt("Enter item name")
+// var pPrice = prompt("Enter item name")
+
+// var pName = "oppo"
+// var pPrice = 9000
+
+// function addItem(name, price){
+//     var cart = []
+//     var item
+    
+//     var newTr = document.createElement("tr")
+//     newTr.setAttribute("class", "rowData")
+//     newTr.setAttribute("id", "dataRow")
+    
+//     var newTdName = document.createElement("td")
+//     newTdName.setAttribute("class", "nameData")
+//     newTdName.setAttribute("id", "dataName")
+    
+//     var newTdPrice = document.createElement("td")
+//     newTdPrice.setAttribute("class", "priceData")
+//     newTdPrice.setAttribute("id", "dataPrice")
+    
+//     newTr.appendChild(newTdName)
+//     newTr.appendChild(newTdPrice)
+//     document.getElementById("tableParnt").appendChild(newTr)
+    
+//     document.getElementById("dataName").innerHTML = name
+//     document.getElementById("dataPrice").innerHTML = price
+    
+
+//     item = {
+//         oName : name,
+//         oPrice : price
+//     }
+    
+//     cart.push(item)
+// }    
 // addItem(pName, pPrice)
 // --
 
@@ -896,3 +911,13 @@ function addItem(name, price){
     
 // }
 // console.log(newTr)
+
+// var i = 0 
+// while (i <= 3) {
+//     alert(i);
+//     i++;
+// }
+
+// for(var i = 0; i <= 3; i++){
+//     alert(i)
+// }
