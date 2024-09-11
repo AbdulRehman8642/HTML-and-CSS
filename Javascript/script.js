@@ -856,52 +856,50 @@
 
 
 // -------------shopping cart----------------tesattributes----
+
+function addItem(name, price){
+    var cart = []
+    var item
+    
+    var newTr = document.createElement("tr")
+    newTr.setAttribute("id", "dataRow")
+    newTr.setAttribute("class", "rowData")
+    
+    var newTdName = document.createElement("td")
+    newTdName.setAttribute("class", "nameData")
+    newTdName.setAttribute("id", "dataName")
+    
+    var newTdPrice = document.createElement("td")
+    newTdPrice.setAttribute("class", "priceData")
+    newTdPrice.setAttribute("id", "dataPrice")
+
+    newTr.appendChild(newTdName)
+    newTr.appendChild(newTdPrice)
+    document.getElementById("tableParnt").appendChild(newTr)
+    
+    var nameDataAllClasses = document.getElementsByClassName("nameData")
+    var priceDataAllClasses = document.getElementsByClassName("priceData")
+    for(var i = nameDataAllClasses.length; i <= nameDataAllClasses.length; i++){
+        var k = i
+        nameDataAllClasses[i-1].innerHTML = name
+    }
+    for(var i = priceDataAllClasses.length; i <= priceDataAllClasses.length; i++){
+       priceDataAllClasses[i-1].innerHTML = price
+    }
+
+    item = {
+        oName : name,
+        oPrice : price
+    }
+    
+    cart.push(item)
+    console.log(k)
+}    
+
+function viewCart (){
+}
 // --
-// function itemCollection(){
-    //     var pName = prompt("Enter the item name")
-//     var pPrice = prompt("Enter the item price")
-//     // addItem(pName, pPrice)
-// }
-
-// var pName = prompt("Enter item name")
-// var pPrice = prompt("Enter item name")
-
-// var pName = "oppo"
-// var pPrice = 9000
-
-// function addItem(name, price){
-//     var cart = []
-//     var item
-    
-//     var newTr = document.createElement("tr")
-//     newTr.setAttribute("class", "rowData")
-//     newTr.setAttribute("id", "dataRow")
-    
-//     var newTdName = document.createElement("td")
-//     newTdName.setAttribute("class", "nameData")
-//     newTdName.setAttribute("id", "dataName")
-    
-//     var newTdPrice = document.createElement("td")
-//     newTdPrice.setAttribute("class", "priceData")
-//     newTdPrice.setAttribute("id", "dataPrice")
-    
-//     newTr.appendChild(newTdName)
-//     newTr.appendChild(newTdPrice)
-//     document.getElementById("tableParnt").appendChild(newTr)
-    
-//     document.getElementById("dataName").innerHTML = name
-//     document.getElementById("dataPrice").innerHTML = price
-    
-
-//     item = {
-//         oName : name,
-//         oPrice : price
-//     }
-    
-//     cart.push(item)
-// }    
-// addItem(pName, pPrice)
-// --
+// -------------shopping Cart Completed---------------- 
 
 // document.getElementById("dataParnt").setAttribute("class", "xyz")
 // var element = document.getElementById("dataName").style.backgroundColor = "orange";
