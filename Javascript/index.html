@@ -124,11 +124,10 @@
                 <td class="priceData" id="dataPrice"></td>
         </tr> -->
     </table>
-    <button onclick="addItem(prompt('Enter item name') , prompt('Enter item price'))">Add Item</button>
+    <button onclick="addItem(prompt('Enter item name') , Number(prompt('Enter item price')))">Add Item</button>
     <button onclick="viewCart()">View Cart</button>
-    <!-- <button onclick="addItem('name', 'prie')">click me</button> -->
-    <!-- <a href="#" onclick="alert('How can you click on this')">click me</a> -->
-    <!-- <button onclick="addItem('value', 900)">click me</button> -->
+    <button onclick="calcTotal()">Calculate Total</button>
+    <button onclick="applyDisc()">View Cart</button>
     <script src="script.js"></script>
 </body>
 </html>

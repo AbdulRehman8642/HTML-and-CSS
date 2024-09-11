@@ -857,21 +857,21 @@
 
 // -------------shopping cart----------------tesattributes----
 
+var cart = []
+var item
 function addItem(name, price){
-    var cart = []
-    var item
     
     var newTr = document.createElement("tr")
-    newTr.setAttribute("id", "dataRow")
     newTr.setAttribute("class", "rowData")
+    // newTr.setAttribute("id", "dataRow")
     
     var newTdName = document.createElement("td")
     newTdName.setAttribute("class", "nameData")
-    newTdName.setAttribute("id", "dataName")
+    // newTdName.setAttribute("id", "dataName")
     
     var newTdPrice = document.createElement("td")
     newTdPrice.setAttribute("class", "priceData")
-    newTdPrice.setAttribute("id", "dataPrice")
+    // newTdPrice.setAttribute("id", "dataPrice")
 
     newTr.appendChild(newTdName)
     newTr.appendChild(newTdPrice)
@@ -879,12 +879,11 @@ function addItem(name, price){
     
     var nameDataAllClasses = document.getElementsByClassName("nameData")
     var priceDataAllClasses = document.getElementsByClassName("priceData")
+    console.log('')
+    console.log('')
     for(var i = nameDataAllClasses.length; i <= nameDataAllClasses.length; i++){
-        var k = i
-        nameDataAllClasses[i-1].innerHTML = name
-    }
-    for(var i = priceDataAllClasses.length; i <= priceDataAllClasses.length; i++){
-       priceDataAllClasses[i-1].innerHTML = price
+        nameDataAllClasses[i - 1].innerHTML = name
+        priceDataAllClasses[i - 1].innerHTML = price
     }
 
     item = {
@@ -893,10 +892,14 @@ function addItem(name, price){
     }
     
     cart.push(item)
-    console.log(k)
 }    
-
-function viewCart (){
+function calcTotal (){
+    
+    var total = 0;
+    for(var j = 0; j < document.getElementsByClassName("priceData").length; j++){
+        total = total + Number(document.getElementsByClassName("priceData")[j].innerHTML)
+    }
+    console.log(total)
 }
 // --
 // -------------shopping Cart Completed---------------- 
