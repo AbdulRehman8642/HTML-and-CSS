@@ -859,47 +859,84 @@
 
 var cart = []
 var item
+var newTr
 function addItem(name, price){
     
-    var newTr = document.createElement("tr")
+    newTr = document.createElement("tr")
     newTr.setAttribute("class", "rowData")
-    // newTr.setAttribute("id", "dataRow")
+    newTr.setAttribute("id","dataRow" + cart.length)
     
     var newTdName = document.createElement("td")
     newTdName.setAttribute("class", "nameData")
+    newTdName.innerHTML=name
     // newTdName.setAttribute("id", "dataName")
     
     var newTdPrice = document.createElement("td")
     newTdPrice.setAttribute("class", "priceData")
+    newTdPrice.innerHTML=price
+
     // newTdPrice.setAttribute("id", "dataPrice")
 
     newTr.appendChild(newTdName)
     newTr.appendChild(newTdPrice)
     document.getElementById("tableParnt").appendChild(newTr)
     
-    var nameDataAllClasses = document.getElementsByClassName("nameData")
-    var priceDataAllClasses = document.getElementsByClassName("priceData")
-    console.log('')
-    console.log('')
-    for(var i = nameDataAllClasses.length; i <= nameDataAllClasses.length; i++){
-        nameDataAllClasses[i - 1].innerHTML = name
-        priceDataAllClasses[i - 1].innerHTML = price
-    }
-
     item = {
         oName : name,
         oPrice : price
     }
-    
     cart.push(item)
-}    
-function calcTotal (){
-    
-    var total = 0;
-    for(var j = 0; j < document.getElementsByClassName("priceData").length; j++){
-        total = total + Number(document.getElementsByClassName("priceData")[j].innerHTML)
+}
+var total
+var discount
+var codeChecker = false
+function applyDisc(){
+    total = 0;
+    for(var j = 0; j < cart.length; j++){
+        total +=cart[j].oPrice 
     }
+    if(codeChecker === false){
+        var code = prompt("Coupon Code")
+    }
+    if(code === "hello"){
+        discount = total * 0.10
+        total -= discount
+        console.log(total)
+        codeChecker = true
+    }
+    if(code !== "hello"){
+        alert("Oops! Wrong Coupon Code")
+    }
+    if(codeChecker === true){
+        document.getElementById("discount").style.display = "none"
+    }
+}
+function calcTotal (){
+    var totalWaliRow = document.createElement("tr")
+
+    var totalKaText = document.createElement("td")
+    totalKaText.setAttribute("class", "totalText")
+
+    var totalKaPrice = document.createElement("td")
+    totalKaPrice.setAttribute("class", "totalPrice")
+    totalKaPrice.innerHTML = total
+        
+    totalWaliRow.appendChild(document.createElement("td"))
+    totalWaliRow.appendChild(document.createElement("td"))
+    document.getElementById("tableParnt").appendChild(totalWaliRow)
+    total = 0;
+    for(var j = 0; j < cart.length; j++){
+        total +=cart[j].oPrice 
+    }
+    // total -= discount
     console.log(total)
+}
+
+function cancel (){
+   cart.pop()
+   var table=document.getElementById('tableParnt')
+   var ele=document.getElementById("dataRow" + cart.length)
+   table.removeChild(ele)
 }
 // --
 // -------------shopping Cart Completed---------------- 

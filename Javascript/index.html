@@ -119,15 +119,16 @@
             <th>name</th>
             <th>price</th>
         </tr>
-        <!-- <tr class="rowData" id="DataRow">
+        <!-- <tr class="rowData" id="dataRow">
                 <td class="nameData" id="dataName"></td>
                 <td class="priceData" id="dataPrice"></td>
         </tr> -->
     </table>
     <button onclick="addItem(prompt('Enter item name') , Number(prompt('Enter item price')))">Add Item</button>
-    <button onclick="viewCart()">View Cart</button>
+    <!-- <button onclick="viewCart()">View Cart</button> -->
     <button onclick="calcTotal()">Calculate Total</button>
-    <button onclick="applyDisc()">View Cart</button>
+    <button id="discount" onclick="applyDisc()">Apply 10% OFF</button>
+    <button onclick="cancel()">Cancel</button>
     <script src="script.js"></script>
 </body>
 </html>
