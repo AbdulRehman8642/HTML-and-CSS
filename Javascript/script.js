@@ -912,6 +912,17 @@ function applyDisc(){
     }
 }
 function calcTotal (){
+    if(document.getElementById("discount").style.display === "none"){
+        total = 0
+        for(var j = 0; j < cart.length; j++){
+            total +=cart[j].oPrice 
+        }
+        discount = total * 0.10
+        total -= discount
+        console.log(total)
+        codeChecker = true
+    }
+    else{
     var totalWaliRow = document.createElement("tr")
 
     var totalKaText = document.createElement("td")
@@ -930,6 +941,7 @@ function calcTotal (){
     }
     // total -= discount
     console.log(total)
+    }
 }
 
 function cancel (){
@@ -937,6 +949,19 @@ function cancel (){
    var table=document.getElementById('tableParnt')
    var ele=document.getElementById("dataRow" + cart.length)
    table.removeChild(ele)
+}
+function viewCart (){
+    var exp = document.getElementById("table").innerHTML
+    document.write(exp)
+}
+
+function checkOut (){
+    for(var k = 0; k < cart.length; k++){
+        cart.pop()
+        var table=document.getElementById('tableParnt')
+        var ele=document.getElementsByClassName("rowData")[k]
+        table.remove(ele)
+    }
 }
 // --
 // -------------shopping Cart Completed---------------- 

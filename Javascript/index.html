@@ -114,6 +114,7 @@
 
 <!-- <button onclick="tellTime()">See Time</button>
 <div class="tim" id="tim"></div> -->
+<div class="table" id="table">
     <table border="2" id="tableParnt">
         <tr>
             <th>name</th>
@@ -124,11 +125,14 @@
                 <td class="priceData" id="dataPrice"></td>
         </tr> -->
     </table>
+</div>
     <button onclick="addItem(prompt('Enter item name') , Number(prompt('Enter item price')))">Add Item</button>
-    <!-- <button onclick="viewCart()">View Cart</button> -->
     <button onclick="calcTotal()">Calculate Total</button>
+    <button onclick="viewCart()">View Cart</button>
     <button id="discount" onclick="applyDisc()">Apply 10% OFF</button>
     <button onclick="cancel()">Cancel</button>
+    <button onclick="checkOut()">Check Out</button>
+    <a href="#" onclick="alert('are you ready')">hmmmm!</a>
     <script src="script.js"></script>
 </body>
 </html>
