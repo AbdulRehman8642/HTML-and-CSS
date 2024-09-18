@@ -857,114 +857,128 @@
 
 // -------------shopping cart----------------tesattributes----
 
-var cart = []
-var item
-var newTr
-function addItem(name, price){
+// var cart = []
+// var item
+// var newTr
+// function addItem(name, price){
     
-    newTr = document.createElement("tr")
-    newTr.setAttribute("class", "rowData")
-    newTr.setAttribute("id","dataRow" + cart.length)
+//     newTr = document.createElement("tr")
+//     newTr.setAttribute("class", "rowData")
+//     newTr.setAttribute("id","dataRow" + cart.length)
     
-    var newTdName = document.createElement("td")
-    newTdName.setAttribute("class", "nameData")
-    newTdName.innerHTML=name
-    // newTdName.setAttribute("id", "dataName")
+//     var newTdName = document.createElement("td")
+//     newTdName.setAttribute("class", "nameData")
+//     newTdName.innerHTML=name
+//     // newTdName.setAttribute("id", "dataName")
     
-    var newTdPrice = document.createElement("td")
-    newTdPrice.setAttribute("class", "priceData")
-    newTdPrice.innerHTML=price
+//     var newTdPrice = document.createElement("td")
+//     newTdPrice.setAttribute("class", "priceData")
+//     newTdPrice.innerHTML=price
 
-    // newTdPrice.setAttribute("id", "dataPrice")
+//     // newTdPrice.setAttribute("id", "dataPrice")
 
-    newTr.appendChild(newTdName)
-    newTr.appendChild(newTdPrice)
-    document.getElementById("tableParnt").appendChild(newTr)
+//     newTr.appendChild(newTdName)
+//     newTr.appendChild(newTdPrice)
+//     document.getElementById("tableParnt").appendChild(newTr)
     
-    item = {
-        oName : name,
-        oPrice : price
-    }
-    cart.push(item)
-}
-var total
-var discount
-var codeChecker = false
-function applyDisc(){
-    total = 0;
-    for(var j = 0; j < cart.length; j++){
-        total +=cart[j].oPrice 
-    }
-    if(codeChecker === false){
-        var code = prompt("Coupon Code")
-    }
-    if(code === "hello"){
-        discount = total * 0.10
-        total -= discount
-        console.log(total)
-        codeChecker = true
-    }
-    if(code !== "hello"){
-        alert("Oops! Wrong Coupon Code")
-    }
-    if(codeChecker === true){
-        document.getElementById("discount").style.display = "none"
-    }
-}
-function calcTotal (){
-    if(document.getElementById("discount").style.display === "none"){
-        total = 0
-        for(var j = 0; j < cart.length; j++){
-            total +=cart[j].oPrice 
-        }
-        discount = total * 0.10
-        total -= discount
-        console.log(total)
-        codeChecker = true
-    }
-    else{
-    var totalWaliRow = document.createElement("tr")
+//     item = {
+//         oName : name,
+//         oPrice : price
+//     }
+//     cart.push(item)
+// }
+// var total
+// var discount
+// var codeChecker = false
+// function applyDisc(){
+//     total = 0;
+//     for(var j = 0; j < cart.length; j++){
+//         total +=cart[j].oPrice 
+//     }
+//     if(codeChecker === false){
+//         var code = prompt("Coupon Code")
+//     }
+//     if(code === "hello"){
+//         discount = total * 0.10
+//         total -= discount
+//         console.log(total)
+//         codeChecker = true
+//     }
+//     if(code !== "hello"){
+//         alert("Oops! Wrong Coupon Code")
+//     }
+//     if(codeChecker === true){
+//         document.getElementById("discount").style.display = "none"
+//     }
+// }
+// function calcTotal (){
+//     if(document.getElementById("discount").style.display === "none"){
+//         total = 0
+//         for(var j = 0; j < cart.length; j++){
+//             total +=cart[j].oPrice 
+//         }
+//         discount = total * 0.10
+//         total -= discount
+//         console.log(total)
+//         codeChecker = true
+//     }
+//     else{
+//     var totalWaliRow = document.createElement("tr")
 
-    var totalKaText = document.createElement("td")
-    totalKaText.setAttribute("class", "totalText")
+//     var totalKaText = document.createElement("td")
+//     totalKaText.setAttribute("class", "totalText")
 
-    var totalKaPrice = document.createElement("td")
-    totalKaPrice.setAttribute("class", "totalPrice")
-    totalKaPrice.innerHTML = total
+//     var totalKaPrice = document.createElement("td")
+//     totalKaPrice.setAttribute("class", "totalPrice")
+//     totalKaPrice.innerHTML = total
         
-    totalWaliRow.appendChild(document.createElement("td"))
-    totalWaliRow.appendChild(document.createElement("td"))
-    document.getElementById("tableParnt").appendChild(totalWaliRow)
-    total = 0;
-    for(var j = 0; j < cart.length; j++){
-        total +=cart[j].oPrice 
-    }
-    // total -= discount
-    console.log(total)
-    }
-}
+//     totalWaliRow.appendChild(document.createElement("td"))
+//     totalWaliRow.appendChild(document.createElement("td"))
+//     document.getElementById("tableParnt").appendChild(totalWaliRow)
+//     total = 0;
+//     for(var j = 0; j < cart.length; j++){
+//         total += cart[j].oPrice 
+//     }
+//     // total -= discount
+//     console.log(total)
+//     }
+// }
 
-function cancel (){
-   cart.pop()
-   var table=document.getElementById('tableParnt')
-   var ele=document.getElementById("dataRow" + cart.length)
-   table.removeChild(ele)
-}
-function viewCart (){
-    var exp = document.getElementById("table").innerHTML
-    document.write(exp)
-}
+// function cancel (){
+//    cart.pop()
+//    var table = document.getElementById('tableParnt')
+//    var ele = document.getElementById("dataRow" + cart.length)
+//    table.removeChild(ele)
+// }
+// function viewCart (){
+//     var exp = document.getElementById("table").innerHTML
+//     document.write(exp)
+// }
 
-function checkOut (){
-    for(var k = 0; k < cart.length; k++){
-        cart.pop()
-        var table=document.getElementById('tableParnt')
-        var ele=document.getElementsByClassName("rowData")[k]
-        table.remove(ele)
-    }
-}
+// function checkOut (){
+//     for(var k = 0; k < cart.length; k++){
+//         cart.pop()
+//         var table = document.getElementById('tableParnt')
+//         var ele = document.getElementsByClassName("rowData")[k]
+//         table.remove(ele)
+//     }
+// }
 // --
 // -------------shopping Cart Completed---------------- 
+
+// var a = ["rehan", "rasheed", "ahmed", "fahad", "saad"]
+
+// a.forEach(function(vird, ind){
+//     document.write(ind + " : " + vird + "<br>")
+// })
+
+function hello (){
+    alert("Your order has placed")
+}
+
+function submitFuntion (){
+    alert("Form has been submitted")
+}
 
 // document.getElementById("dataParnt").setAttribute("class", "xyz")
 // var element = document.getElementById("dataName").style.backgroundColor = "orange";
