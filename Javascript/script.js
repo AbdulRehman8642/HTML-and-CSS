@@ -972,13 +972,25 @@
 //     document.write(ind + " : " + vird + "<br>")
 // })
 
-function hello (){
-    alert("Your order has placed")
+// function hello (){
+//     alert("Your order has placed")
+// }
+
+// function submitFuntion (){
+//     alert("Form has been submitted")
+// }
+
+function dateFunction (){
+    var compDate = new Date
+    var hour = compDate.getHours()
+    var minute = compDate.getMinutes()
+    var second = compDate.getSeconds()
+    document.write(hour + " : " + minute + " : " + second + "<br>")
+    
 }
 
-function submitFuntion (){
-    alert("Form has been submitted")
-}
+setInterval(dateFunction, 1000)
+// dateFunction()
 
 // document.getElementById("dataParnt").setAttribute("class", "xyz")
 // var element = document.getElementById("dataName").style.backgroundColor = "orange";
