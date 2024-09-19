@@ -980,7 +980,7 @@
 //     alert("Form has been submitted")
 // }
 
-function dateFunction (){
+function dateFunction (){ 
     var compDate = new Date
     var hour = compDate.getHours()
     var minute = compDate.getMinutes()
