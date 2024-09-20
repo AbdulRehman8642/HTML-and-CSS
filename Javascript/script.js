@@ -982,11 +982,30 @@
 
 function dateFunction (){ 
     var compDate = new Date
-    var hour = compDate.getHours()
-    var minute = compDate.getMinutes()
-    var second = compDate.getSeconds()
-    document.write(hour + " : " + minute + " : " + second + "<br>")
+    var formatter = new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit', second:'2-digit' ,hour12:true})
+    document.getElementById("time").innerHTML = formatter.format(new Date())
+    // var hour = compDate.getHours()
+    // var minute = compDate.getMinutes()
+    // var second = compDate.getSeconds()
     
+    // if(hour < 10){
+    //     hour = "0" + compDate.getHours()
+    // }
+    
+    // if(minute < 10){
+    //     minute = "0" + compDate.getMinutes()
+    // }
+    
+    // if(second < 10){
+    //     second = "0" + compDate.getSeconds()
+    // }
+    
+    // for(var i = 13; i <= 24; i++){
+    //     if(hour === i){
+    //         hour = i - 12
+    //     }
+    // }
+    // document.getElementById("time").innerHTML = hour + " : " + minute + " : " + second
 }
 
 setInterval(dateFunction, 1000)
