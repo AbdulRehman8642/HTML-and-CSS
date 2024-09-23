@@ -105,7 +105,9 @@
     font-size: 34px;
 } */
 
-body{
+
+
+/* body{
     background-color: bisque;
     padding: 0px;
     margin: 0px;
@@ -136,10 +138,19 @@ body{
 }
 
 #time{
-    /* width: fit-content; */
     display: flex;
     justify-content: center;
     font-size: 50px;
     font-family: fantasy;
     background-color: red;
+} */
+
+.pic{
+    transition: 160ms;
+    width: 300px;
+}
+
+.pic:hover{
+    transform: scaleX(-100%);
+    /* width: 320px; */
 }

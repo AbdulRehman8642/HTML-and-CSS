@@ -1029,3 +1029,14 @@ setInterval(dateFunction, 1000)
 // for(var i = 0; i <= 3; i++){
 //     alert(i)
 // }
+
+// function img_trans(){
+//     var a = document.getElementById("pic").getAttribute('src')
+//     a = 'https://5.imimg.com/data5/SELLER/Default/2021/7/UX/VB/HT/3027728/yamaha-fzs-fi-bike-500x500.jpg'
+// }
+
+
+function transform (){
+    document.getElementById("pic").style.transform = "sc"
+}
+// document.getElementById("pic").style.transition = "300ms"
