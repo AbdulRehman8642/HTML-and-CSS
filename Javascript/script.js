@@ -1036,7 +1036,46 @@ setInterval(dateFunction, 1000)
 // }
 
 
-function transform (){
-    document.getElementById("pic").style.transform = "sc"
+function transformOver (){
+    document.getElementById("pic").style.transform = "scaleX(-100%)"
 }
+
+function transformOut (){
+    document.getElementById("pic").style.transform = "scaleX(100%)"
+}
+
+
+function passwordShow(){
+    document.getElementById("pass").getAttributeNode("type").value = "text"
+    document.getElementById("eye").getAttributeNode("class").value = "fa-regular fa-eye"
+}
+
+function passwordHide(){
+    document.getElementById("pass").getAttributeNode("type").value = "password"
+    document.getElementById("eye").getAttributeNode("class").value = "fa-regular fa-eye-slash"
+}
+
+// var a = Math.random().toString()
+// var b
+// for(var i = 0; i < a.length; i++){
+//     if(i > 0 && i < 7){
+//         b = i
+//     }
+// }
+// if(b > 0 && b < 7){
+//     console.log(b)
+// }
+// console.log(a)
+
+
+
 // document.getElementById("pic").style.transition = "300ms"
+
+// facebook ads
+// instagram ads (baad mein)
+// hba services ecommerce
+// ws cube tech woocommerce
+// enterprenures
+// researching
+// test yaad krna he center ka english ka
+// phir urdu ya chemistry urdu ka test ""kal a.ahad se poochna he lazmi""
