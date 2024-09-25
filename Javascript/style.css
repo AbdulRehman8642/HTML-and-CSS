@@ -122,3 +122,30 @@
 /* .pic:hover{
     transform: scaleX(-100%);
 } */
+
+.flipDicePic{
+    width: 100px;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.flipDicePic:hover{
+    transform: scale(90%);
+}
+
+.parentOfLudo{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+}
+
+.row1{
+    display: flex;
+    justify-content: center;
+}
+
+.boxes{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}

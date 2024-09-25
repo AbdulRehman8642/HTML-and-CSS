@@ -1055,19 +1055,100 @@ function passwordHide(){
     document.getElementById("eye").getAttributeNode("class").value = "fa-regular fa-eye-slash"
 }
 
-// var a = Math.random().toString()
-// var b
-// for(var i = 0; i < a.length; i++){
-//     if(i > 0 && i < 7){
-//         b = i
-//     }
-// }
-// if(b > 0 && b < 7){
-//     console.log(b)
-// }
-// console.log(a)
+function diceFlip(){
+    var a = Math.random().toString()
+    var b
 
+    for(var i = 0; i <= a.length; i++){
+        if(a[i] > 0 && a[i] < 7){
+            b = a[i]
+        }
+    }
+    console.log(b)
 
+    var oneDice = "https://shorturl.at/bF4UB"
+    var twoDice = "https://shorturl.at/Dv3Ik"
+    var threeDice = "https://shorturl.at/UrwlM"
+    var fourDice = "https://shorturl.at/R3DIh"
+    var fiveDice = "https://shorturl.at/AvWWz"
+    var sixDice = "https://shorturl.at/e2RuA"
+
+    if(b == 1){
+        document.getElementById("flipDicePic").getAttributeNode("src").value = oneDice
+    }
+
+    else if(b == 2){
+        document.getElementById("flipDicePic").getAttributeNode("src").value = twoDice
+    }
+
+    else if(b == 3){
+        document.getElementById("flipDicePic").getAttributeNode("src").value = threeDice
+    }
+
+    else if(b == 4){
+        document.getElementById("flipDicePic").getAttributeNode("src").value = fourDice
+    }
+
+    else if(b == 5){
+        document.getElementById("flipDicePic").getAttributeNode("src").value = fiveDice
+    }
+
+    else{
+        document.getElementById("flipDicePic").getAttributeNode("src").value = sixDice
+    }   
+}
+
+function diceFlip2(){
+    var c = Math.random().toString()
+    var d
+
+    for(var i = 0; i <= c.length; i++){
+        if(c[i] > 0 && c[i] < 7){
+            d = c[i]
+        }
+    }
+    console.log(d)
+
+    var oneDice = "https://shorturl.at/bF4UB"
+    var twoDice = "https://shorturl.at/Dv3Ik"
+    var threeDice = "https://shorturl.at/UrwlM"
+    var fourDice = "https://shorturl.at/R3DIh"
+    var fiveDice = "https://shorturl.at/AvWWz"
+    var sixDice = "https://shorturl.at/e2RuA"
+
+    if(d == 1){
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = oneDice
+    }
+
+    else if(d == 2){
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = twoDice
+    }
+
+    else if(d == 3){
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = threeDice
+    }
+
+    else if(d == 4){
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = fourDice
+    }
+
+    else if(d == 5){
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = fiveDice
+    }
+
+    else{
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = sixDice
+    }   
+}
+
+// function diceFlipping (){
+//     document.getElementById("flipDicePic").style.transform = "scaleX(-100%)"
+//     setInterval(diceback, 200)
+// }
+
+// function diceback(){
+//     document.getElementById("flipDicePic").style.transform = "scaleX(100%)"
+// }
 
 // document.getElementById("pic").style.transition = "300ms"
 
