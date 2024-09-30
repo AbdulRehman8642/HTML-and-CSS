@@ -152,11 +152,14 @@
         <input type="submit">
     </form> -->
 
-    <div class="pass-parnt">
+    <!-- <div class="pass-parnt">
         <input type="password" id="pass"><i id="eye" style="cursor: pointer;" onmouseover="passwordShow()" onmouseout="passwordHide()" class="fa-regular fa-eye-slash"></i>
-    </div>
+    </div> -->
 
-    <button onclick="diceFlip(), diceFlip2()">FLIP DICE</button>
+    <button onclick="diceFlip()" id="flipButton">FLIP DICE</button>
+
+
+    <div class="ludoProjectParnt">
 
     <div class="flipDice" id="flipDice">
         <br>
@@ -166,128 +169,177 @@
         <br>
         <img src="https://shorturl.at/UrwlM" alt="" class="flipDicePic" id="flipDicePic2">
     </div>
-
+    
     <div class="parentOfLudo">
         <div class="redHouse">
-
+            <div class="gotParnt">
+                <div class="rowOfGots">
+                    <img src="./ludo assets/red.png" alt="" class="gotImage">
+                    <img src="./ludo assets/red.png" alt="" class="gotImage"><br>
+                    <img src="./ludo assets/red.png" alt="" class="gotImage">
+                    <img src="./ludo assets/red.png" alt="" class="gotImage">
+                </div>
+            </div>
+        </div>
+        <div class="greenParnt">
+            <div class="redHouse greenHouse">
+                <div class="gotParnt">
+                    <div class="rowOfGots">
+                        <img src="./ludo assets/green.png" alt="" class="gotImage">
+                        <img src="./ludo assets/green.png" alt="" class="gotImage"><br>
+                        <img src="./ludo assets/green.png" alt="" class="gotImage">
+                        <img src="./ludo assets/green.png" alt="" class="gotImage">
+                    </div>
+                </div>                
+            </div>
         </div>
         <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
+            <div class="boxes">
+                <img src="./red.png" class="gotImage" alt="">
+            </div>
             <div class="boxes"></div>
             <div class="boxes"></div>
         </div>
         <div class="row1">
             <div class="boxes"></div>
+            <div class="boxes greenBeRing"></div>
+            <div class="boxes greenStop"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes greenStop"></div>
+            <div class="boxes greenBeRing"></div>
+            <div class="boxes"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes greenBeRing"></div>
+            <div class="boxes"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes greenBeRing"></div>
+            <div class="boxes"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes greenBeRing"></div>
+            <div class="boxes"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes redStop"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
+            <div class="boxes ringSection"></div>
+            <div class="boxes">
+                <img src="./ludo assets/1.png" class="gotImage greenCrown" alt="">
+            </div>
+            <div class="boxes ringSection"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
+            <div class="boxes yellowStop"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
         </div>
         
         <div class="row1">
             <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
+            <div class="boxes redBeRing"></div>
+            <div class="boxes redBeRing"></div>
+            <div class="boxes redBeRing"></div>
+            <div class="boxes redBeRing"></div>
+            <div class="boxes redBeRing"></div>
+            <div class="boxes">
+                <img src="./ludo assets/2.png" class="gotImage redCrown" alt="">
+            </div>
+            <div class="boxes ringSection"></div>
+            <div class="boxes">
+                <img src="./ludo assets/4.png" class="gotImage yellowCrown" alt="">
+            </div>
+            <div class="boxes yellowBeRing"></div>
+            <div class="boxes yellowBeRing"></div>
+            <div class="boxes yellowBeRing"></div>
+            <div class="boxes yellowBeRing"></div>
+            <div class="boxes yellowBeRing"></div>
             <div class="boxes"></div>
         </div>
         
         <div class="row1">
             <div class="boxes"></div>
             <div class="boxes"></div>
+            <div class="boxes redStop"></div>
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+            <div class="boxes ringSection"></div>
+            <div class="boxes">
+                <img src="./ludo assets/3.png" class="gotImage blueCrown" alt="">
+            </div>
+            <div class="boxes ringSection"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
+            <div class="boxes yellowStop"></div>
             <div class="boxes"></div>
         </div>
-        <div class="redHouse">
-            
+        <div class="redHouse blueHouse">
+            <div class="gotParnt">
+                <div class="rowOfGots">
+                    <img src="./ludo assets/blue.png" alt="" class="gotImage">
+                    <img src="./ludo assets/blue.png" alt="" class="gotImage"><br>
+                    <img src="./ludo assets/blue.png" alt="" class="gotImage">
+                    <img src="./ludo assets/blue.png" alt="" class="gotImage">
+                </div>
+            </div>
+        </div>
+        <div class="yellowParnt">
+            <div class="redHouse yellowHouse">
+                <div class="gotParnt">
+                    <div class="rowOfGots">
+                        <img src="./ludo assets/yellow.png" alt="" class="gotImage">
+                        <img src="./ludo assets/yellow.png" alt="" class="gotImage"><br>
+                        <img src="./ludo assets/yellow.png" alt="" class="gotImage">
+                        <img src="./ludo assets/yellow.png" alt="" class="gotImage">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes blueBeRing"></div>
+            <div class="boxes"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes blueBeRing"></div>
+            <div class="boxes"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes blueBeRing"></div>
+            <div class="boxes"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes"></div>
+            <div class="boxes blueBeRing"></div>
+            <div class="boxes blueStop"></div>
+        </div>
+        <div class="row1">
+            <div class="boxes blueStop"></div>
+            <div class="boxes blueBeRing"></div>
+            <div class="boxes"></div>
         </div>
         <div class="row1">
             <div class="boxes"></div>
             <div class="boxes"></div>
             <div class="boxes"></div>
         </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-        <div class="row1">
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-            <div class="boxes"></div>
-        </div>
-    </div>  
+    </div>
+    </div> 
 
     <!-- <a href="#" onclick="alert('are you ready')">hmmmm!</a> -->
     <script src="script.js"></script>

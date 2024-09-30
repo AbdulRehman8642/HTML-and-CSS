@@ -1055,52 +1055,84 @@ function passwordHide(){
     document.getElementById("eye").getAttributeNode("class").value = "fa-regular fa-eye-slash"
 }
 
+
+
+
+
+// =========================================================================================================================
+// -----------------------------------------LUDO-PROJECT--------------------------------------------------------------------
+// =========================================================================================================================
+
+// ---------------------------------------------DESIGNING-------------------------------------------------------------------
+// ---------------------------------------------DESIGNING-------------------------------------------------------------------
+
+var oneDice
+var twoDice
+var threeDice
+var fourDice
+var fiveDice
+var sixDice
+
+var oneDice2
+var twoDice2
+var threeDice2
+var fourDice2
+var fiveDice2
+var sixDice2
+
+var a
+var diceNumber
+
+var c
+var d
+
+var flipChecker = false
 function diceFlip(){
-    var a = Math.random().toString()
-    var b
+    a = Math.random().toString()
 
     for(var i = 0; i <= a.length; i++){
         if(a[i] > 0 && a[i] < 7){
-            b = a[i]
+            diceNumber= a[i]
         }
     }
-    console.log(b)
+    console.log(diceNumber)
 
-    var oneDice = "https://shorturl.at/bF4UB"
-    var twoDice = "https://shorturl.at/Dv3Ik"
-    var threeDice = "https://shorturl.at/UrwlM"
-    var fourDice = "https://shorturl.at/R3DIh"
-    var fiveDice = "https://shorturl.at/AvWWz"
-    var sixDice = "https://shorturl.at/e2RuA"
+    oneDice = "https://shorturl.at/bF4UB"
+    twoDice = "https://shorturl.at/Dv3Ik"
+    threeDice = "https://shorturl.at/UrwlM"
+    fourDice = "https://shorturl.at/R3DIh"
+    fiveDice = "https://shorturl.at/AvWWz"
+    sixDice = "https://shorturl.at/e2RuA"
 
-    if(b == 1){
+    if(diceNumber== 1){
         document.getElementById("flipDicePic").getAttributeNode("src").value = oneDice
     }
 
-    else if(b == 2){
+    else if(diceNumber== 2){
         document.getElementById("flipDicePic").getAttributeNode("src").value = twoDice
     }
 
-    else if(b == 3){
+    else if(diceNumber== 3){
         document.getElementById("flipDicePic").getAttributeNode("src").value = threeDice
     }
 
-    else if(b == 4){
+    else if(diceNumber== 4){
         document.getElementById("flipDicePic").getAttributeNode("src").value = fourDice
     }
 
-    else if(b == 5){
+    else if(diceNumber== 5){
         document.getElementById("flipDicePic").getAttributeNode("src").value = fiveDice
     }
 
     else{
         document.getElementById("flipDicePic").getAttributeNode("src").value = sixDice
     }   
-}
 
-function diceFlip2(){
-    var c = Math.random().toString()
-    var d
+
+// ------------------------------------DICE-2------------------------------------------------------------
+
+    c = Math.random().toString()
+    d
 
     for(var i = 0; i <= c.length; i++){
         if(c[i] > 0 && c[i] < 7){
@@ -1109,37 +1141,72 @@ function diceFlip2(){
     }
     console.log(d)
 
-    var oneDice = "https://shorturl.at/bF4UB"
-    var twoDice = "https://shorturl.at/Dv3Ik"
-    var threeDice = "https://shorturl.at/UrwlM"
-    var fourDice = "https://shorturl.at/R3DIh"
-    var fiveDice = "https://shorturl.at/AvWWz"
-    var sixDice = "https://shorturl.at/e2RuA"
+    oneDice2 = "https://shorturl.at/bF4UB"
+    twoDice2 = "https://shorturl.at/Dv3Ik"
+    threeDice2 = "https://shorturl.at/UrwlM"
+    fourDice2 = "https://shorturl.at/R3DIh"
+    fiveDice2 = "https://shorturl.at/AvWWz"
+    sixDice2 = "https://shorturl.at/e2RuA"
 
     if(d == 1){
-        document.getElementById("flipDicePic2").getAttributeNode("src").value = oneDice
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = oneDice2
     }
 
     else if(d == 2){
-        document.getElementById("flipDicePic2").getAttributeNode("src").value = twoDice
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = twoDice2
     }
 
     else if(d == 3){
-        document.getElementById("flipDicePic2").getAttributeNode("src").value = threeDice
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = threeDice2
     }
 
     else if(d == 4){
-        document.getElementById("flipDicePic2").getAttributeNode("src").value = fourDice
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = fourDice2
     }
 
     else if(d == 5){
-        document.getElementById("flipDicePic2").getAttributeNode("src").value = fiveDice
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = fiveDice2
     }
 
     else{
-        document.getElementById("flipDicePic2").getAttributeNode("src").value = sixDice
+        document.getElementById("flipDicePic2").getAttributeNode("src").value = sixDice2
     }   
+
+
+    flipChecker = true
+
+    
+    // ---------------------------------------------------turn-canceller---------------------------------------------------
+    // if(diceNumber !== 6 && d !== 6){
+    //     document.getElementById("flipButton").style.display = "none"
+    // }
+    // else{
+    //     alert("Again your turn")
+    // }
+    // if(flipChecker == true){
+    // }
+    // ---------------------------------------------------turn-canceller---------------------------------------------------
 }
+
+
+// ---------------------------------------------DESIGNING-------------------------------------------------------------------
+// ---------------------------------------------DESIGNING-------------------------------------------------------------------
+
+
+// ---------------------------------------------FUNTIONALITY---------------------------------------------------------------
+// ---------------------------------------------FUNTIONALITY---------------------------------------------------------------
+
+
+
+
+
+
+// ---------------------------------------------FUNTIONALITY---------------------------------------------------------------
+// ---------------------------------------------FUNTIONALITY---------------------------------------------------------------
+
+// =========================================================================================================================
+// -----------------------------------------LUDO-PROJECT--------------------------------------------------------------------
+// =========================================================================================================================
 
 // function diceFlipping (){
 //     document.getElementById("flipDicePic").style.transform = "scaleX(-100%)"
