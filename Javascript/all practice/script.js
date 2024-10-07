@@ -1080,6 +1080,9 @@ var fourDice2
 var fiveDice2
 var sixDice2
 
+var blueGot = "./ludo assets/blue.png"
+var blueGotIdArray = ["blueHouseGot1", "blueHouseGot2", "blueHouseGot3", "blueHouseGot4"]
+
 var a
 var diceNumber
 
@@ -1179,43 +1182,18 @@ function diceFlip(){
 
 
     // ---------------------------------------------------turn-canceller---------------------------------------------------
-    // document.getElementById("flipButton").style.display = "none"
-    // if(flipChecker == true){
-        // }
-        // ---------------------------------------------------turn-canceller---------------------------------------------------
-    
-    openChecker = false
-    if((diceNumber == 6 || d == 6)){
-        var img = document.createElement("img")
-        var src = img.setAttribute("src", "./ludo assets/blue.png")
-        var clas = img.setAttribute("class", "gotImage")
-        id = "b1"
-        var mainElement = document.getElementById(id)
-        mainElement.appendChild(img)
-        openChecker = true
-    }
-    else if(openChecker === true){
-        // for(var l = 0; l < 54; l++){    
-            // }
-        
-        var t = id.slice(1)
-        id = "b" + t + diceNumber + d
-        console.log(t)
-        console.log(id)
-        var img = document.createElement("img")
-        var src = img.setAttribute("src", "./ludo assets/blue.png")
-        var clas = img.setAttribute("class", "gotImage")
-        var mainElement = document.getElementById("b4")
-        mainElement.appendChild(img)
-        openChecker = true
-    }
-    // openChecker = false
-}
+    // ---------------------------------------------------turn-canceller---------------------------------------------------
 
-// if(diceNumber == 6 && d == 6){
-//     document.getElementById("flipButton").style.display = "block"
-//     alert("Again your turn")
-// }
+    if(diceNumber == 6 || d == 6){
+            document.getElementById(blueGotIdArray[0]).style.display = "none"
+            blueGotIdArray.shift()
+    }
+    // var img = document.createElement("img")
+    // var src = img.setAttribute("src", blueGot)
+    // var clas = img.setAttribute("class", "gotImage")
+    // var mainElement = document.getElementById(id)
+    // mainElement.appendChild(img)
+}
     
 
 // ---------------------------------------------DESIGNING-------------------------------------------------------------------
@@ -1249,15 +1227,6 @@ function diceFlip(){
 // =========================================================================================================================
 // -----------------------------------------LUDO-PROJECT--------------------------------------------------------------------
 // =========================================================================================================================
-
-// function diceFlipping (){
-//     document.getElementById("flipDicePic").style.transform = "scaleX(-100%)"
-//     setInterval(diceback, 200)
-// }
-
-// function diceback(){
-//     document.getElementById("flipDicePic").style.transform = "scaleX(100%)"
-// }
 
 // document.getElementById("pic").style.transition = "300ms"
 
