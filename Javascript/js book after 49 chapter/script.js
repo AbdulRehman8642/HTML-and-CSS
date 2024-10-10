@@ -60,21 +60,4 @@
 //     document.getElementById("para").className = hiddenClass
 // }
 
-// var beforePara
-// function swapPic(id, afterPara){
-//     beforePara = document.getElementById(id).innerHTML
-//     document.getElementById(id).innerHTML = afterPara
-// }
-
-// function blurred(id){
-//     console.log(beforePara)
-// }
-
-
-function over(){
-    console.log("First")
-}
-
-function blur(){
-    console.log("Second")
-}
+    
