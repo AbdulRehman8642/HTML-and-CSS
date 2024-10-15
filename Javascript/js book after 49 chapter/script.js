@@ -60,4 +60,40 @@
 //     document.getElementById("para").className = hiddenClass
 // }
 
-    
+// ==========================================================================================================================//
+// var t = document.getElementById("tableId")
+// var td = t.getElementsByTagName("td")
+
+// function colorChange(id){
+//     // for(var i = 0; i < td.length; i++){
+//         document.getElementById(id).style.backgroundColor = "yellow"
+//     // }
+// }
+
+// function colorReset(id){
+//     // for(var i = 0; i < td.length; i++){
+//         document.getElementById(id).style.backgroundColor = "black"
+//     // }
+// }
+// ==========================================================================================================================//
+
+
+
+var turnChecker
+var turnRechecker
+
+function tic(id){
+    if(turnChecker === false){
+        document.getElementById(id).innerHTML = "tac"
+        document.getElementById(id).style.backgroundColor = "#024e91"
+        turnRechecker = true
+    }
+    else if(turnRechecker === true){
+        document.getElementById(id).innerHTML = "tic"
+        document.getElementById(id).style.backgroundColor = "#f5ad36"
+        turnChecker = false
+    }
+    else{
+    console.log("none")
+    }
+}   
