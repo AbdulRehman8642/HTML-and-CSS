@@ -1,0 +1,12 @@
+.tableParnt{
+    display: flex;
+}
+
+.box{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    /* background-color: yellow; */
+    /* margin: 5px; */
+    border: 2px solid black;
+}

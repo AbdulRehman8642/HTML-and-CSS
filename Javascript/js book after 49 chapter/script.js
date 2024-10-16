@@ -77,23 +77,3 @@
 // }
 // ==========================================================================================================================//
 
-
-
-var turnChecker
-var turnRechecker
-
-function tic(id){
-    if(turnChecker === false){
-        document.getElementById(id).innerHTML = "tac"
-        document.getElementById(id).style.backgroundColor = "#024e91"
-        turnRechecker = true
-    }
-    else if(turnRechecker === true){
-        document.getElementById(id).innerHTML = "tic"
-        document.getElementById(id).style.backgroundColor = "#f5ad36"
-        turnChecker = false
-    }
-    else{
-    console.log("none")
-    }
-}   
