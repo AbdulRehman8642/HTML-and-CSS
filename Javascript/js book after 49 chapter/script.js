@@ -77,3 +77,12 @@
 // }
 // ==========================================================================================================================//
 
+var element = document.childNodes[1].childNodes[2].childNodes[15].childNodes[3]
+var ntype = element.nodeType
+console.log(element)
+console.log(element.innerHTML)
+console.log(ntype)
+// console.log(element.innerHTML)
+
+// var element = document.querySelectorAll("#n2 p")
+// console.log(element[1].innerHTML)
