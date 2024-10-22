@@ -77,12 +77,51 @@
 // }
 // ==========================================================================================================================//
 
-var element = document.childNodes[1].childNodes[2].childNodes[15].childNodes[3]
-var ntype = element.nodeType
-console.log(element)
-console.log(element.innerHTML)
-console.log(ntype)
+// var element = document.children[0].children[1].children[1].childNodes[0]
+// var ntype = element.nodeType
+// console.log(element)
 // console.log(element.innerHTML)
+// console.log(ntype)
 
-// var element = document.querySelectorAll("#n2 p")
-// console.log(element[1].innerHTML)
+// var d = document.getElementById("humpty")
+// var pCounter = 0
+// for (var i = 0; i < d.childNodes.length; i++) {
+//     if (d.childNodes[i].nodeType === 1 ) {
+//         pCounter++
+//     }
+//     if (pCounter === 2) {
+//         d.childNodes[i].innerHTML = "All his men."
+//         break
+//     }
+// }
+
+// var p = document.getElementById("n")
+// var q = p.parentNode
+// var r = q.nodeType
+// console.log(q)
+// console.log(r)
+
+// var a = document.getElementById("n")
+// var b = a.nextSibling.nextSibling
+// console.log(b.innerHTML)
+// console.log(b.nodeType)
+
+// var a = document.getElementById("p")
+// var b = a.previousSibling.previousSibling
+// console.log(b.innerHTML)
+
+// var a = document.getElementById("h").lastChild.previousSibling
+// var b = a.nodeName
+// console.log(b)
+
+// var a = document.getElementById("h")
+// var b = a.firstChild
+// console.log(b.nodevalue)
+
+// var a = document.getElementById("e")
+// var b = a.firstChild.nextSibling.innerHTML
+// // var b = a.lastChild.nodeValue
+// console.log(b)
+
+// var a = document.getElementById("ap").attri
+// console.log(a)
