@@ -1,0 +1,34 @@
+.qtyInput{
+    width: 18px;
+    border: none;
+    padding: 2px;
+    text-align: center;
+}
+
+
+.qtyInput:focus{
+    border: none;
+    outline: 0px;
+    width: 18px;
+    text-align: center;
+}
+
+.qtyParent{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.fa-minus, .fa-plus{
+    font-size: 10px;
+    margin: 0px;
+}
+
+.fa-minus:hover, .fa-plus:hover{
+    font-size: 10px;
+    margin: 0px;
+    text-shadow: 0px 0px 0px black;
+}

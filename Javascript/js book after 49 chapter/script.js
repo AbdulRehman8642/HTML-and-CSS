@@ -123,5 +123,22 @@
 // // var b = a.lastChild.nodeValue
 // console.log(b)
 
-// var a = document.getElementById("ap").attri
+// var a = document.getElementById("ap").getAttributeNode("class").value = "class2"
+// a.value = "class2"
 // console.log(a)
+
+// var idees = document.getElementById("ap").attributes
+// console.log(idees[4].value)
+
+// var a = document.getElementById("ap").attributes
+// var b = a[1].nodeName
+// var c = a[1].nodeValue
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+var pElement = document.createElement("p")
+
+var pText = document.createTextNode("created by js")
+
+pElement.appendChild(pText)
