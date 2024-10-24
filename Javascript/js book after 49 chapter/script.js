@@ -137,8 +137,41 @@
 // console.log(b)
 // console.log(c)
 
-var pElement = document.createElement("p")
+// var pElement = document.createElement("p")
 
-var pText = document.createTextNode("created by js")
+// var pText = document.createTextNode("created")
 
-pElement.appendChild(pText)
+// pElement.appendChild(pText)
+// document.write(pElement.innerHTML)  
+// console.log(pElement.innerHTML)
+// console.log(pElement.outerHTML)
+
+// var div = document.getElementById("divP")
+// var p = document.createElement("p")
+// var t = document.createTextNode("Create for P & divP")
+// p.appendChild(t)
+// div.appendChild(p)
+
+// var div = document.getElementById("divP")
+// var nodeToRemove = div.childNodes[1]
+// div.removeChild(nodeToRemove)
+// var p = document.createElement("p")
+// var t = document.createTextNode("This is 1 para")
+// p.appendChild(t)
+// var firstPara = div.firstChild
+// // div.insertBefore(p, firstPara.nextSibling.nextSibling.nextSibling.nextSibling)
+
+
+var student = {
+    name : "Abdul Rehman",
+    id : 12345,
+    class : 9
+}
+// delete student.name
+
+var propertyExists = "name" in student
+
+console.log(student.name)
+console.log(propertyExists)
+
+
