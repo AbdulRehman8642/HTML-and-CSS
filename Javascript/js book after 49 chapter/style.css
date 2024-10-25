@@ -1,3 +1,34 @@
+body{
+    font-family: sans-serif;
+}
+
 .hidden{
     display: none;
 }
+
+/* TO DO LIST WITH FAKE API */
+
+.userBox{
+    background-color: rgb(214, 211, 211);
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px #646464;
+    /* cursor: pointer; */
+    padding: 10px 5px;
+    color: #2E2E2E;
+    margin: 10px 0px;
+}
+
+.userBox:hover{
+    box-shadow: 0px 0px 8px #646464 ;
+    transform: translate(0.3%);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    margin: 0px;
+}
+
+/* TO DO LIST WITH FAKE API */

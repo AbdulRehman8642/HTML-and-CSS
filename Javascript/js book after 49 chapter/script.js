@@ -162,16 +162,107 @@
 // // div.insertBefore(p, firstPara.nextSibling.nextSibling.nextSibling.nextSibling)
 
 
-var student = {
-    name : "Abdul Rehman",
-    id : 12345,
-    class : 9
-}
-// delete student.name
+// var student = {
+//     name : "Abdul Rehman",
+//     id : 12345,
+//     class : 9
+// }
+// // delete student.name
 
-var propertyExists = "name" in student
+// var propertyExists = "name" in student
 
-console.log(student.name)
-console.log(propertyExists)
+// console.log(student.name)
+// console.log(propertyExists)
 
 
+// var plan1 = {
+//     calcAnnual : function(){
+//         alert("You are programmer")
+//     }
+// }\
+
+
+// -----is se door raho jab tak js advance na reach out----------------------------------------------
+// ------------------------------------------FAKE API DATA WITH ADVANCE METHODS-----------------------------------------
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+// let data = [];
+// fetch('https://jsonplaceholder.typicode.com/todos/')
+//   .then((response) => response.json())
+//   .then((jsonData) => {
+//     data = jsonData;
+    
+//     // Map through each item in data and generate a div for each
+//     const divs = data.map((item, index) => `
+//       <a href="JavaScript:void(0)">
+//         <div class="userBox user${index + 1}" id="user${index + 1}">
+//           <h1>User ${item.id}</h1>
+//           <p>${item.title}</p>
+//           <p>${item.userId}</p>
+//           <p>${item.id}</p>
+//           <p>Completed: ${item.completed}</p>
+//         </div>
+//       </a>
+//     `).join(''); // Use .join('') to create a single string of HTML
+    
+//     document.getElementById('parent').innerHTML = divs; // Append all divs at once
+//     console.log(data); 
+//   })
+//   .catch((error) => console.error('Error fetching data:', error));
+
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+                                                //    I
+// ------------------------------------------FAKE API DATA WITH ADVANCE METHODS-----------------------------------------
+// -----is se door raho jab tak js advance na reach out----------------------------------------------
