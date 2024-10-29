@@ -266,3 +266,66 @@
                                                 //    I
 // ------------------------------------------FAKE API DATA WITH ADVANCE METHODS-----------------------------------------
 // -----is se door raho jab tak js advance na reach out----------------------------------------------
+
+// var dealObject = {
+//     name : "Abdul Rehman Khan",
+//     fatherName : "Abdul Samad Khan",
+//     class : 9,
+//     rollNumber : 12345,
+//     address : "Sector 41/B"
+// }
+
+// var checker = "address" in dealObject
+// console.log(dealObject.rollNumber + 5)
+// console.log(checker)
+// console.log(typeof checker)
+
+// var plan1 = {
+//     name: "Basic",
+//     price: 3.99,
+//     space: 100,
+//     transfer: 1000,
+//     pages: 10,
+//     discountMonths: [6, 7],
+//     calcAnnual: function(percentIfDisc) {
+//         var bestPrice = plan1.price
+//         var currDate = new Date()
+//         var thisMo = currDate.getMonth()
+//         for (var i = 0; i < plan1.discountMonths.length; i++) {
+//             if (plan1.discountMonths[i] === thisMo) {
+//                 bestPrice = plan1.price * percentIfDisc
+//                 break
+//             }
+//         }
+//         return bestPrice * 12
+//     }
+// }
+
+// var annualPrice = plan1.calcAnnual(0.8)
+// console.log(annualPrice)
+
+// var a = "is this capital"
+// a = a.toUpperCase()
+// console.log(a)
+// var a = "IS THIS CAPITAL"
+// a = a.toLowerCase()
+// console.log(a)
+
+// function Plan(name, price, space, transfer, pages) {
+//     this.name = name;
+//     this.price = price;
+//     this.space = space;
+//     this.transfer = transfer;
+//     this.pages = pages;
+// }
+
+// var basicPlan = new Plan("MYNAME", 9000, 500, "unlimited", 10)
+
+// console.log(basicPlan.name)
+// console.log(basicPlan.price)
+// basicPlan.price += 1000
+// basicPlan.name += 20
+// console.log(basicPlan.name)
+// console.log(basicPlan.price)
+// console.log(typeof basicPlan.name)
+
