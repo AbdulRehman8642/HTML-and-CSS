@@ -329,3 +329,26 @@
 // console.log(basicPlan.price)
 // console.log(typeof basicPlan.name)
 
+// var dont = null
+// console.log(dont)
+
+// function v(a, b){
+//     alert("row")
+//     var c = a + b
+//     return c
+// }
+
+// v(1,2)
+// var d = v(1, 2)
+// console.log(d)
+
+function fetchData(callback) {
+    setTimeout(() => {
+        const data = "Data received!"
+        callback(data)
+    }, 2000)
+}
+
+fetchData(function(data) {
+    console.log(data)
+})
