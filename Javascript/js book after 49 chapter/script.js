@@ -342,13 +342,28 @@
 // var d = v(1, 2)
 // console.log(d)
 
-function fetchData(callback) {
-    setTimeout(() => {
-        const data = "Data received!"
-        callback(data)
-    }, 2000)
-}
+// function fetchData(callback) {
+//     setTimeout(() => {
+//         const data = "Data received!"
+//         callback(data)
+//     }, 2000)
+// }
 
-fetchData(function(data) {
-    console.log(data)
-})
+// fetchData(function(data) {
+//     console.log(data)
+// })
+
+var game = {
+    userName : "Markh",
+    age : 17,
+    price : 900,
+
+    welcomeMessage : function() {
+
+        console.log(`${this.age} welcome to my website`);
+        console.log(this);
+        // console.log("welcome to my website");
+    }
+}
+game.age = 90
+game.welcomeMessage()
