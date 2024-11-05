@@ -353,17 +353,71 @@
 //     console.log(data)
 // })
 
-var game = {
-    userName : "Markh",
-    age : 17,
-    price : 900,
+// var game = {
+//     userName : "Markh",
+//     age : 17,
+//     price : 900,
 
-    welcomeMessage : function() {
+//     welcomeMessage : function() {
 
-        console.log(`${this.age} welcome to my website`);
-        console.log(this);
-        // console.log("welcome to my website");
-    }
-}
-game.age = 90
-game.welcomeMessage()
+//         console.log(`${this.age} welcome to my website`);
+//         console.log(this);
+//         // console.log("welcome to my website");
+//     }
+// }
+// game.age = 90
+// game.welcomeMessage()
+
+// var abc = {
+//     username : "anwar",
+//     surname : "ali",
+//     id : 343410,
+//     action : function(){
+//         console.log(this.username + this.surname)
+//     }
+// }
+// console.log(abc.action())
+
+// function CarManufacturingFactory(name, model, launchYear, engineCC, seat, color, sunroof, speed){
+//     this.carName = name
+//     this.carModel = model
+//     this.carLaunchYear = launchYear
+//     this.carEngineCC = engineCC
+//     this.carSeat = seat
+//     this.carColor = color
+//     this.hasSunroof = sunroof
+//     this.carSpeed = speed
+// }
+
+// var newCar = new CarManufacturingFactory("Audi A6", 2023, 2022, "1800 CC", 4, "grey", true, 300)
+// console.log(newCar);
+// console.log(typeof newCar.hasSunroof);
+
+// function abc(){
+//     document.write("creative")
+//     console.log(this);
+// }
+
+// var a = 1
+// function timer(){
+//     var dateForTimer = new Date()
+//     var hourForTimer = dateForTimer.getHours()
+//     var minuteForTimer = dateForTimer.getMinutes()
+//     var secondsForTimer = dateForTimer.getSeconds()
+//     var millisecondsForTimer = dateForTimer.getMilliseconds()
+//     console.log(hourForTimer +" : "+ minuteForTimer +" : "+ secondsForTimer +" : "+ millisecondsForTimer)
+// }
+
+// setInterval(timer, 1000)
+
+// var a = (a,b) => {
+//     return a + b
+// }
+
+
+
+// console.log(a(2,4))
+
+// var abc = () => ({username: "hitesh"})
+
+// console.log(abc().username)
