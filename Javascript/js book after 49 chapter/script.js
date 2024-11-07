@@ -421,3 +421,53 @@
 // var abc = () => ({username: "hitesh"})
 
 // console.log(abc().username)
+
+
+// var abc = {
+//     username : "Abdul Rehman",
+//     price : 1900
+// }
+
+// var price
+// var checkProperty = "price" in window
+// console.log(checkProperty)
+
+// var a = {
+//     username : "Abdul Rehman",
+//     role : "Graphic Designer",
+//     Salary : 65000
+// }
+// // a.Salary = 75000
+
+// console.log(a.Salary)
+
+// var vegetables = {
+//     potato : "2kg",
+//     onion : "2kg",
+//     cabbage : "2kg",
+//     carrot : "1kg",
+//     cocumber : "1kg",
+//     lemon : "0.25kg"
+// }
+
+// var listOfProperties = []
+// for(var a in vegetables){
+//     listOfProperties.push(a)
+// }
+
+// listOfProperties.pop()
+// console.log(listOfProperties)
+// ----------------------------------------------------------------wrong
+// var a = {
+//     userName : "Abdul Rehman",
+//     fatherName : "Abdul Samad",
+//     GrandFatherName : "Abdul Hameed",
+//     rollNo : 1138
+// }
+
+// function abc(){
+//     console.log(" 'a' function is running")
+//     this.rollNo = 343410
+//     console.log(a.rollNo)
+// }
+// ----------------------------------------------------------------wrong
