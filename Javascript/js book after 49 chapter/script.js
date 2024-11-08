@@ -471,3 +471,18 @@
 //     console.log(a.rollNo)
 // }
 // ----------------------------------------------------------------wrong
+
+// function goBack(){
+//     history.back()
+// }
+
+// function goForward(){
+//     history.forward()
+// }
+
+try{
+    alert("There is a problem")
+}
+catch(err){
+    alert(err)
+}
