@@ -480,9 +480,41 @@
 //     history.forward()
 // }
 
-try{
-    alert("There is a problem")
-}
-catch(err){
-    alert(err)
-}
+// try{
+//     aler("There is a problem")
+// }
+// catch(err){
+//     alert(err)
+// }
+
+// // // // // // // // // // // // // NOT WORKING BECAUSE IT IS OLD⬇️
+
+// var a = window.open()
+// var b = "<h1>hello world</h1>"
+// a.document.write(b)
+
+// function checkForPopBlocker() {
+//     var testPop = window.open("", "","width=100,height=100");
+//     if (testPop === null) {
+//         alert("Please disable your popup blocker.");
+//     }
+//     testPop.close();
+// }
+
+// checkForPopBlocker()
+// // // // // // // // // // // // // NOT WORKING BECAUSE IT IS OLD⬇⬆️
+// // // // // // // // // // // // // WORKING after disabling popup blockers⬇️
+
+// var newWindow = window
+// newWindow.open()
+// newWindow.close()
+// document.write("<h1 style='background-color: yellow'>hello world</h1>")
+
+// var newWindow = window.open("https://www.youtube.com", "new", "width=100,height=150", "left=200,top=100")
+// newWindow.document.location.href("https://www.youtube.com")
+// newWindow.document.write("This is new window on new page")
+// window.open().document.write("directly writing on new window without storing in variable")
+
+
+
+// // // // // // // // // // // // // WORKING after disabling popup blockers⬆️
