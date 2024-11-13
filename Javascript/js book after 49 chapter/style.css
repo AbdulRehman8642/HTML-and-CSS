@@ -31,3 +31,23 @@ h1{
 }
 
 /* TO DO LIST WITH FAKE API */
+
+/* QR CODE GENERATOR */
+
+
+/* .parent{
+    display: flex;
+    justify-content: center;
+} */
+
+.box{
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    margin: 3px;
+}
+
+
+
+
+/* QR CODE GENERATOR */

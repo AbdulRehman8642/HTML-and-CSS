@@ -518,3 +518,25 @@
 
 
 // // // // // // // // // // // // // WORKING after disabling popup blockers⬆️
+
+
+// var arrFunction = () => {
+//     for(var i = 0; i < 10; i++){
+//         console.log(`Abrar got ${i}`)
+//     }
+// }
+
+// arrFunction()
+
+function createDiv (){
+    for(var i = 1; i < 842; i++){
+        var parentBox = document.getElementById("parentQR")
+        var box = document.createElement("div")
+        box.className = "box"
+        parentBox.append(box)
+        if(i % 29){
+            var lineBreaker = document.createElement("br")
+            parentBox.appendChild(lineBreaker)
+        }
+    }
+}
