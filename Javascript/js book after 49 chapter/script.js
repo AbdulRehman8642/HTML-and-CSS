@@ -528,15 +528,17 @@
 
 // arrFunction()
 
-function createDiv (){
-    for(var i = 1; i < 842; i++){
-        var parentBox = document.getElementById("parentQR")
-        var box = document.createElement("div")
-        box.className = "box"
-        parentBox.append(box)
-        if(i % 29){
-            var lineBreaker = document.createElement("br")
-            parentBox.appendChild(lineBreaker)
-        }
-    }
-}
+// -----------------------------------------------------------------    QR CODE GENERATOR
+// var parentRow = document.createElement("div")
+// parentRow.className = "row"
+// var parentRowCopy = document.createElement("div")
+// parentRowCopy.className = "row"
+// for(var k = 0; k < 30; k++){
+//     for(var j = 0; j < 30; j++){
+//         var boxCopy = document.createElement("div")
+//         boxCopy.className = "box"
+//         parentRowCopy.append(boxCopy)
+//         document.getElementById("parentQR").append(parentRowCopy)
+//     }
+// }
+// -----------------------------------------------------------------    QR CODE GENERATOR
