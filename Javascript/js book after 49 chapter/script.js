@@ -542,3 +542,43 @@
 //     }
 // }
 // -----------------------------------------------------------------    QR CODE GENERATOR
+
+// ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING
+
+// testing
+// document.write("hello world")
+// document.write("<img src='https://static.toiimg.com/photo/80452572.cms'>")
+
+// console.log("before settimeout")
+
+// setTimeout(() => {
+//     console.log("message in wait")
+// }, 2000);
+// console.log("after settimeout")
+// PROMISES
+
+// function abc(){
+//     setTimeout(() => {
+//         console.log("first code");
+//     }, 3000);
+// }
+
+// var promise = abc()
+
+// function xyz(){
+//     console.log("second code")
+// }
+// promise.then(xyz())
+
+var sampleAPI = "https://fake-json-api.mock.beeceptor.com/users"
+var user = fetch(sampleAPI)
+console.log(user)
+// user.then( (data)=>{
+//     return data 
+// }).then((data2)=>{
+//     console.log(data2)
+// })
+
+
+
+// ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING
