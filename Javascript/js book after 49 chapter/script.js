@@ -573,6 +573,42 @@
 var sampleAPI = "https://fake-json-api.mock.beeceptor.com/users"
 var user = fetch(sampleAPI)
 console.log(user)
+
+var cart = ["shirt", "trouser", "jogger"]
+
+var promise = createOrder(cart)
+
+promise.then(function (data){
+    console.log(data)
+    // proceedToPayment(data)
+})
+.catch(function(realError){
+    alert(realError.message)
+})
+
+///
+
+function createOrder(){
+    var pr = new Promise(function(resolve, reject){
+        if(!validateCart(cart)){
+            var err = new Error("Cart is not valid")
+            reject(err)
+        }
+        var orderId = "12345"
+        if(orderId){
+            setTimeout(function() {
+                resolve(orderId)
+            }, 3000)
+        }
+    })
+
+    return pr
+}
+
+function validateCart(cart){
+    // return true
+    return false
+}
 // user.then( (data)=>{
 //     return data 
 // }).then((data2)=>{
