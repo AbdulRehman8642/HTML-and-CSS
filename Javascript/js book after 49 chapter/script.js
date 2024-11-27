@@ -570,17 +570,24 @@
 // }
 // promise.then(xyz())
 
-var sampleAPI = "https://fake-json-api.mock.beeceptor.com/users"
-var user = fetch(sampleAPI)
-console.log(user)
+// var sampleAPI = "https://fake-json-api.mock.beeceptor.com/users"
+// var user = fetch(sampleAPI)
+// console.log(user)
 
 var cart = ["shirt", "trouser", "jogger"]
 
-var promise = createOrder(cart)
-
+var promise = createOrder()
+console.log
 promise.then(function (data){
     console.log(data)
     // proceedToPayment(data)
+    return data
+})
+.then(function(orderDetails){
+    return proceedToPayment(orderDetails)
+})
+.then(function(paymentData){
+    console.log(paymentData)
 })
 .catch(function(realError){
     alert(realError.message)
@@ -606,9 +613,21 @@ function createOrder(){
 }
 
 function validateCart(cart){
-    // return true
-    return false
+    return true
+    // return false
 }
+
+function proceedToPayment(orderId){
+    return new Promise((resolve, reject) => {
+        // setTimeout(()=>{
+            resolve("Payment Successful")
+        // },2000)
+    })
+}
+
+var t = "oioioioioi"
+t = t[2] + "kl"
+console.log(t)
 // user.then( (data)=>{
 //     return data 
 // }).then((data2)=>{
