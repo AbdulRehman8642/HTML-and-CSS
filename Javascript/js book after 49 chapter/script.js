@@ -574,66 +574,137 @@
 // var user = fetch(sampleAPI)
 // console.log(user)
 
-var cart = ["shirt", "trouser", "jogger"]
+// // --------------
+// var cart = ["shirt", "trouser", "jogger"]
 
-var promise = createOrder()
-console.log
-promise.then(function (data){
-    console.log(data)
-    // proceedToPayment(data)
-    return data
-})
-.then(function(orderDetails){
-    return proceedToPayment(orderDetails)
-})
-.then(function(paymentData){
-    console.log(paymentData)
-})
-.catch(function(realError){
-    alert(realError.message)
-})
-
-///
-
-function createOrder(){
-    var pr = new Promise(function(resolve, reject){
-        if(!validateCart(cart)){
-            var err = new Error("Cart is not valid")
-            reject(err)
-        }
-        var orderId = "12345"
-        if(orderId){
-            setTimeout(function() {
-                resolve(orderId)
-            }, 3000)
-        }
-    })
-
-    return pr
-}
-
-function validateCart(cart){
-    return true
-    // return false
-}
-
-function proceedToPayment(orderId){
-    return new Promise((resolve, reject) => {
-        // setTimeout(()=>{
-            resolve("Payment Successful")
-        // },2000)
-    })
-}
-
-var t = "oioioioioi"
-t = t[2] + "kl"
-console.log(t)
-// user.then( (data)=>{
-//     return data 
-// }).then((data2)=>{
-//     console.log(data2)
+// var promise = createOrder()
+// console.log
+// promise.then(function (data){
+//     console.log(data)
+//     // proceedToPayment(data)
+//     return data
+// })
+// .then(function(orderDetails){
+//     return proceedToPayment(orderDetails)
+// })
+// .then(function(paymentData){
+//     console.log(paymentData)
+// })
+// .catch(function(realError){
+//     alert(realError.message)
 // })
 
+// ///
 
+// function createOrder(){
+//     var pr = new Promise(function(resolve, reject){
+//         if(!validateCart(cart)){
+//             var err = new Error("Cart is not valid")
+//             reject(err)
+//         }
+//         var orderId = "12345"
+//         if(orderId){
+//             setTimeout(function() {
+//                 resolve(orderId)
+//             }, 3000)
+//         }
+//     })
+
+//     return pr
+// }
+
+// function validateCart(cart){
+//     return true
+//     // return false
+// }
+
+// function proceedToPayment(orderId){
+//     return new Promise((resolve, reject) => {
+//         // setTimeout(()=>{
+//             resolve("Payment Successful")
+//         // },2000)
+//     })
+// }
+// // --------------
+// // // ------------------------------------------------------------
+// // --------------
+
+// var cart = ["vegetables", "ball", "mobile"]
+// var orderId = 12345
+
+// takeOrder()
+// .then(function (ID){
+//     alert(ID)
+//     return ID
+// })
+// .then(function(){
+//     return paymentCalculation()
+// })
+// .then(function (data){
+//     console.log(data)
+// })
+// .catch(function (err){
+//     alert(err)
+// })
+// function takeOrder(){
+//     var confirmation = Number(prompt("Enter your order id"))
+//     var promise = new Promise(function (resolve, reject){
+//         if(confirmation == orderId){
+//             resolve(orderId)
+//         }
+//         if(confirmation != orderId){
+//             var error = new Error("Order Id is not valid")
+//             reject(error)
+//         }
+//     })
+    
+//     return promise
+// }
+
+// function paymentCalculation(){
+//     var itemQty = prompt("Enter Item quantity")
+//     var promise2 = new Promise(function (resolve, reject){
+//         var totalPrice = 0
+//         if(itemQty == 0){
+//             var error = new Error("Your Cart is empty")
+//             reject(error)
+//         }
+//         for(var i = 0; i < itemQty; i++){
+//             totalPrice += 250
+//         }
+//         resolve(totalPrice)
+//     })
+//     return promise2
+// }
+// // --------------
+
+var p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("p1 is successful")
+        // reject("p1 is fail")
+    }, 3000)
+})
+
+var p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("p2 is successful")
+        // reject("p2 is fail")
+    }, 1000);
+})
+
+var p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("p3 is successful")
+        // reject("p3 is fail")
+    }, 2000);
+})
+
+Promise.race([p1,p2,p3])
+.then((res) => {
+    console.log(res)
+})
+.catch((err) => {
+    console.error(err)
+})
 
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING
