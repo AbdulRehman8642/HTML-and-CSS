@@ -573,7 +573,7 @@
 // var sampleAPI = "https://fake-json-api.mock.beeceptor.com/users"
 // var user = fetch(sampleAPI)
 // console.log(user)
-
+// // // ------------------------------------------------------------
 // // --------------
 // var cart = ["shirt", "trouser", "jogger"]
 
@@ -677,34 +677,110 @@
 //     return promise2
 // }
 // // --------------
+// // // ------------------------------------------------------------
+// // --------------
+// var p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("p1 is successful")
+//         reject("p1 is fail")
+//     }, 3000)
+// })
+
+// var p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("p2 is successful")
+//         reject("p2 is fail")
+//     }, 1000);
+// })
+
+// var p3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("p3 is successful")
+//         reject("p3 is fail")
+//     }, 2000);
+// })
+
+// Promise.any([p1,p2,p3])
+// .then((res) => {
+//     console.log(res)
+// })
+// .catch((err) => {
+//     console.error(err.errors)
+// })
+// // --------------
+// // // ------------------------------------------------------------
+// --------------
+// async await
+// var pr = new Promise(function (resolve, reject) {
+//     resolve("Resolved Promise value")
+// })
+
+// console.log(pr)
+// pr
+// .then(function(res) {
+//     console.log(res)
+// })
+
+// async function abc () {
+//     // return "how"
+//     return pr
+// }
+
+// abc()
+// .then((res) => {
+//     console.log(res)
+// })
+// await is a keyword that is only to be used inside an async funtion
+// --------------
+// // // ------------------------------------------------------------
+
+
+
+
+// // // ------------------------------------------------------------
+// --------------
+// var pr = new Promise(function (resolve, reject) {
+//     resolve("Promise is resolved")
+// })
+
+// async function asyncFunction() {
+//     var actualData = await pr
+//     console.log(pr)
+//     // console.log(actualData)
+// }
+
+// asyncFunction()
+// --------------
+// // // ------------------------------------------------------------
+
+
+
+// // // ------------------------------------------------------------
+// --------------
 
 var p1 = new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve("p1 is successful")
-        // reject("p1 is fail")
-    }, 3000)
+        resolve("This is 1st resolved promise value")
+    }, 5000);
 })
 
 var p2 = new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve("p2 is successful")
-        // reject("p2 is fail")
-    }, 1000);
+        resolve("This is 2nd resolved promise value")
+    }, 8000);
 })
 
-var p3 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("p3 is successful")
-        // reject("p3 is fail")
-    }, 2000);
-})
+async function solving () {
+    var p1Value = await p1
+    console.log("This is gap 1")
+    console.log(p1Value)
 
-Promise.race([p1,p2,p3])
-.then((res) => {
-    console.log(res)
-})
-.catch((err) => {
-    console.error(err)
-})
+    var p2Value = await p2
+    console.log("This is gap 2")
+    console.log(p2Value)
+}
 
+solving()
+// --------------
+// // // ------------------------------------------------------------
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING
