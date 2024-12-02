@@ -679,34 +679,34 @@
 // // --------------
 // // // ------------------------------------------------------------
 // // --------------
-// var p1 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         // resolve("p1 is successful")
-//         reject("p1 is fail")
-//     }, 3000)
-// })
+var p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // resolve("p1 is successful")
+        reject("p1 is fail")
+    }, 3000)
+})
 
-// var p2 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         // resolve("p2 is successful")
-//         reject("p2 is fail")
-//     }, 1000);
-// })
+var p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // resolve("p2 is successful")
+        reject("p2 is fail")
+    }, 1000);
+})
 
-// var p3 = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         // resolve("p3 is successful")
-//         reject("p3 is fail")
-//     }, 2000);
-// })
+var p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // resolve("p3 is successful")
+        reject("p3 is fail")
+    }, 2000);
+})
 
-// Promise.any([p1,p2,p3])
-// .then((res) => {
-//     console.log(res)
-// })
-// .catch((err) => {
-//     console.error(err.errors)
-// })
+Promise.any([p1,p2,p3])
+.then((res) => {
+    console.log(res)
+})
+.catch((err) => {
+    console.error(err.errors)
+})
 // // --------------
 // // // ------------------------------------------------------------
 // --------------
@@ -783,4 +783,4 @@ async function solving () {
 solving()
 // --------------
 // // // ------------------------------------------------------------
-// ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING
+// ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING 
