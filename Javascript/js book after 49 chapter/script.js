@@ -781,6 +781,14 @@ async function solving () {
 }
 
 solving()
+
+function a (){
+    console.log("how are you")
+}
+
+a()
+window.n = 90
+// console.log(a())
 // --------------
 // // // ------------------------------------------------------------
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING 
