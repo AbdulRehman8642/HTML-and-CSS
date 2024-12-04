@@ -679,34 +679,34 @@
 // // --------------
 // // // ------------------------------------------------------------
 // // --------------
-var p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        // resolve("p1 is successful")
-        reject("p1 is fail")
-    }, 3000)
-})
+// var p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("p1 is successful")
+//         reject("p1 is fail")
+//     }, 3000)
+// })
 
-var p2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        // resolve("p2 is successful")
-        reject("p2 is fail")
-    }, 1000);
-})
+// var p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("p2 is successful")
+//         reject("p2 is fail")
+//     }, 1000);
+// })
 
-var p3 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        // resolve("p3 is successful")
-        reject("p3 is fail")
-    }, 2000);
-})
+// var p3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // resolve("p3 is successful")
+//         reject("p3 is fail")
+//     }, 2000);
+// })
 
-Promise.any([p1,p2,p3])
-.then((res) => {
-    console.log(res)
-})
-.catch((err) => {
-    console.error(err.errors)
-})
+// Promise.any([p1,p2,p3])
+// .then((res) => {
+//     console.log(res)
+// })
+// .catch((err) => {
+//     console.error(err.errors)
+// })
 // // --------------
 // // // ------------------------------------------------------------
 // --------------
@@ -758,37 +758,46 @@ Promise.any([p1,p2,p3])
 // // // ------------------------------------------------------------
 // --------------
 
-var p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("This is 1st resolved promise value")
-    }, 5000);
-})
+// var p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("This is 1st resolved promise value")
+//     }, 5000);
+// })
 
-var p2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("This is 2nd resolved promise value")
-    }, 8000);
-})
+// var p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("This is 2nd resolved promise value")
+//     }, 8000);
+// })
 
-async function solving () {
-    var p1Value = await p1
-    console.log("This is gap 1")
-    console.log(p1Value)
+// async function solving () {
+//     var p1Value = await p1
+//     console.log("This is gap 1")
+//     console.log(p1Value)
 
-    var p2Value = await p2
-    console.log("This is gap 2")
-    console.log(p2Value)
-}
+//     var p2Value = await p2
+//     console.log("This is gap 2")
+//     console.log(p2Value)
+// }
 
-solving()
+// solving()
 
-function a (){
-    console.log("how are you")
-}
-
-a()
-window.n = 90
+// function a (){
+//     console.log("how are you")
+// }
+    
+// a()
+// window.n = 90
 // console.log(a())
 // --------------
 // // // ------------------------------------------------------------
+
+function a () {
+    console.log(b)
+}
+
+var b = 10
+
+a()
+
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING 
