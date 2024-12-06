@@ -792,12 +792,24 @@
 // --------------
 // // // ------------------------------------------------------------
 
-function a () {
-    console.log(b)
-}
+// BLOCK BLOCK BLOCK
+// {
+//     var a = 10
+//     console.log(a)
+// }
+// if(true) true
 
-var b = 10
-
-a()
-
+// var a = true
+// if(a){
+//     // const b = 90
+//     let b = 900
+//     // var b = 9000
+//     console.log(b)
+// }
+// // console.log(b)
+// {
+//     var a = 90
+//     // console.log(a)
+// }
+// console.log(a)
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING 
