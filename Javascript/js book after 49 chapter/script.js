@@ -811,5 +811,34 @@
 //     var a = 90
 //     // console.log(a)
 // }
+// try{
+//     console.log(a)
+// }
+// catch(err){
+//     alert(err)
+// }
+// let a = 10
+
+
+// {
+//     var a = 10
+//     console.log(a)
+// }
+
+// var a = () => {
+//     console.log("arrow")
+// }
+
+// console.log(a)
+
+// let a = 10;
+// a = 30;
+
+// var a
+// // if(a === false) {console.log("ran")}
+// if(a === true){
+//     console.log("how")
+// }
+
 // console.log(a)
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING 
