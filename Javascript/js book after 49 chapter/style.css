@@ -51,3 +51,36 @@ h1{
 
 
 /* QR CODE GENERATOR */
+
+.allParent{
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.upTriangle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 0px;
+    /* background-color: bisque; */
+    /* border-radius: 100%; */
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid bisque;
+}
+
+.downTriangle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 0px;
+    /* background-color: bisque; */
+    /* border-radius: 100%; */
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid bisque;
+}

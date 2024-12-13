@@ -840,5 +840,34 @@
 //     console.log("how")
 // }
 
+// if(true) alert("you")
+// function ref(){
+//     location.reload()
+// }
+
+// {
+//     var a = 10
+//     let b = 20
+//     const c = 30
+//     console.log(c)
+// }
+
 // console.log(a)
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING 
+
+const a = 10
+let b = 20
+var c = 30
+console.log(c)
+{
+    const a = 40
+    let b = 50
+    var c = 60
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+
+console.log(a)
+console.log(b)
+console.log(c)
