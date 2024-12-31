@@ -855,19 +855,33 @@
 // console.log(a)
 // ASYNCHRONOUS AND SYNCHRONOUS PROGRAMMING 
 
-const a = 10
-let b = 20
-var c = 30
-console.log(c)
-{
-    const a = 40
-    let b = 50
-    var c = 60
-    console.log(a)
-    console.log(b)
-    console.log(c)
-}
+// // var a = 10
+// // let b = 20
+// const c = 30
+// // console.log(c)
+// function a() {
+//     const c = 40
+//     // console.log(c)
+// }
 
-console.log(a)
-console.log(b)
-console.log(c)
+// // console.log(a)
+// // console.log(b)
+// console.log(c)
+
+
+// // SHADOWING
+// var a = 10
+// {
+//     let a = 20
+//     console.log(a)
+// }
+// console.log(a)
+
+function a (){
+    var b = 10
+    function c() {
+        console.log(b)
+    }
+    c()
+}
+a()
