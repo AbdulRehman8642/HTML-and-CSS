@@ -877,11 +877,24 @@
 // }
 // console.log(a)
 
-function a (){
-    var b = 10
-    function c() {
-        console.log(b)
-    }
-    c()
-}
-a()
+// function a (){
+//     var b = 10
+//     function c() {
+//         console.log(b)
+//     }
+//     c()
+// }
+// a()
+
+// function a() {
+//     for(var i = 1; i <= 5; i++){
+//         setTimeout(() => {
+//             console.log(i)
+//         }, i * 1000);
+//     }
+//     console.log("JS")
+// }
+
+// a()
+
+
