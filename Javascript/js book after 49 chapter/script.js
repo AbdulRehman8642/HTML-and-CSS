@@ -897,4 +897,14 @@
 
 // a()
 
+// function x(){
+//     console.log("Abdul Rehman")
+// }
 
+// function b(e){
+//     e()
+// }
+// b(function x(){
+//     console.log("Abdul Rehman")
+// })
+// console.log("you know")
