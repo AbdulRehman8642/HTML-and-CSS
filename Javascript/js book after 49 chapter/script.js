@@ -908,3 +908,22 @@
 //     console.log("Abdul Rehman")
 // })
 // console.log("you know")
+
+
+// // converting into binary
+// const arr = [5,1,3,2,6]
+
+// function binary(x){
+//     return x.toString(2)
+// }
+
+// const output = arr.map(binary)
+
+// console.log(output)
+
+var a = [1,2,3,4,5,6,7,8,9,10]
+for(var i = 0; i<a.length; i++){
+    if(i%2 == 0){
+        console.log(i)
+    }
+}
