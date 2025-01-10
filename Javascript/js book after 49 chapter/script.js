@@ -921,9 +921,29 @@
 
 // console.log(output)
 
-var a = [1,2,3,4,5,6,7,8,9,10]
-for(var i = 0; i<a.length; i++){
-    if(i%2 == 0){
-        console.log(i)
+// var a = [1,2,3,4,5,6,7,8,9,10]
+// for(var i = 0; i<a.length; i++){
+//     if(i%2 == 0){
+//         console.log(i)
+//     }
+// }
+
+const users = [
+    {firstName: "Elon", lastName : "Musk", age : 53},
+    {firstName: "Akshay", lastName : "Saini", age : 26},
+    {firstName: "Mark", lastName : "Zuckerberg", age : 40},
+    {firstName: "Jeff", lastName : "bezos", age : 26}
+]
+
+
+const output = users.reduce(function(acc, curr){
+    if(acc[curr.age]){
+        acc[curr.age] = ++acc[curr.age]
     }
-}
+    else{
+        acc[curr.age] = 1
+    }
+    return acc
+}, {})
+
+console.log(output)
