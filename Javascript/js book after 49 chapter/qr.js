@@ -29,7 +29,7 @@ for(var j = 0; j < 25; j++){
     }
     boxParent.appendChild(rowSingle)
     // var lineBreaker = document.createElement("br")
-    // boxParent.appendChild(lineBreaker)
+    // boxParent.appendChild(lineBreaker)-
 }
 
 var allBoxesArray = document.getElementsByClassName("box")
@@ -152,12 +152,15 @@ for(var s = 0; s < sideBoxIDs.length; s++){
 //     idNumber = sideBoxIDs[n].slice(3)
 // }
 
+var arrayOfRandomBoxesIds = []
+
 for(var h = 0; h < randomIds.length; h++){
 
     var mathRandom1 = Math.random().toString()
     if(mathRandom1.slice(2,3) > 0){
         var random1 = mathRandom1.slice(2, 3)
         var newId1 = `box${random1}`
+        arrayOfRandomBoxesIds.push(newId1)
     }
 
 
@@ -165,6 +168,7 @@ for(var h = 0; h < randomIds.length; h++){
     if(mathRandom2.slice(2, 4) >= 10){
         var random2 = mathRandom2.slice(2, 4)
         var newId2 = `box${random2}`
+        arrayOfRandomBoxesIds.push(newId2)
     }
     
 
@@ -172,41 +176,52 @@ for(var h = 0; h < randomIds.length; h++){
     if(mathRandom3.slice(2, 5) >= 100 && mathRandom3.slice(2, 5) <= 625){
         var random3 = mathRandom3.slice(2, 5)
         var newId3 = `box${random3}`
+        arrayOfRandomBoxesIds.push(newId3)
     }
     
-    // for(var r = 0; r < sideBoxesWithSpace.length; r++){
-    //     var toCheckId = sideBoxesWithSpace[r].slice(3)
-    //     var completeCheckId = `box${toCheckId}`
+    // // for(var r = 0; r < sideBoxesWithSpace.length; r++){
+    // //     var toCheckId = sideBoxesWithSpace[r].slice(3)
+    // //     var completeCheckId = `box${toCheckId}`
 
 
-        // for(var d = 0; d < 50; d++){
-            if(newId1 && newId1 == randomIds[h]){
-                document.getElementById(newId1).style.backgroundColor = "transparent"
-            }
-        // }
+    //     // for(var d = 0; d < 50; d++){
+    //         if(newId1 && newId1 == randomIds[h]){
+    //             document.getElementById(newId1).style.backgroundColor = "transparent"
+    //         }
+    //     // }
 
-        // for(var d = 0; d < 50; d++){
-            if(newId2 && newId2 == randomIds[h]){
-                document.getElementById(newId2).style.backgroundColor = "transparent"
-            }
-        // }
+    //     // for(var d = 0; d < 50; d++){
+    //         if(newId2 && newId2 == randomIds[h]){
+    //             document.getElementById(newId2).style.backgroundColor = "transparent"
+    //         }
+    //     // }
 
-        // for(var d = 0; d < 50; d++){
-            if(newId3 && newId3 == randomIds[h]){
-                document.getElementById(newId3).style.backgroundColor = "transparent"
-            }
-        // }
+    //     // for(var d = 0; d < 50; d++){
+    //         if(newId3 && newId3 == randomIds[h]){
+    //             document.getElementById(newId3).style.backgroundColor = "transparent"
+    //         }
+    //     // }
         
-    // }
+    // // }
 
+}
+
+
+for(var l = 0; l < arrayOfRandomBoxesIds; l++){
+    var singleIdGenerator = arrayOfRandomBoxesIds[l]
+    var singleIdWithDOM = document.getElementById(singleIdGenerator)
+    singleIdGenerator.style.backgroundColor = "transparent"
 }
 console.log(Math.random())
 console.log(newId1)
 console.log(newId2)
 console.log(newId3)
+console.log(arrayOfRandomBoxesIds)
 // console.log(idNumber)
 
 // console.log(randomIds.length)
 
 // QR CODE MISSION //
 // QR CODE MISSION //
+
+var div = "<div></div>"

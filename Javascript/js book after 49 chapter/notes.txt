@@ -1,0 +1,76 @@
+1 big box (side wala) = 7 small boxes
+up and left mid boxes = 11 boxes
+down and right boxes = 18 small boxes
+
+
+calculation:
+-up and down:
+7+7+11
+
+right and left :
+7+18
+
+BOX = 25x25
+
+--jin small boxes ke side wale boxes banane hen:
+r1 mein box1 - box7 tak redded | box19 - box25 redded
+
+r2 mein box26 and box32 redded | box44, box50 redded
+
+r3 mein box52 and box56 white | box70,74 white
+
+r4 mein box77,81 white | box95,99 white
+
+r5 mein box102,106 white | box20,24 white
+
+r6 mein box126,132 redded | box144,150 redded
+
+r7 mein box151-157 redded | box169-175 redded
+
+
+last box keliye:
+box451-457 redded
+box 476,482 redded
+box 502,506 white
+box 527,531 white
+box 552,556 white
+box 576,582 redded
+box 601-607 redded
+
+--white tooo
+
+27-31
+127-131
+
+45-49
+145-149
+
+477-481
+577-581
+
+
+
+
+
+
+
+
+
+interpreter
+compiler
+garbage collector
+Orinoco
+Oil pay
+mark & sweep algorithm
+in lining
+copy elision
+in line caching
+v8 engine
+
+concurrency model
+
+haven't work practically on promises yet
+
+
+
+
