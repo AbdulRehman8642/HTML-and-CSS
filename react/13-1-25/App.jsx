@@ -1,4 +1,4 @@
-import MainHeading from "./MainHeading.js"
+import MainHeading from "./MainHeading.jsx"
  
 export default function App(){
     return <>
