@@ -1,0 +1,36 @@
+.footerParent{
+    height: fit-content;
+    border-top: 1px solid grey;
+    background-color: beige;
+}
+
+.logoParent{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: fit-content;
+}
+
+.footerContent{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footerParaParent{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.footerPara{
+    width: 150vh;
+}
+
+.footerContactParent{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}

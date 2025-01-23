@@ -1,0 +1,22 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.mainContent{
+    height: 100vh;
+    padding: 30px;
+    background-color: rgba(245, 245, 220, 0.642);
+}
+
+.titleParent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyContentParent{
+    display: flex;
+    padding: 20px;
+    line-height: 25px;
+}

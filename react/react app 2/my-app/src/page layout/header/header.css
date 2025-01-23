@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 10px 30px; */
+    border-bottom: 1px solid grey;
+    background-color: beige;
+}
+
+.navItemsParent{
+    /* padding: 10px 30px; */
+    display: flex;
+}
+
+.navItems{
+    padding: 20px 30px;
+}
+
+.logo{
+    padding: 20px 30px;
+}
