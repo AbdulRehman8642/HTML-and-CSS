@@ -5,7 +5,7 @@ function Footer() {
     <>
       <div className="footerParent">
         <div className="logoParent">
-          <h1 className="logo">Abdul Rehman Group</h1>
+          <h1 className="logo">Abdul Rehman Group Of Companies</h1>
         </div>
         <div className="footerContent">
           <h3>We are developing the new city in Karachi</h3>
