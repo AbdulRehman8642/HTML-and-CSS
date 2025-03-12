@@ -1,6 +1,13 @@
+import { useEffect } from 'react'
 import './header.css'
 
 function Header(){
+    useEffect(()=>{
+        console.log("Mounted")
+        return () => {
+            console.log("unmounted")
+        }
+    }, [])
     return(
         <>
         <nav className="navbar">
@@ -16,5 +23,5 @@ function Header(){
         </>
     )
 }
-
+    
 export default Header

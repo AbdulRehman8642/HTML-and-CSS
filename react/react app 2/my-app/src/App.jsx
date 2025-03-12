@@ -3,6 +3,8 @@ import Header from "./page layout/header/header.jsx"
 import Body from "./page layout/body/body.jsx"
 import Footer from './page layout/footer/footer.jsx'
 import Counter from './page layout/counter/counter.jsx'
+import Chatbot from './chatbot component/Chatbot.jsx'
+import { useState } from 'react'
 // import {
 //   BrowserRouter as Router,
 //   Switch,
@@ -11,7 +13,10 @@ import Counter from './page layout/counter/counter.jsx'
 // } from "react-router-dom";
 
 function App() {
-
+  const [mount, setMount] = useState(false)
+  const onToggle = () => {
+    setMount(!mount)
+  }
   return (
     <>
       {/* <Router>
@@ -22,10 +27,19 @@ function App() {
         </Switch>
       </Router> */}
       {/* <TestComponent /> */}
-      <Header />
+      {/* <Header />
       <Body />
       <Footer />
-      <Counter />
+      <Counter /> */}
+
+    {/* <button onClick={onToggle}>
+      toggle mount
+    </button>
+      {
+        mount &&
+      <Header />
+      } */}
+      <Chatbot />
     </>
   )
 }
