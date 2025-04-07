@@ -13,23 +13,32 @@
 
 .timerContainer{
     transform: scale(180%);
-    padding: 60px 25px;
+    padding: 0px 25px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    /* gap: 10px; */
     flex-direction: column;
     
     border: 2px solid #757575;
     border-radius: 30px;
 }
 
+.credit{
+    padding: 10px;
+    /* margin: 35px 0px 0px 0px; */
+    font-family: sans-serif;
+    font-size: 7px;
+    color: #757575;
+    opacity: 60%;
+}
+
 .startTimerBtn{
     width: 100%;
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
 
     padding: 10px;
     background-color: #dfdcdc;
@@ -48,6 +57,7 @@
 }
 
 .timerBody{
+    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     gap: 25px;

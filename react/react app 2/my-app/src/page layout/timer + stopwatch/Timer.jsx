@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import "./Timer.css";
 import Start from "./timer start stop/Start";
-import tester from "./sound/test";
 
 export default function Timer() {
   const [hourFieldState, setHourFieldState] = useState(
@@ -14,9 +13,9 @@ export default function Timer() {
     document.getElementById("seconds")
   );
 
-//   Buzzer Sound
+  //   Buzzer Sound
 
-  const buzzer = new Audio("./sound/buzzer-18")
+  const buzzer = new Audio("./buzzer-18.mp3");
 
   const minFocus = function (e) {
     const hourField = document.getElementById("hours");
@@ -24,11 +23,11 @@ export default function Timer() {
     const secField = document.getElementById("seconds");
 
     // for full field next field focus
-    if (hourField.value.length == 2) {
+    if (hourField.value.length == 2 && minField.value.length == 0) {
       minField.focus();
     }
 
-    if (minField.value.length == 2) {
+    if (minField.value.length == 2 && secField.value.length == 0) {
       secField.focus();
     }
 
@@ -69,18 +68,38 @@ export default function Timer() {
   let isTimerStart = false;
 
   const setTimer = function () {
-    const hoursCalc = hourFieldState.value * 60 * 60 * 1000;
-    const minutesCalc = minFieldState.value * 60 * 1000;
-    const secondsCalc = secFieldState.value * 1000;
+    
+    if (hourFieldState.value + minFieldState.value + secFieldState.value > 0) {
+      const hoursCalc = hourFieldState.value * 60 * 60 * 1000;
+      const minutesCalc = minFieldState.value * 60 * 1000;
+      const secondsCalc = secFieldState.value * 1000;
 
-    const totalMS = hoursCalc + minutesCalc + secondsCalc;
-    buzzer.play()
+      const totalMS = hoursCalc + minutesCalc + secondsCalc;
 
-    setTimeout(() => {
-      console.log("Time up");
-    }, totalMS);
+      // buzzer.play()
 
-    isTimerStart = true;
+      setTimeout(() => {
+        console.log("Time up");
+      }, totalMS);
+
+      // for second decrement after timer started
+      if (secFieldState.value > 0) {
+        const secondDecInterval = setInterval(() => {
+          --secFieldState.value;
+
+          // clearing the interval if value is 0
+          if (secFieldState.value == 0) {
+            clearInterval(secondDecInterval);
+            secFieldState.value = ""
+          }
+        }, 1000);
+      }
+
+      // for minute decrement after timer started
+      
+
+      isTimerStart = true;
+    }
   };
 
   // document.getElementById("StartTimer").addEventListener("click", setTimer)
@@ -93,7 +112,7 @@ export default function Timer() {
             <div className="inputArea">
               <input
                 onInput={digitChecker}
-                onKeyDown={minFocus}
+                onKeyUp={minFocus}
                 id="hours"
                 maxLength={2}
                 className="timerInput"
@@ -105,7 +124,7 @@ export default function Timer() {
 
               <input
                 onInput={digitChecker}
-                onKeyDown={minFocus}
+                onKeyUp={minFocus}
                 id="minutes"
                 maxLength={2}
                 className="timerInput"
@@ -117,7 +136,7 @@ export default function Timer() {
 
               <input
                 onInput={digitChecker}
-                onKeyDown={minFocus}
+                onKeyUp={minFocus}
                 id="seconds"
                 maxLength={2}
                 className="timerInput"
@@ -138,6 +157,7 @@ export default function Timer() {
           </div>
 
           {/* <Start/> */}
+        {/* <p className="credit">Credit : Abdul Rehman</p> */}
         </div>
       </div>
     </>
