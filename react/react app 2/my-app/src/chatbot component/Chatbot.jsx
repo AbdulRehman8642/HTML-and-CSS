@@ -26,7 +26,7 @@ export default function Chatbot() {
                 </div>
               </>,
             ]);
-        }, 600);}
+        }, 1000);}
       }
       else if (inputValue !== FAQs[key]){
         console.log("empty")

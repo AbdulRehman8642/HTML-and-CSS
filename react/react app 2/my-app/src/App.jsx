@@ -4,6 +4,7 @@ import Body from "./page layout/body/body.jsx"
 import Footer from './page layout/footer/footer.jsx'
 import Counter from './page layout/counter/counter.jsx'
 import Chatbot from './chatbot component/Chatbot.jsx'
+import Timer from './page layout/timer + stopwatch/Timer.jsx'
 import { useState } from 'react'
 // import {
 //   BrowserRouter as Router,
@@ -13,6 +14,11 @@ import { useState } from 'react'
 // } from "react-router-dom";
 
 function App() {
+  // const [mount, setMount] = useState(false)
+  // const onToggle = () => {
+  //   setMount(!mount)
+  // }
+
   const [mount, setMount] = useState(false)
   const onToggle = () => {
     setMount(!mount)
@@ -39,7 +45,10 @@ function App() {
         mount &&
       <Header />
       } */}
-      <Chatbot />
+      {/* <Chatbot /> */}
+      
+      
+      <Timer/>
     </>
   )
 }
