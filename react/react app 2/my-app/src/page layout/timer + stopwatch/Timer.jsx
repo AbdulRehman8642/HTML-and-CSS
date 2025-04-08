@@ -68,7 +68,7 @@ export default function Timer() {
   let isTimerStart = false;
 
   const setTimer = function () {
-    
+    let minuteIntervalToggler = false;
     if (hourFieldState.value + minFieldState.value + secFieldState.value > 0) {
       const hoursCalc = hourFieldState.value * 60 * 60 * 1000;
       const minutesCalc = minFieldState.value * 60 * 1000;
@@ -82,26 +82,48 @@ export default function Timer() {
         console.log("Time up");
       }, totalMS);
 
+
+      // for minute decrement after timer started when seconds added
+      if (minuteIntervalToggler == false && minutesCalc > 0) {
+        setTimeout(() => {
+          minFieldState.value -= 1;
+
+          // clearing the Interval when value of minute field = 0
+
+          secFieldState.value = 60
+
+          if (minFieldState.value == 0) {
+            minFieldState.value = "";
+          }
+
+          !minuteIntervalToggler;
+        }, secondsCalc);
+      }
+
+      // for minute decrement
+
+
+
+      
       // for second decrement after timer started
       if (secFieldState.value > 0) {
         const secondDecInterval = setInterval(() => {
-          --secFieldState.value;
+          secFieldState.value -= 1;
 
           // clearing the interval if value is 0
           if (secFieldState.value == 0) {
             clearInterval(secondDecInterval);
-            secFieldState.value = ""
+            secFieldState.value = "";
           }
         }, 1000);
       }
 
-      // for minute decrement after timer started
-      
+      // for Hour decrement after timer started
 
       isTimerStart = true;
     }
   };
-
+  
   // document.getElementById("StartTimer").addEventListener("click", setTimer)
 
   return (
@@ -112,7 +134,7 @@ export default function Timer() {
             <div className="inputArea">
               <input
                 onInput={digitChecker}
-                onKeyUp={minFocus}
+                onKeyDown={minFocus}
                 id="hours"
                 maxLength={2}
                 className="timerInput"
@@ -124,7 +146,7 @@ export default function Timer() {
 
               <input
                 onInput={digitChecker}
-                onKeyUp={minFocus}
+                onKeyDown={minFocus}
                 id="minutes"
                 maxLength={2}
                 className="timerInput"
@@ -136,7 +158,7 @@ export default function Timer() {
 
               <input
                 onInput={digitChecker}
-                onKeyUp={minFocus}
+                onKeyDown={minFocus}
                 id="seconds"
                 maxLength={2}
                 className="timerInput"
@@ -157,7 +179,7 @@ export default function Timer() {
           </div>
 
           {/* <Start/> */}
-        {/* <p className="credit">Credit : Abdul Rehman</p> */}
+          {/* <p className="credit">Credit : Abdul Rehman</p> */}
         </div>
       </div>
     </>
