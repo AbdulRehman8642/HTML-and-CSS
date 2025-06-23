@@ -5,6 +5,8 @@ import Footer from './page layout/footer/footer.jsx'
 import Counter from './page layout/counter/counter.jsx'
 import Chatbot from './chatbot component/Chatbot.jsx'
 import Timer from './page layout/timer + stopwatch/Timer.jsx'
+import Copy from './page layout/Copy Cut Function Component/CopyCut.jsx'
+
 import { useState } from 'react'
 // import {
 //   BrowserRouter as Router,
@@ -48,7 +50,9 @@ function App() {
       {/* <Chatbot /> */}
       
       
-      <Timer/>
+      {/* <Timer/> */}
+
+      {/* <Copy/> */}
     </>
   )
 }
