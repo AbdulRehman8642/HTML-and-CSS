@@ -3,6 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebas
 import {
   getAuth,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -17,25 +18,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
-
-function register() {
-
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-
-  createUserWithEmailAndPassword(auth, email.value, password.value)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log("user ==>", user);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log("Error Message ==>", errorMessage);
-    });
+console.log()
+export {
+    auth,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword
 }
-
-const registerBtn = document.getElementById("registerBtn");
-
-registerBtn.addEventListener('click', register)
