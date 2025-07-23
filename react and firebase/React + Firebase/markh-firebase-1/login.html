@@ -31,29 +31,54 @@
             </div>
             <div class="mb-3">
               <label for="phoneInput" class="form-label">Phone Number</label>
-              <input id="phoneInput" type="tel" class="form-control" placeholder="+923331234567">
+              <input
+                id="phoneInput"
+                type="tel"
+                class="form-control"
+                placeholder="+923331234567"
+              />
             </div>
-            <div id="sign-in-button"></div>
-            <button id="signInWithPhone" class="btn btn-primary">Sign in with Phone</button>
+            <button id="signInWithPhone" class="btn btn-primary">
+              Sign in with Phone
+            </button>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
               >Password</label
             >
             <input id="password" type="password" class="form-control" />
-          </div>
-          <div  id="sign-in-button">
 
+            <label class="form-label">Name</label>
+            <input id="name" type="text" class="form-control" />
           </div>
+          <div id="sign-in-button"></div>
+          <button id="updateBtn" class="btn btn-primary">Update name</button>
+          <button id="deleteBtn" class="btn btn-primary">
+            Delete all data
+          </button>
           <button id="loginBtn" class="btn btn-primary">Login</button>
-          <button id="loginWithGoogle" class="btn btn-primary">loginWithGoogle</button>
-          
-          <button id="SignOutWithGoogle" class="btn btn-primary">SignOutWithGoogle</button>
+          <button id="loginWithGoogle" class="btn btn-primary">
+            loginWithGoogle
+          </button>
+
+          <button id="SignOutWithGoogle" class="btn btn-primary">
+            SignOutWithGoogle
+          </button>
           <!-- <button id="signInWithPhone" class="btn btn-primary">sign in with phone</button> -->
           <p class="mt-2">
             Don't have an account <a href="./index+register.html">Sign up</a>
           </p>
         </div>
+      </div>
+
+      <div class="text-center m-5">
+        <h1>ToDo List</h1>
+        <input id="todoField" type="text" placeholder="Enter value" />
+        <button id="addTodoBtn">Add ToDo</button>
+        <br>
+        <ul id="list" class="list-group">
+          <li id="listItem" class="list-group-item"></li>
+        </ul>
       </div>
     </div>
     <script type="module" src="firebase.js"></script>
