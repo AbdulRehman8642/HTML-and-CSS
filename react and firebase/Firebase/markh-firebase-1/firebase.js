@@ -24,6 +24,7 @@ import {
   deleteDoc,
   deleteField,
   getDocs,
+  onSnapshot,
 } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -66,4 +67,5 @@ export {
   deleteDoc,
   deleteField,
   getDocs,
+  onSnapshot,
 };

@@ -16,6 +16,8 @@ import {
   deleteDoc,
   deleteField,
   addDoc,
+  collection,
+  onSnapshot,
 } from "./firebase.js";
 
 // window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {});
@@ -122,13 +124,35 @@ let deleteBtn = document.getElementById("deleteBtn");
 deleteBtn && deleteBtn.addEventListener("click", deleteDataFun);
 
 // ToDo list Item Adding function... Below:
+// ToDo list Item Adding function... Below:
 
 let addTodoItem = () => {
-  const docRef = addDoc()
+  let todo = document.getElementById("todoField");
+
+  const todoRef = collection(db, "todos");
+  const sendValueToDB = addDoc(todoRef, {
+    value: todo.value,
+  });
+
+  console.log(todo.value);
 };
 
 let addItemBtn = document.getElementById("addTodoBtn");
-addItemBtn && addItemBtn.addEventListener('click', addTodoItem)
+addItemBtn && addItemBtn.addEventListener("click", addTodoItem);
+
+let getAllTodos = async () => {
+  const ref = collection(db, "todos");
+  const unsubscribe = onSnapshot(ref, (querySnapshot) => {
+    const todos = [];
+    querySnapshot.forEach((doc) => {
+      todos.push(doc.data());
+    });
+    console.log("todos -->", todos)
+  });
+};
+
+let getTodoBtn = document.getElementById("getTodoBtn")
+getTodoBtn && getTodoBtn.addEventListener("click", getAllTodos)
 
 // const phoneNumber = "03313963733";
 // const appVerifier = window.recaptchaVerifier;
