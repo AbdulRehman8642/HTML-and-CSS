@@ -1,0 +1,43 @@
+* {
+  font-family: sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.navItemsParent {
+  display: flex;
+}
+
+.navItem {
+  margin: 10px;
+  background-color: bisque;
+  border-radius: 15px;
+  padding: 8px;
+  transition: 300ms;
+}
+
+.navItem:hover {
+  box-shadow: 1px 1px 20px 3px rgb(243, 226, 204);
+  cursor: pointer;
+}
+
+.newTaskBtn {
+  padding: 10px;
+  outline: none;
+  border: none;
+
+  background-color: bisque;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.newTaskBtn:hover {
+  box-shadow: 1px 1px 20px 3px rgb(243, 226, 204);
+  cursor: pointer;
+}
