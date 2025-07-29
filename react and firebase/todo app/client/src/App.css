@@ -41,3 +41,8 @@
   box-shadow: 1px 1px 20px 3px rgb(243, 226, 204);
   cursor: pointer;
 }
+
+
+.taskFormParent{
+  background-color: grey;
+}

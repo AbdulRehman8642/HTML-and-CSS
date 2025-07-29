@@ -1,17 +1,17 @@
 import { React, useState } from "react";
 import "../App.css";
 import NewTaskPopup from "./NewTaskPopup";
+import Signup from "./Signup.jsx";
 
 export default function Parent() {
   const [taskPopupReq, setTaskPopupReq] = useState(false);
-
+  const isNewTask = true;
   const taskPopupFun = () => {
     // setTaskPopupReq(true)
-    if(taskPopupFun === true){
-        console.log("it is true")
+    if (taskPopupFun === true) {
+      console.log("it is true");
     }
   };
-
 
   return (
     <>
@@ -23,7 +23,9 @@ export default function Parent() {
             <div className="remainTaskNav navItem">Remaining Tasks</div>
           </div>
           <div className="newTaskParent">
-            <button onClick={taskPopupFun} className="newTaskBtn">New</button>
+            <button onClick={taskPopupFun} className="newTaskBtn">
+              New
+            </button>
           </div>
         </nav>
 
@@ -37,7 +39,8 @@ export default function Parent() {
           </div>
         </div>
       </div>
-      <NewTaskPopup />
+      {isNewTask && <NewTaskPopup />}
+      <Signup />
     </>
   );
 }
