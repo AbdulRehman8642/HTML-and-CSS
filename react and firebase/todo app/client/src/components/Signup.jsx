@@ -1,5 +1,11 @@
 import { React, useState } from "react";
-import { createUserWithEmailAndPassword } from "../firebase.js";
+import {
+  createUserWithEmailAndPassword,
+  doc,
+  setDoc,
+  db,
+  auth,
+} from "../firebase.js";
 import "../App.css";
 
 export default function Signup() {
@@ -16,14 +22,29 @@ export default function Signup() {
   //     const errorMessage = error.message;
   //     // ..
   //   });
-  function test1check() {
-    console.log(email);
-    console.log(password);
-  }
 
-  const sendUserDataToDb = ()=>{
-    const docRef = doc(db, "user", "test")
-  }
+  const sendUserData = async (user) => {
+    const docRef = doc(db, "user", user.uid);
+    await setDoc(docRef, {
+      userEmail: email,
+      userPassword: password,
+    });
+  };
+
+  const newUserCreation = async () => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCred) => {
+        const user = userCred.user;
+        console.log("new user created");
+        console.log("user ==>", user.uid);
+        console.log(email);
+        console.log(password);
+        sendUserData(user);
+      })
+      .catch((error) => {
+        console.log("error ==>", error);
+      });
+  };
 
   return (
     <>
@@ -37,11 +58,15 @@ export default function Signup() {
             />
           </div>
           <div className="passInpDiv">
-            <input type="password" placeholder="Password" />
+            <input
+              onChange={(event) => setPassword(event.target.value)}
+              type="password"
+              placeholder="Password"
+            />
           </div>
         </div>
       </div>
-      <button id="test1" onClick={test1check}>
+      <button id="test1" onClick={newUserCreation}>
         test it
       </button>
     </>

@@ -4,14 +4,17 @@ import NewTaskPopup from "./NewTaskPopup";
 import Signup from "./Signup.jsx";
 
 export default function Parent() {
-  const [taskPopupReq, setTaskPopupReq] = useState(false);
-  const isNewTask = true;
-  const taskPopupFun = () => {
-    // setTaskPopupReq(true)
-    if (taskPopupFun === true) {
-      console.log("it is true");
-    }
+  const [isNewTask, setIsNewTask] = useState(false);
+  const newTaskToggle = () => {
+    setIsNewTask(!isNewTask);
+    console.log(isNewTask);
   };
+
+  // const dateString = "01/01/1971";
+  // const dateObject = new Date(dateString);
+  // const milliseconds = dateObject.getTime();
+
+  // console.log(milliseconds);
 
   return (
     <>
@@ -23,7 +26,7 @@ export default function Parent() {
             <div className="remainTaskNav navItem">Remaining Tasks</div>
           </div>
           <div className="newTaskParent">
-            <button onClick={taskPopupFun} className="newTaskBtn">
+            <button onClick={newTaskToggle} className="newTaskBtn">
               New
             </button>
           </div>
@@ -39,7 +42,11 @@ export default function Parent() {
           </div>
         </div>
       </div>
-      {isNewTask && <NewTaskPopup />}
+      {/* <button onClick={newTaskToggle} className="test2" id="test2">
+        toggle new task
+      </button> */}
+      {isNewTask && <NewTaskPopup triggerNewTaskToggle={newTaskToggle} />}
+      {/* <NewTaskPopup /> */}
       <Signup />
     </>
   );
