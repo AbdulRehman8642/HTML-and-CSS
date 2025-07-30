@@ -47,7 +47,7 @@ function App() {
         mount &&
       <Header />
       } */}
-      {/* <Chatbot /> */}
+      <Chatbot />
       
       
       {/* <Timer/> */}

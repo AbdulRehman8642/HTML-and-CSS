@@ -2,23 +2,30 @@ import { React, useState } from "react";
 import { setDoc, db, auth, doc } from "../firebase";
 import "../App.css";
 
-export default function NewTaskPopup({ triggerNewTaskToggle }) {
+export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData, taskUIMaker }) {
   // storing task details by using useState() below
   const [taskSubj, setTaskSubj] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
-  const [taskDDate, setTaskDDate] = useState("");
+  const [taskDueDate, settaskDueDate] = useState("");
 
   // new task creator function below...
   const taskCardCreator = () => {
-    if (taskSubj && taskDesc && taskDDate) {
+    if (taskSubj && taskDesc && taskDueDate) {
       console.log("task subject ==>", taskSubj);
       console.log("task description ==>", taskDesc);
-      console.log("task due date ==>", taskDDate);
+      console.log("task due date ==>", taskDueDate);
 
       // converting date into milliseconds taake tasks to sort kar saken...
-      const dateObject = new Date(taskDDate);
+      const dateObject = new Date(taskDueDate);
       const dateMills = dateObject.getTime();
       console.log(dateMills);
+      const taskCardDataObject = {
+        taskSubject: taskSubj,
+        taskDescription: taskDesc,
+        taskDueDate: taskDueDate,
+      };
+      taskCardData(taskCardDataObject);
+      taskUIMaker()
     }
   };
 
@@ -45,9 +52,9 @@ export default function NewTaskPopup({ triggerNewTaskToggle }) {
         <div className="taskDueDateParent">
           <p>Task Due Date</p>
           <input
-            onChange={(e) => setTaskDDate(e.target.value)}
+            onChange={(e) => settaskDueDate(e.target.value)}
             type="date"
-            id="taskDDateId"
+            id="taskDueDateId"
           />
         </div>
         <div className="taskStatusParent">

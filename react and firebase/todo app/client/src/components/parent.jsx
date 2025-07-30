@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import "../App.css";
-import NewTaskPopup from "./NewTaskPopup";
+import NewTaskPopup from "./NewTaskPopup.jsx";
 import Signup from "./Signup.jsx";
 
 export default function Parent() {
@@ -15,6 +15,38 @@ export default function Parent() {
   // const milliseconds = dateObject.getTime();
 
   // console.log(milliseconds);
+
+  const [taskData, setTaskData] = useState("");
+  const receivedTaskData = (data) => {
+    setTaskData(data);
+  };
+
+  const taskDataCheck = () => {
+    console.log(taskData.taskSubject);
+    console.log(taskData.taskDescription);
+    console.log(taskData.taskDueDate);
+  };
+
+  const [taskCards, setTaskCards] = useState([]);
+  const millisecondsForID = Date.now()
+  const taskUICreator = () => {
+    setTaskCards((previous) => [
+      ...previous,
+      <>
+        <div key={`task${millisecondsForID}`} className="task">
+          <div className="subjectParent">
+            <p>{taskData.taskSubject}</p>
+          </div>
+          <div className="descriptionParent">
+            <p>{taskData.taskDescription}</p>
+          </div>
+          <div className="dateParent">
+            <p>{taskData.taskDueDate}</p>
+          </div>
+        </div>
+      </>,
+    ]);
+  };
 
   return (
     <>
@@ -33,21 +65,21 @@ export default function Parent() {
         </nav>
 
         <div className="bodyParent">
-          <div className="taskCardsParent">
-            <div className="taskCard">
-              <div className="subjectDiv">
-                <h4 className="subject">Task 1</h4>
-              </div>
-            </div>
-          </div>
+          <div className="taskCardsParent">{taskCards}</div>
         </div>
       </div>
+      <button onClick={taskDataCheck}>task data check</button>
       {/* <button onClick={newTaskToggle} className="test2" id="test2">
         toggle new task
       </button> */}
-      {isNewTask && <NewTaskPopup triggerNewTaskToggle={newTaskToggle} />}
-      {/* <NewTaskPopup /> */}
-      <Signup />
+      {isNewTask && (
+        <NewTaskPopup
+          triggerNewTaskToggle={newTaskToggle}
+          taskCardData={receivedTaskData}
+          taskUIMaker={taskUICreator}
+        />
+      )}
+      {/* <Signup /> */}
     </>
   );
 }

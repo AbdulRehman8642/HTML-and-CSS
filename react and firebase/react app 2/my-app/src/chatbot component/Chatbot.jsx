@@ -8,7 +8,7 @@ export default function Chatbot() {
   function messageReply(inputValue) {
     Object.keys(FAQs).forEach((key) => {
       if (inputValue === FAQs[key]) {
-        {setTimeout(() => {
+        // {setTimeout(() => {
             
             setAnswerDiv((previousAnswer) => [
               ...previousAnswer,
@@ -26,7 +26,7 @@ export default function Chatbot() {
                 </div>
               </>,
             ]);
-        }, 1000);}
+        // }, 1000);}
       }
       else if (inputValue !== FAQs[key]){
         console.log("empty")
