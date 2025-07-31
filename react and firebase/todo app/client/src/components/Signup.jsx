@@ -37,8 +37,6 @@ export default function Signup() {
         const user = userCred.user;
         console.log("new user created");
         console.log("user ==>", user.uid);
-        console.log(email);
-        console.log(password);
         sendUserData(user);
       })
       .catch((error) => {

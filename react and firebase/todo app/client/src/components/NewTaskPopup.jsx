@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { setDoc, db, auth, doc } from "../firebase";
 import "../App.css";
 
-export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData, taskUIMaker }) {
+export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
   // storing task details by using useState() below
   const [taskSubj, setTaskSubj] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
@@ -25,7 +25,6 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData, taskU
         taskDueDate: taskDueDate,
       };
       taskCardData(taskCardDataObject);
-      taskUIMaker()
     }
   };
 

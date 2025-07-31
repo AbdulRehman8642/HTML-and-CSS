@@ -2,6 +2,15 @@ import { React, useState } from "react";
 import "../App.css";
 import NewTaskPopup from "./NewTaskPopup.jsx";
 import Signup from "./Signup.jsx";
+import {
+  setDoc,
+  db,
+  auth,
+  doc,
+  getDoc,
+  getDocs,
+  collection,
+} from "../firebase";
 
 export default function Parent() {
   const [isNewTask, setIsNewTask] = useState(false);
@@ -17,35 +26,57 @@ export default function Parent() {
   // console.log(milliseconds);
 
   const [taskData, setTaskData] = useState("");
-  const receivedTaskData = (data) => {
-    setTaskData(data);
-  };
-
-  const taskDataCheck = () => {
-    console.log(taskData.taskSubject);
-    console.log(taskData.taskDescription);
-    console.log(taskData.taskDueDate);
-  };
-
   const [taskCards, setTaskCards] = useState([]);
-  const millisecondsForID = Date.now()
-  const taskUICreator = () => {
+
+  const receivedTaskData = async (data) => {
+    setTaskData(data);
     setTaskCards((previous) => [
       ...previous,
       <>
-        <div key={`task${millisecondsForID}`} className="task">
+        <div className="task">
           <div className="subjectParent">
-            <p>{taskData.taskSubject}</p>
+            <p>{data.taskSubject}</p>
           </div>
           <div className="descriptionParent">
-            <p>{taskData.taskDescription}</p>
+            <p>{data.taskDescription}</p>
           </div>
           <div className="dateParent">
-            <p>{taskData.taskDueDate}</p>
+            <p>{data.taskDueDate}</p>
           </div>
         </div>
       </>,
     ]);
+    const dueDateObject = new Date(data.taskDueDate);
+    const dueDateMills = dueDateObject.getTime();
+    const docRef = doc(db, "user", auth.currentUser.uid);
+    const newTaskCollectionRef = doc(
+      collection(docRef, "tasks"),
+      `task${taskCards.length + 1}`
+    );
+    await setDoc(newTaskCollectionRef, {
+      taskSubject: data.taskSubject,
+      taskDescription: data.taskDescription,
+      taskDueDate: data.taskDueDate,
+      taskDueDateMills: dueDateMills,
+    });
+  };
+  const getTasksData = async () => {
+    const docRef = doc(db, "user", auth.currentUser.uid);
+    const tasksCollectionRef = collection(
+      db,
+      "user",
+      auth.currentUser.uid,
+      "tasks"
+    );
+    const docSnap = await getDoc(docRef);
+    const tasksDocSnap = await getDocs(tasksCollectionRef);
+
+    if (docSnap.exists()) {
+      console.log("Document data:", docSnap.data());
+      console.log("Document data:", tasksDocSnap.data());
+    } else {
+      console.log("No such document!");
+    }
   };
 
   return (
@@ -68,7 +99,7 @@ export default function Parent() {
           <div className="taskCardsParent">{taskCards}</div>
         </div>
       </div>
-      <button onClick={taskDataCheck}>task data check</button>
+      <button onClick={getTasksData}>task data check</button>
       {/* <button onClick={newTaskToggle} className="test2" id="test2">
         toggle new task
       </button> */}
@@ -76,10 +107,9 @@ export default function Parent() {
         <NewTaskPopup
           triggerNewTaskToggle={newTaskToggle}
           taskCardData={receivedTaskData}
-          taskUIMaker={taskUICreator}
         />
       )}
-      {/* <Signup /> */}
+      <Signup />
     </>
   );
 }

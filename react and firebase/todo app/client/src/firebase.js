@@ -7,6 +7,9 @@ import {
   getFirestore,
   setDoc,
   doc,
+  getDoc,
+  getDocs,
+  collection,
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -25,4 +28,13 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 
-export { createUserWithEmailAndPassword, db, setDoc, doc, auth };
+export {
+  createUserWithEmailAndPassword,
+  db,
+  setDoc,
+  doc,
+  auth,
+  getDoc,
+  getDocs,
+  collection,
+};
