@@ -30,48 +30,60 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
 
   return (
     <>
-      <div className="taskFormParent">
-        <div className="subjectParent">
-          <p>Task Subject</p>
-          <input
-            onChange={(e) => setTaskSubj(e.target.value)}
-            type="text"
-            id="subjectInpId"
-            placeholder="Enter Task Subject"
-          />
+      <div className="handleParent">
+        <div className="taskFormParent">
+          <div className="subjectParent">
+            {/* <button onClick={triggerNewTaskToggle}>X</button> */}
+            <p>Task Subject </p>
+            <input
+              className="subjectInp"
+              onChange={(e) => setTaskSubj(e.target.value)}
+              type="text"
+              id="subjectInpId"
+              placeholder="Enter Task Subject"
+            />
+          </div>
+          <div className="textareaParent">
+            <p>Task Description</p>
+            <textarea
+              className="descriptionTA"
+              onChange={(e) => setTaskDesc(e.target.value)}
+              id="descriptionInpId"
+              placeholder="Enter Task description"
+            ></textarea>
+          </div>
+          <div className="taskDueDateParent">
+            <p>Task Due Date</p>
+            <input
+              className="taskDueDate"
+              onChange={(e) => settaskDueDate(e.target.value)}
+              type="date"
+              id="taskDueDateId"
+            />
+          </div>
+          <div className="taskStatusParent">
+            <p>Task Status</p>
+            <div className="taskStatusInputArea">
+              <input type="radio" name="taskStatus" id="startedStatusId" />
+              <label htmlFor="startedStatusId">Started</label>
+              <input
+                type="radio"
+                name="taskStatus"
+                id="notStartedStatusId"
+              />
+              <label htmlFor="notStartedStatusId">Not started</label>
+            </div>
+          </div>
+          <button
+            onClick={() => {
+              taskCardCreator();
+              triggerNewTaskToggle();
+            }}
+            className="createNewTaskBtn"
+          >
+            Create New Task
+          </button>
         </div>
-        <div className="textareaParent">
-          <p>Task Description</p>
-          <textarea
-            onChange={(e) => setTaskDesc(e.target.value)}
-            id="descriptionInpId"
-            placeholder="Enter Task description"
-          ></textarea>
-        </div>
-        <div className="taskDueDateParent">
-          <p>Task Due Date</p>
-          <input
-            onChange={(e) => settaskDueDate(e.target.value)}
-            type="date"
-            id="taskDueDateId"
-          />
-        </div>
-        <div className="taskStatusParent">
-          <p>Task Status</p>
-          <input type="checkbox" name="started" id="startedStatusId" />
-          <label htmlFor="startedStatusId">Started</label>
-          <input type="checkbox" name="not-started" id="notStartedStatusId" />
-          <label htmlFor="notStartedStatusId">Not started</label>
-        </div>
-        <button
-          onClick={() => {
-            taskCardCreator();
-            triggerNewTaskToggle();
-          }}
-          className="createNewTaskBtn"
-        >
-          Create New Task
-        </button>
       </div>
     </>
   );

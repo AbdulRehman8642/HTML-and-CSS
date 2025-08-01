@@ -1,6 +1,30 @@
+/* FOR ALL */
+
 * {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+input {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*  */
+/* SEPARATION */
+/* Parent.jsx */
+
+/* Navbar */
 
 .navbar {
   display: flex;
@@ -42,7 +66,59 @@
   cursor: pointer;
 }
 
+/*  */
+/* SEPARATION */
+/* NewTaskPopop.jsx */
 
-.taskFormParent{
+.handleParent {
+  position: fixed;
+  top: 0;
+  background-color: rgba(66, 63, 63, 0.21);
+  width: 100vw;
+  height: 100vh;
+  justify-items: center;
+  align-content: center;
+}
+
+.taskFormParent {
   background-color: grey;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Task Subject */
+
+.subjectInp {
+  background-color: white;
+  padding: 4px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  width: 220px;
+}
+
+/* Task Description/textarea */
+
+.descriptionTA {
+  padding: 4px;
+  border-radius: 10px;
+  width: 220px;
+  max-width: 220px;
+  min-width: 220px;
+  height: 20px;
+  min-height: 20px;
+  max-height: 100px;
+  text-align: center;
+}
+
+/* Task Due Date */
+
+.taskDueDate {
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
 }

@@ -10,9 +10,17 @@ import {
   getDoc,
   getDocs,
   collection,
+  onAuthStateChanged,
 } from "../firebase";
 
 export default function Parent() {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log("user is signed in and uid is ==>", user.uid);
+    } else {
+      console.log("user is not signed in");
+    }
+  });
   const [isNewTask, setIsNewTask] = useState(false);
   const newTaskToggle = () => {
     setIsNewTask(!isNewTask);
@@ -59,7 +67,11 @@ export default function Parent() {
       taskDueDate: data.taskDueDate,
       taskDueDateMills: dueDateMills,
     });
+    console.log("data is sent successfully");
   };
+
+  //
+  // SEPARATION
   const getTasksData = async () => {
     const docRef = doc(db, "user", auth.currentUser.uid);
     const tasksCollectionRef = collection(
@@ -73,7 +85,10 @@ export default function Parent() {
 
     if (docSnap.exists()) {
       console.log("Document data:", docSnap.data());
-      console.log("Document data:", tasksDocSnap.data());
+      //   console.log("Document data:", tasksDocSnap);
+      tasksDocSnap.forEach((doc) => {
+        console.log(doc.id, "=>", doc.data());
+      });
     } else {
       console.log("No such document!");
     }
