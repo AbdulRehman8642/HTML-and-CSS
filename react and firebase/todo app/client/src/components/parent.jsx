@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import "../App.css";
 import NewTaskPopup from "./NewTaskPopup.jsx";
 import Signup from "./Signup.jsx";
@@ -37,23 +37,7 @@ export default function Parent() {
   const [taskCards, setTaskCards] = useState([]);
 
   const receivedTaskData = async (data) => {
-    setTaskData(data);
-    setTaskCards((previous) => [
-      ...previous,
-      <>
-        <div className="task">
-          <div className="subjectParent">
-            <p>{data.taskSubject}</p>
-          </div>
-          <div className="descriptionParent">
-            <p>{data.taskDescription}</p>
-          </div>
-          <div className="dateParent">
-            <p>{data.taskDueDate}</p>
-          </div>
-        </div>
-      </>,
-    ]);
+    // setTaskData(data);
     const dueDateObject = new Date(data.taskDueDate);
     const dueDateMills = dueDateObject.getTime();
     const docRef = doc(db, "user", auth.currentUser.uid);
@@ -67,6 +51,7 @@ export default function Parent() {
       taskDueDate: data.taskDueDate,
       taskDueDateMills: dueDateMills,
     });
+    getTasksData();
     console.log("data is sent successfully");
   };
 
@@ -74,25 +59,23 @@ export default function Parent() {
   // SEPARATION
   const getTasksData = async () => {
     const docRef = doc(db, "user", auth.currentUser.uid);
-    const tasksCollectionRef = collection(
-      db,
-      "user",
-      auth.currentUser.uid,
-      "tasks"
-    );
+    const tasksCollectionRef = collection(docRef, "tasks");
     const docSnap = await getDoc(docRef);
     const tasksDocSnap = await getDocs(tasksCollectionRef);
 
     if (docSnap.exists()) {
       console.log("Document data:", docSnap.data());
-      //   console.log("Document data:", tasksDocSnap);
       tasksDocSnap.forEach((doc) => {
         console.log(doc.id, "=>", doc.data());
+        setTaskCards([doc.data()]);
       });
+      console.log('all task',taskCards);
+
     } else {
       console.log("No such document!");
     }
   };
+  // getTasksData();
 
   return (
     <>
@@ -111,7 +94,23 @@ export default function Parent() {
         </nav>
 
         <div className="bodyParent">
-          <div className="taskCardsParent">{taskCards}</div>
+          <div className="taskCardsParent">
+            {taskCards.map((data, index) => {
+              return (
+                <div className="task" key={index}>
+                  <div className="subjectParent">
+                    <p>{data.taskSubject}</p>
+                  </div>
+                  <div className="descriptionParent">
+                    <p>{data.taskDescription}</p>
+                  </div>
+                  <div className="dateParent">
+                    <p>{data.taskDueDate}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
       <button onClick={getTasksData}>task data check</button>

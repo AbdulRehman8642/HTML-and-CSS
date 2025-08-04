@@ -10,7 +10,7 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
 
   // new task creator function below...
   const taskCardCreator = () => {
-    if (taskSubj && taskDesc && taskDueDate) {
+    (taskSubj && taskDesc && taskDueDate) &&
       console.log("task subject ==>", taskSubj);
       console.log("task description ==>", taskDesc);
       console.log("task due date ==>", taskDueDate);
@@ -25,7 +25,7 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
         taskDueDate: taskDueDate,
       };
       taskCardData(taskCardDataObject);
-    }
+    
   };
 
   return (
