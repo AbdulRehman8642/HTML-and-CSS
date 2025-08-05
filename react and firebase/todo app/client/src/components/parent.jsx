@@ -11,6 +11,7 @@ import {
   getDocs,
   collection,
   onAuthStateChanged,
+  updateDoc,
 } from "../firebase";
 
 export default function Parent() {
@@ -27,25 +28,16 @@ export default function Parent() {
     console.log(isNewTask);
   };
 
-  // const dateString = "01/01/1971";
-  // const dateObject = new Date(dateString);
-  // const milliseconds = dateObject.getTime();
-
-  // console.log(milliseconds);
-
   const [taskData, setTaskData] = useState("");
   const [taskCards, setTaskCards] = useState([]);
 
   const receivedTaskData = async (data) => {
-    // setTaskData(data);
     const dueDateObject = new Date(data.taskDueDate);
     const dueDateMills = dueDateObject.getTime();
     const docRef = doc(db, "user", auth.currentUser.uid);
-    const newTaskCollectionRef = doc(
-      collection(docRef, "tasks"),
-      `task${taskCards.length + 1}`
-    );
+    const newTaskCollectionRef = doc(collection(docRef, "tasks"));
     await setDoc(newTaskCollectionRef, {
+      taskID: newTaskCollectionRef.id,
       taskSubject: data.taskSubject,
       taskDescription: data.taskDescription,
       taskDueDate: data.taskDueDate,
@@ -62,20 +54,30 @@ export default function Parent() {
     const tasksCollectionRef = collection(docRef, "tasks");
     const docSnap = await getDoc(docRef);
     const tasksDocSnap = await getDocs(tasksCollectionRef);
-
+    const dataCollectingArray = [];
     if (docSnap.exists()) {
       console.log("Document data:", docSnap.data());
       tasksDocSnap.forEach((doc) => {
         console.log(doc.id, "=>", doc.data());
-        setTaskCards([doc.data()]);
+        console.log(doc);
+        dataCollectingArray.push(doc.data());
       });
-      console.log('all task',taskCards);
-
+      setTaskCards(dataCollectingArray);
+      console.log("all task", taskCards);
     } else {
       console.log("No such document!");
     }
   };
   // getTasksData();
+
+  //
+  // SEPARATION
+  const updateFunction = async () => {
+    const docRef = doc(db, "user", auth.currentUser.uid);
+    const tasksCollectionRef = collection(docRef, "tasks");
+    const newTaskCollectionRef = doc(collection(docRef, "tasks"));
+    await updateDoc();
+  };
 
   return (
     <>
@@ -99,13 +101,18 @@ export default function Parent() {
               return (
                 <div className="task" key={index}>
                   <div className="subjectParent">
-                    <p>{data.taskSubject}</p>
+                    <h3>{data.taskSubject}</h3>
                   </div>
                   <div className="descriptionParent">
                     <p>{data.taskDescription}</p>
                   </div>
                   <div className="dateParent">
                     <p>{data.taskDueDate}</p>
+                  </div>
+                  <div className="upDelBtnContainer">
+                    <button className="upDelBtn updateTask">Update</button>
+                    <br />
+                    <button className="upDelBtn deleteTask">Delete</button>
                   </div>
                 </div>
               );

@@ -18,6 +18,12 @@ button {
   border: none;
   padding: 0;
   margin: 0;
+  transition: 100ms;
+  background-color: rgb(253, 219, 180);
+}
+
+button:hover {
+  background-color: rgb(253, 219, 180);
 }
 
 /*  */
@@ -39,14 +45,13 @@ button {
 
 .navItem {
   margin: 10px;
-  background-color: bisque;
   border-radius: 15px;
   padding: 8px;
   transition: 300ms;
 }
 
 .navItem:hover {
-  box-shadow: 1px 1px 20px 3px rgb(243, 226, 204);
+  background-color: rgb(253, 219, 180);
   cursor: pointer;
 }
 
@@ -55,7 +60,7 @@ button {
   outline: none;
   border: none;
 
-  background-color: bisque;
+  background-color: rgb(253, 219, 180);
   border-radius: 15px;
   cursor: pointer;
   transition: 300ms;
@@ -73,7 +78,7 @@ button {
 .handleParent {
   position: fixed;
   top: 0;
-  background-color: rgba(66, 63, 63, 0.21);
+  background-color: rgba(98, 95, 95, 0.21);
   width: 100vw;
   height: 100vh;
   justify-items: center;
@@ -82,14 +87,25 @@ button {
 
 .taskFormParent {
   background-color: grey;
-  padding: 5px;
+  padding: 15px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   text-align: center;
 }
 
-/* Task Subject */
+.createNewTaskBtn {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.createNewTaskBtn:focus {
+  background-color: #c5c5c5;
+}
+
+/* Task Subject Input */
 
 .subjectInp {
   background-color: white;
@@ -100,7 +116,7 @@ button {
   width: 220px;
 }
 
-/* Task Description/textarea */
+/* Task Description/textarea Input*/
 
 .descriptionTA {
   padding: 4px;
@@ -117,8 +133,40 @@ button {
 /* Task Due Date */
 
 .taskDueDate {
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-    font-size: 16px;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/*  */
+/* SEPARATION */
+/* Task Cards UI */
+
+.taskCardsParent {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 25px;
+}
+
+.task {
+  height: fit-content;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 1px 1px 2px 1px black;
+}
+
+.upDelBtnContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.upDelBtn {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.upDelBtn:hover {
+  box-shadow: 1px 1px 10px 3px rgb(243, 226, 204);
 }

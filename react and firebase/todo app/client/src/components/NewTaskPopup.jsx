@@ -10,7 +10,7 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
 
   // new task creator function below...
   const taskCardCreator = () => {
-    (taskSubj && taskDesc && taskDueDate) &&
+    if (taskSubj && taskDesc && taskDueDate) {
       console.log("task subject ==>", taskSubj);
       console.log("task description ==>", taskDesc);
       console.log("task due date ==>", taskDueDate);
@@ -25,7 +25,7 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
         taskDueDate: taskDueDate,
       };
       taskCardData(taskCardDataObject);
-    
+    }
   };
 
   return (
@@ -62,15 +62,10 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
             />
           </div>
           <div className="taskStatusParent">
-            <p>Task Status</p>
             <div className="taskStatusInputArea">
               <input type="radio" name="taskStatus" id="startedStatusId" />
               <label htmlFor="startedStatusId">Started</label>
-              <input
-                type="radio"
-                name="taskStatus"
-                id="notStartedStatusId"
-              />
+              <input type="radio" name="taskStatus" id="notStartedStatusId" />
               <label htmlFor="notStartedStatusId">Not started</label>
             </div>
           </div>
