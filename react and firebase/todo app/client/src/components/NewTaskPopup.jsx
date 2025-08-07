@@ -32,7 +32,7 @@ export default function NewTaskPopup({ triggerNewTaskToggle, taskCardData }) {
     <>
       <div className="handleParent">
         <div className="taskFormParent">
-          <div className="subjectParent">
+          <div className="inpSubjectParent">
             {/* <button onClick={triggerNewTaskToggle}>X</button> */}
             <p>Task Subject </p>
             <input
